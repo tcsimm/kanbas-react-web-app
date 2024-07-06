@@ -18,7 +18,7 @@ export default function Lab1() {
           This is the third paragraph. Wrap each paragraph with the paragraph tag to tell browsers to render the gaps.
         </p>
       </div>
-      <div id="wd-lists">
+      <div id="wd-lists-1">
         <h4>List Tags</h4>
         <h5>Ordered List Tag</h5>
         <p>How to make pancakes:</p>
@@ -33,7 +33,7 @@ export default function Lab1() {
           <li>Serve and enjoy!</li>
         </ol>
       </div>
-      <div id="wd-lists">
+      <div id="wd-lists-2">
         <h5>Ordered List Tag</h5>
         <p>How to make pasta with vodka sauce:</p>
         <ol id="wd-pasta">
@@ -43,6 +43,24 @@ export default function Lab1() {
           <li>Drain the pasta and add it to the sauce.</li>
           <li>Enjoy!</li>
         </ol>
+      </div>
+      <div id="wd-unordered-lists">
+        <h5>Unordered List Tag</h5>
+        <p>My favorite books (in no particular order):</p>
+        <ul id="wd-my-books">
+          <li>Dune</li>
+          <li>Lord of the Rings</li>
+          <li>Ender's Game</li>
+          <li>Red Mars</li>
+          <li>The Forever War</li>
+        </ul>
+        <p>Your favorite books (in no particular order):</p>
+        <ul id="wd-your-favorite-books">
+          <li>The House of God</li>
+          <li>On Call</li>
+          <li>Be Useful: Seven Tools For Life</li>
+          <li>The Ride of a Lifetime</li>
+        </ul>
       </div>
     </div>
   );
