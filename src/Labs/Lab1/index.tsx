@@ -34,19 +34,16 @@ export default function Lab1() {
         </ol>
       </div>
       <div id="wd-lists">
-  <h4>List Tags</h4>
-  <h5>Ordered List Tag</h5>
-  How to make pasta with vodka sauce:
-  <ol id="wd-pasta"> ... </ol>
-  My favorite recipe:
-  <ol id="wd-your-favorite-recipe">
-  <li>Boil pasta.</li>
-  <li>In a separate pan, heat up green onions, tomato paste, and heavy cream.</li>
-  <li>Let the ingredients mix.</li>
-  <li>Drain the pasta and add it to the sauce.</li>
-  <li>Enjoy!.</li>
-  </ol>
-</div>
+        <h5>Ordered List Tag</h5>
+        <p>How to make pasta with vodka sauce:</p>
+        <ol id="wd-pasta">
+          <li>Boil pasta.</li>
+          <li>In a separate pan, heat up green onions, tomato paste, and heavy cream.</li>
+          <li>Let the ingredients mix.</li>
+          <li>Drain the pasta and add it to the sauce.</li>
+          <li>Enjoy!</li>
+        </ol>
+      </div>
     </div>
   );
 }
