@@ -254,15 +254,15 @@ export default function Lab1() {
           <option value="DRAMA">Drama</option>
           <option selected value="SCIFI">Science Fiction</option>
           <option value="FANTASY">Fantasy</option>
-        </select>
+          </select>
       </div>
       <div id="wd-anchor-tags">
         <h4>Anchor tag</h4>
-        Please
+        Please&nbsp;
         <a id="wd-lipsum" href="https://www.lipsum.com">click here</a>
-        to get dummy text<br/>
+        &nbsp;to get dummy text<br/>
         <a id="github-repository" href="https://github.com/tcsimm/kanbas-react-web-app">click here</a>
-        for my github repository<br/>
+        &nbsp;for my github repository<br/>
       </div>
     </div>
   );
