@@ -256,12 +256,14 @@ export default function Lab1() {
           <option value="FANTASY">Fantasy</option>
         </select>
       </div>
-      <h4>Anchor tag</h4>
-Please
-<a id="wd-lipsum" href="https://www.lipsum.com">click here</a>
-to get dummy text<br/>
-<a id="github-repository" href="https://github.com/tcsimm/kanbas-react-web-app">click here</a>
-for my github repository<br/>
+      <div id="wd-anchor-tags">
+        <h4>Anchor tag</h4>
+        Please
+        <a id="wd-lipsum" href="https://www.lipsum.com">click here</a>
+        to get dummy text<br/>
+        <a id="github-repository" href="https://github.com/tcsimm/kanbas-react-web-app">click here</a>
+        for my github repository<br/>
+      </div>
     </div>
   );
 }
