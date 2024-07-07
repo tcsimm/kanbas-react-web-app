@@ -1,3 +1,4 @@
+import React from 'react';
 import reactjsImg from '../../images/reactjs.jpg';
 
 export default function Dashboard() {
