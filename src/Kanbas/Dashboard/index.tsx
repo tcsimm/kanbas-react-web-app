@@ -17,85 +17,85 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="wd-dashboard-course">
-            <img src="/images/data-analytics.jpg" width={200} alt="Data Analytics Course" />
+            <img src="/images/reactjs.jpg" width={200} alt="Database Management Course" />
             <div>
-              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5678/Home">
-                CS5678 Data Analytics
+              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5200/Home">
+                CS5200 Database Management
               </a>
               <p className="wd-dashboard-course-title">
-                Data Analytics with R
+                Data Analytics
               </p>
               <a href="#/Kanbas/Courses/5678/Home"> Go </a>
             </div>
           </div>
           <div className="wd-dashboard-course">
-            <img src="/images/python.jpg" width={200} alt="Python Course" />
+            <img src="/images/reactjs.jpg" width={200} alt="Algorithms course" />
             <div>
-              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/9101/Home">
-                CS9101 Python Programming
+              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5800/Home">
+                CS 5800 Algorithms
               </a>
               <p className="wd-dashboard-course-title">
-                Python for Beginners
+                Algorithms
               </p>
               <a href="#/Kanbas/Courses/9101/Home"> Go </a>
             </div>
           </div>
           <div className="wd-dashboard-course">
-            <img src="/images/web-development.jpg" width={200} alt="Web Development Course" />
+            <img src="/images/reactjs.jpg" width={200} alt="Web Development Course" />
             <div>
-              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/1122/Home">
-                CS1122 Web Development
+              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5810/Home">
+                CS 5810 Web Development
               </a>
               <p className="wd-dashboard-course-title">
-                Modern Web Development
+                Web Development
               </p>
               <a href="#/Kanbas/Courses/1122/Home"> Go </a>
             </div>
           </div>
           <div className="wd-dashboard-course">
-            <img src="/images/machine-learning.jpg" width={200} alt="Machine Learning Course" />
+            <img src="/images/reactjs.jpg" width={200} alt="Data science Course" />
             <div>
-              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/3344/Home">
-                CS3344 Machine Learning
+              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5290/Home">
+                CS5290 Data Science
               </a>
               <p className="wd-dashboard-course-title">
-                Introduction to Machine Learning
+                Introduction to Data Science
               </p>
               <a href="#/Kanbas/Courses/3344/Home"> Go </a>
             </div>
           </div>
           <div className="wd-dashboard-course">
-            <img src="/images/database-systems.jpg" width={200} alt="Database Systems Course" />
+            <img src="/images/reactjs.jpg" width={200} alt="Data Mining Course" />
             <div>
-              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5566/Home">
-                CS5566 Database Systems
+              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5700/Home">
+                CS5700 Data Mining
               </a>
               <p className="wd-dashboard-course-title">
-                Database Design and Management
+                Data mining and data sicence
               </p>
               <a href="#/Kanbas/Courses/5566/Home"> Go </a>
             </div>
           </div>
           <div className="wd-dashboard-course">
-            <img src="/images/cyber-security.jpg" width={200} alt="Cyber Security Course" />
+            <img src="/images/reactjs.jpg" width={200} alt="Information Assurance Course" />
             <div>
-              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/7788/Home">
-                CS7788 Cyber Security
+              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5670/Home">
+                CS5670 Information Assurance
               </a>
               <p className="wd-dashboard-course-title">
-                Fundamentals of Cyber Security
+                Fundamentals of Information Assurance
               </p>
               <a href="#/Kanbas/Courses/7788/Home"> Go </a>
             </div>
           </div>
           <div className="wd-dashboard-course">
-            <img src="/images/cloud-computing.jpg" width={200} alt="Cloud Computing Course" />
+            <img src="/images/reactjs.jpg" width={200} alt="Database Architecture Course" />
             <div>
-              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/9900/Home">
-                CS9900 Cloud Computing
+              <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5400/Home">
+                CS5400 Database Architecture
               </a>
               <p className="wd-dashboard-course-title">
-                Cloud Computing Basics
+                Intro to database architecture
               </p>
               <a href="#/Kanbas/Courses/9900/Home"> Go </a>
             </div>
