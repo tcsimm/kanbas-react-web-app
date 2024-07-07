@@ -3,6 +3,7 @@ import Modules from "./Modules";
 import Home from "./Home";
 import { Navigate, Route, Routes } from "react-router";
 import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/editor";
 
 export default function Courses() {
   return (
@@ -23,7 +24,7 @@ export default function Courses() {
                 <Route path="Piazza" element={<h3>Piazza</h3>} />
                 <Route path="Zoom" element={<h4>Zoom</h4>} />
                 <Route path="Assignments" element={<Assignments />} />
-                <Route path="Assignments/:id" element={<h5>Assignment Editor</h5>} />
+                <Route path="Assignments/:id" element={<AssignmentEditor />} />
                 <Route path="Quizzes" element={<h6>Quizzes</h6>} />
                 <Route path="Grades" element={<h6>Grades</h6>} />
               </Routes>
