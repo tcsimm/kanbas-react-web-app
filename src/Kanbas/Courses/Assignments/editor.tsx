@@ -18,20 +18,20 @@ export default function AssignmentEditor() {
           </tr>
           <tr>
             <td align="right" valign="top">
-              <label htmlFor="wd-assignment-group">Assignment Group</label>
+              <label htmlFor="wd-group">Assignment Group</label>
             </td>
             <td>
-              <select id="wd-assignment-group">
+              <select id="wd-group">
                 <option value="assignments">ASSIGNMENTS</option>
               </select>
             </td>
           </tr>
           <tr>
             <td align="right" valign="top">
-              <label htmlFor="wd-display-grade">Display Grade as</label>
+              <label htmlFor="wd-display-grade-as">Display Grade as</label>
             </td>
             <td>
-              <select id="wd-display-grade">
+              <select id="wd-display-grade-as">
                 <option value="percentage">Percentage</option>
               </select>
             </td>
@@ -53,8 +53,8 @@ export default function AssignmentEditor() {
                 <label htmlFor="wd-media-recordings">Media Recordings</label><br />
                 <input type="checkbox" id="wd-student-annotation" />
                 <label htmlFor="wd-student-annotation">Student Annotation</label><br />
-                <input type="checkbox" id="wd-file-uploads" />
-                <label htmlFor="wd-file-uploads">File Uploads</label>
+                <input type="checkbox" id="wd-file-upload" />
+                <label htmlFor="wd-file-upload">File Uploads</label>
               </div>
             </td>
           </tr>
@@ -68,10 +68,10 @@ export default function AssignmentEditor() {
           </tr>
           <tr>
             <td align="right" valign="top">
-              <label htmlFor="wd-due">Due</label>
+              <label htmlFor="wd-due-date">Due</label>
             </td>
             <td>
-              <input type="date" id="wd-due" value="2024-05-13" />
+              <input type="date" id="wd-due-date" value="2024-05-13" />
             </td>
           </tr>
           <tr>
