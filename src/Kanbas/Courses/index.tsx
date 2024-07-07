@@ -1,4 +1,3 @@
-import React from "react";
 import CoursesNavigation from "./Navigation";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Modules from "./Modules";  
