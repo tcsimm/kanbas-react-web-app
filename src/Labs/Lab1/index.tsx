@@ -1,3 +1,5 @@
+import teslabotImg from '../../images/teslabot.jpg';
+
 export default function Lab1() {
   return (
     <div id="wd-lab1">
@@ -153,7 +155,7 @@ export default function Lab1() {
           alt="Starship"
         />
         <p>Loading a local image:</p>
-        <img id="wd-teslabot" src="images/teslabot.jpg" height="200px" alt="Tesla Bot" />
+        <img id="wd-teslabot" src={teslabotImg} height="200px" alt="Tesla Bot" />
       </div>
     </div>
   );
