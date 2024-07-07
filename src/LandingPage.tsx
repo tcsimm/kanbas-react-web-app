@@ -4,7 +4,7 @@ export default function LandingPage() {
   return (
     <div>
       <h1>Welcome to My Web Application</h1>
-      <h2>Thomas Simmons - Section XYZ</h2>
+      <h2>Thomas Simmons - Section Summer 2</h2>
       <h3>Links to Lab Assignments</h3>
       <ul>
         <li><a href="#/Labs/Lab1">Lab 1</a></li>
