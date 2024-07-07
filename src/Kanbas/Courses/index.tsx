@@ -1,6 +1,6 @@
+import { Navigate, Route, Routes } from "react-router-dom";
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
-import { Navigate, Route, Routes } from "react-router";
 
 export default function Courses() {
   return (
@@ -15,7 +15,7 @@ export default function Courses() {
           <td valign="top">
             <Routes>
               <Route path="/" element={<Navigate to="Home" />} />
-              <Route path="Home" element={<h2>Home</h2>} />
+              <Route path="Home" element={<h3>Home</h3>} />
               <Route path="Modules" element={<Modules />} />
               <Route path="Piazza" element={<h3>Piazza</h3>} />
               <Route path="Zoom" element={<h4>Zoom</h4>} />
