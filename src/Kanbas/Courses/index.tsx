@@ -2,6 +2,7 @@ import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import { Navigate, Route, Routes } from "react-router";
+import Assignments from "./Assignments";
 
 export default function Courses() {
   return (
