@@ -1,5 +1,5 @@
 import React from "react";
-import stackedImg from "../../public/images/stacked.jpg"; // Adjust the path as necessary
+import stackedImg from "../../src/images/stacked.jpg";
 
 export default function BootstrapNavigation() {
   return (
