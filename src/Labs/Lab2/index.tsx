@@ -1,5 +1,9 @@
-import "./index.css";
-import Borders from "./Borders";
+// src/Labs/Lab2/index.tsx
+
+import React from 'react';
+import './index.css';
+import Borders from './Borders';
+import Padding from './Padding'; // Import the Padding component
 
 export default function Lab2() {
   return (
@@ -54,6 +58,7 @@ export default function Lab2() {
         </div>
       </div>
       <Borders />
+      <Padding /> 
     </div>
   );
 }
