@@ -1,4 +1,5 @@
 import "./index.css";
+import Borders from "./Borders";
 
 export default function Lab2() {
   return (
@@ -52,6 +53,7 @@ export default function Lab2() {
           </div>
         </div>
       </div>
+      <Borders />
     </div>
   );
 }
