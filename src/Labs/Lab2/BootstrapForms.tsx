@@ -1,4 +1,3 @@
-// src/Labs/Lab2/BootstrapForms.tsx
 export default function BootstrapForms() {
     return (
       <div>
