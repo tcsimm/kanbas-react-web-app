@@ -3,7 +3,8 @@
 import React from 'react';
 import './index.css';
 import Borders from './Borders';
-import Padding from './Padding'; // Import the Padding component
+import Padding from './Padding';
+import Margins from './Margins'; // Import the Margins component
 
 export default function Lab2() {
   return (
@@ -58,7 +59,8 @@ export default function Lab2() {
         </div>
       </div>
       <Borders />
-      <Padding /> 
+      <Padding />
+      <Margins />
     </div>
   );
 }
