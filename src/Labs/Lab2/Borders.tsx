@@ -1,5 +1,3 @@
-import "./index.css";
-
 export default function Borders() {
   return (
     <div id="wd-css-borders">
