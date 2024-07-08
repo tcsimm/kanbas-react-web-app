@@ -1,8 +1,7 @@
-/* General paragraph styling */
-p {
-   background-color: blue; /* This rule is commented out */
-   color: white; /* This rule is commented out */
- }
+/* p {
+  background-color: blue;
+  color: white;
+} */
  
  /* ID selectors */
  p#wd-id-selector-1 {
