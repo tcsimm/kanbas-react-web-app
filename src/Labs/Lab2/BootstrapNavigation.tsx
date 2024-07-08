@@ -1,4 +1,4 @@
-import stackedImg from "../../src/images/stacked.jpg";
+import stackedImg from '../../public/images/stacked.jpg';
 
 export default function BootstrapNavigation() {
   return (
@@ -32,7 +32,7 @@ export default function BootstrapNavigation() {
       <div id="wd-css-navigating-with-cards">
         <h2>Cards</h2>
         <div className="card" style={{ width: "18rem" }}>
-          <img src={stackedImg} className="card-img-top" alt="Stacking Starship" height="200px" />
+          <img src={stackedImg} className="card-img-top" alt="Stacking Starship" />
           <div className="card-body">
             <h5 className="card-title">Stacking Starship</h5>
             <p className="card-text">
