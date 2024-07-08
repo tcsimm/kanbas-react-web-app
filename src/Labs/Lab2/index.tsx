@@ -10,6 +10,7 @@ import Float from "./Float";
 import GridLayout from "./GridLayout";
 import Flex from "./Flex";
 import ReactIconsSampler from "./ReactIcons";
+import BootstrapGrids from "./BootstrapGrids";  
 
 export default function Lab2() {
   return (
@@ -91,6 +92,7 @@ export default function Lab2() {
       <GridLayout />
       <Flex />
       <ReactIconsSampler />
+      <BootstrapGrids /> 
     </div>
   );
 }
