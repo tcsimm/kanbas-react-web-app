@@ -1,32 +1,37 @@
-/* src/Labs/Lab2/index.css */
-
-.wd-margin-bottom {
-   margin-bottom: 50px;
+p {
+   background-color: blue;
+   color: white;
  }
  
- .wd-margin-right-left {
-   margin-left: 50px;
-   margin-right: 50px;
+ /* ID selectors */
+ p#wd-id-selector-1 {
+   background-color: red;
+   color: white;
  }
  
- .wd-margin-all-around {
-   margin: 30px;
+ p#wd-id-selector-2 {
+   background-color: yellow;
+   color: black;
  }
  
- .wd-padded-top-left {
-   padding-top: 50px;
-   padding-left: 50px;
+ /* Class selectors */
+ .wd-class-selector {
+   background-color: yellow;
+   color: blue;
  }
  
- .wd-padded-bottom-right {
-   padding-bottom: 50px;
-   padding-right: 50px;
+ /* Document structure selectors */
+ .wd-selector-1 .wd-selector-3 {
+   background-color: red;
+   color: white;
  }
  
- .wd-padding-fat {
-   padding: 50px;
+ .wd-selector-2 > .wd-selector-3 > .wd-selector-4 {
+   background-color: yellow;
+   color: blue;
  }
  
+ /* Borders */
  .wd-border-fat {
    border-width: 20px 30px 20px 30px;
  }
@@ -55,6 +60,56 @@
    border-color: #7070ff;
  }
  
+ /* Padding */
+ .wd-padded-top-left {
+   padding-top: 50px;
+   padding-left: 50px;
+ }
+ 
+ .wd-padded-bottom-right {
+   padding-bottom: 50px;
+   padding-right: 50px;
+ }
+ 
+ .wd-padding-fat {
+   padding: 50px;
+ }
+ 
+ /* Margin */
+ .wd-margin-bottom {
+   margin-bottom: 50px;
+ }
+ 
+ .wd-margin-right-left {
+   margin-left: 50px;
+   margin-right: 50px;
+ }
+ 
+ .wd-margin-all-around {
+   margin: 30px;
+ }
+ 
+ /* Foreground and Background colors */
+ .wd-fg-color-black {
+   color: black;
+ }
+ 
+ .wd-fg-color-white {
+   color: white;
+ }
+ 
+ .wd-fg-color-blue {
+   color: #7070ff;
+ }
+ 
+ .wd-fg-color-red {
+   color: #ff7070;
+ }
+ 
+ .wd-fg-color-green {
+   color: green;
+ }
+ 
  .wd-bg-color-yellow {
    background-color: #ffff07;
  }
@@ -63,7 +118,15 @@
    background-color: #7070ff;
  }
  
- .wd-fg-color-white {
-   color: white;
+ .wd-bg-color-red {
+   background-color: #ff7070;
+ }
+ 
+ .wd-bg-color-green {
+   background-color: green;
+ }
+ 
+ .wd-bg-color-gray {
+   background-color: lightgray;
  }
  
