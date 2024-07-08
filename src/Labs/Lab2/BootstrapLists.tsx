@@ -1,4 +1,3 @@
-// src/Labs/Lab2/BootstrapLists.tsx
 export default function BootstrapLists() {
     return (
       <div>
