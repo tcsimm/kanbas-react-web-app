@@ -6,19 +6,15 @@ import KanbasNavigation from "./Navigation";
 
 export default function Kanbas() {
   return (
-    <div id="wd-kanbas" className="container-fluid">
-      <div className="row">
-        <div className="col-12 col-md-3 mb-3">
-          <KanbasNavigation />
-        </div>
-        <div className="col-12 col-md-9">
-          <Routes>
-            <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Dashboard" element={<Dashboard />} />
-            <Route path="Courses/*" element={<Courses />} />
-            <Route path="LandingPage" element={<LandingPage />} />
-          </Routes>
-        </div>
+    <div id="wd-kanbas" className="d-flex">
+      <KanbasNavigation />
+      <div className="flex-grow-1">
+        <Routes>
+          <Route path="/" element={<Navigate to="Dashboard" />} />
+          <Route path="Dashboard" element={<Dashboard />} />
+          <Route path="Courses/*" element={<Courses />} />
+          <Route path="LandingPage" element={<LandingPage />} />
+        </Routes>
       </div>
     </div>
   );
