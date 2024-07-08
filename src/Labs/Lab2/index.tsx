@@ -4,6 +4,7 @@ import Padding from "./Padding";
 import Margins from "./Margins";
 import Corners from "./Corners";
 import Dimensions from "./Dimensions";
+import Positions from "./Positions";
 
 export default function Lab2() {
   return (
@@ -79,6 +80,7 @@ export default function Lab2() {
       <Margins />
       <Corners />
       <Dimensions />
+      <Positions />
     </div>
   );
 }
