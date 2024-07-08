@@ -45,31 +45,6 @@ export default function BootstrapNavigation() {
           </div>
         </div>
       </div>
-
-      <div id="wd-bootstrap-positions-margins-paddings">
-        <h2>Bootstrap Positions, Margins, and Paddings</h2>
-
-        <div className="position-relative p-5 bg-light border">
-          <div className="position-absolute top-0 start-50 translate-middle bg-primary text-white p-2">
-            Position Absolute
-          </div>
-          <p>Relative positioning with absolute positioned child.</p>
-        </div>
-
-        <div className="mt-5 mb-3 p-3 bg-secondary text-white">
-          <p className="mb-1">Margin top 5 and bottom 3, padding 3</p>
-        </div>
-
-        <div className="p-5 bg-success text-white">
-          <p className="pt-1 pb-2 ps-3 pe-4">
-            Padding top 1, bottom 2, start 3, end 4
-          </p>
-        </div>
-
-        <div className="mt-2 mb-4">
-          <button className="btn btn-info mt-3">Button with margin top 3</button>
-        </div>
-      </div>
     </div>
   );
 }
