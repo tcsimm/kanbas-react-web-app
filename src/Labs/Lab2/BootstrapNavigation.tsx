@@ -1,4 +1,3 @@
-import React from "react";
 import stackedImg from "../../src/images/stacked.jpg";
 
 export default function BootstrapNavigation() {
