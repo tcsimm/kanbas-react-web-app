@@ -2,12 +2,13 @@ import { AiOutlineDashboard } from "react-icons/ai";
 import { IoCalendarOutline } from "react-icons/io5";
 import { LiaBookSolid, LiaCogSolid } from "react-icons/lia";
 import { FaInbox, FaRegCircle } from "react-icons/fa";
+import neuLogo from '../../images/NEU.png'; 
 
 export default function KanbasNavigation() {
   return (
     <div id="wd-kanbas-navigation" className="list-group rounded-0 position-fixed top-0 bottom-0 bg-black" style={{ width: 120 }}>
       <a id="wd-neu-link" target="_blank" rel="noreferrer" href="https://www.northeastern.edu/" className="list-group-item bg-black border-0">
-        <img src="/images/NEU.png" width="75px" alt="Northeastern" />
+        <img src={neuLogo} width="75px" alt="Northeastern" />
       </a>
       <a id="wd-account-link" href="#/Kanbas/Account" className="list-group-item text-white bg-black text-center border-0">
         <FaRegCircle className="fs-1 text text-white" /><br />
