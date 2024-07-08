@@ -1,4 +1,3 @@
-// src/Labs/Lab2/BootstrapTables.tsx
 export default function BootstrapTables() {
     return (
       <div>
