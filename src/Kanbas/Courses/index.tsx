@@ -1,21 +1,21 @@
-import { Navigate, Route, Routes } from "react-router";
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/editor";
-import "./styles.css"; 
+import { Navigate, Route, Routes } from "react-router";
+import '../styles.css'; 
 
 export default function Courses() {
   return (
-    <div id="wd-courses" className="container-fluid">
-      <h2 className="text-danger my-3">Course 1234</h2>
+    <div id="wd-courses">
+      <h2>Course 1234</h2>
       <hr />
-      <div className="row">
-        <div className="col-md-3 position-fixed bottom-0 top-0 d-none d-md-block bg-black z-2">
+      <div className="d-flex">
+        <div className="me-3">
           <CoursesNavigation />
         </div>
-        <div className="col-md-9 offset-md-3 p-3 wd-main-content-offset">
+        <div className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />

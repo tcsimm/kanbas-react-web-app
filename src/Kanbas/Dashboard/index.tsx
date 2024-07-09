@@ -1,5 +1,5 @@
 import reactjsImg from '../../images/reactjs.jpg';
-import './styles.css'; 
+import '../styles.css'; 
 
 export default function Dashboard() {
   return (
