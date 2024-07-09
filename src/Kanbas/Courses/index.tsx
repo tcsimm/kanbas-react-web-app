@@ -1,12 +1,10 @@
-import React from 'react';
 import { Navigate, Route, Routes } from "react-router";
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/editor";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import "../../styles.css";
 
 export default function Courses() {
   return (
