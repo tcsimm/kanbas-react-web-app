@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0;  
   padding: 0;
 }
 body * {
@@ -16,4 +16,38 @@ body * {
 }
 .border-gray {
   border: 1px solid gray;
+}
+#wd-kanbas {
+  display: flex;
+}
+#wd-kanbas-navigation {
+  width: 120px;
+  flex-shrink: 0;
+}
+.wd-main-content-offset {
+  flex-grow: 1;
+}
+#wd-modules-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#wd-modules-controls button {
+  margin-left: 1rem;
+}
+#wd-modules {
+  margin-top: 1rem;
+}
+#wd-modules .wd-module {
+  margin-bottom: 2rem;
+}
+#wd-modules .wd-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#wd-modules .wd-lessons .wd-lesson {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
