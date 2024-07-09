@@ -12,3 +12,33 @@ body * {
     padding-left: 140px !important;
   }
 }
+
+#wd-dashboard {
+  padding: 20px;
+}
+
+#wd-dashboard-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#wd-dashboard-published {
+  font-size: 1.5rem;
+}
+
+#wd-dashboard-courses .wd-dashboard-course {
+  margin-bottom: 40px;
+}
+
+#wd-courses {
+  padding: 20px;
+}
+
+.wd-main-content-offset {
+  padding-left: 140px !important;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
