@@ -2,43 +2,18 @@ body {
   margin: 0;
   padding: 0;
 }
-
 body * {
   font-family: Arial, Helvetica, sans-serif;
 }
-
-@media (min-width: 768px) {
-  #wd-kanbas .wd-main-content-offset {
-    padding-left: 140px !important;
-  }
+.btn-secondary {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #c7cdd1;
+  --bs-btn-border-color: #c7cdd1;
+  --bs-btn-hover-color: #fff;
 }
-
-#wd-dashboard {
-  padding: 20px;
+.bg-secondary {
+  background-color: #c7cdd1 !important;
 }
-
-#wd-dashboard-title {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-#wd-dashboard-published {
-  font-size: 1.5rem;
-}
-
-#wd-dashboard-courses .wd-dashboard-course {
-  margin-bottom: 40px;
-}
-
-#wd-courses {
-  padding: 20px;
-}
-
-.wd-main-content-offset {
-  padding-left: 140px !important;
-}
-
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
+.border-gray {
+  border: 1px solid gray;
 }
