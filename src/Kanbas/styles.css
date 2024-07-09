@@ -51,3 +51,16 @@ body * {
   justify-content: space-between;
   align-items: center;
 }
+
+
+@media (min-width: 768px) {
+  .wd-main-content-offset {
+    padding-left: 140px !important;
+  }
+}
+
+#wd-courses-navigation > .list-group-item.active {
+  color: black;
+  background-color: white;
+  border-left: 3px solid black !important;
+}
