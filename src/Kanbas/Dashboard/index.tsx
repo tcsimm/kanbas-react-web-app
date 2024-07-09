@@ -3,104 +3,106 @@ import '../styles.css';
 
 export default function Dashboard() {
   return (
-    <div id="wd-dashboard">
-      <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
-      <h2 id="wd-dashboard-published">Published Courses (8)</h2> <hr />
-      <div id="wd-dashboard-courses">
-        <div className="wd-dashboard-course">
-          <img src={reactjsImg} width={200} alt="React JS Course" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/1234/Home">
-              CS1234 React JS
+    <div id="wd-dashboard" className="container-fluid">
+      <h1 id="wd-dashboard-title">Dashboard</h1> 
+      <hr />
+      <h2 id="wd-dashboard-published">Published Courses (8)</h2> 
+      <hr />
+      <div id="wd-dashboard-courses" className="row row-cols-1 row-cols-md-4 g-4">
+        <div className="col">
+          <div className="card">
+            <a className="wd-dashboard-course-link text-decoration-none text-dark" href="#/Kanbas/Courses/1234/Home">
+              <img src={reactjsImg} className="card-img-top" alt="React JS Course" />
+              <div className="card-body">
+                <h5 className="wd-dashboard-course-title card-title">CS1234 React JS</h5>
+                <p className="card-text">Full Stack software developer</p>
+                <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary">Go</a>
+              </div>
             </a>
-            <p className="wd-dashboard-course-title">
-              Full Stack software developer
-            </p>
-            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
           </div>
         </div>
-        <div className="wd-dashboard-course">
-          <img src={reactjsImg} width={200} alt="Database Management Course" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5200/Home">
-              CS5200 Database Management
+        <div className="col">
+          <div className="card">
+            <a className="wd-dashboard-course-link text-decoration-none text-dark" href="#/Kanbas/Courses/5200/Home">
+              <img src={reactjsImg} className="card-img-top" alt="Database Management Course" />
+              <div className="card-body">
+                <h5 className="wd-dashboard-course-title card-title">CS5200 Database Management</h5>
+                <p className="card-text">Data Analytics</p>
+                <a href="#/Kanbas/Courses/5200/Home" className="btn btn-primary">Go</a>
+              </div>
             </a>
-            <p className="wd-dashboard-course-title">
-              Data Analytics
-            </p>
-            <a href="#/Kanbas/Courses/5678/Home"> Go </a>
           </div>
         </div>
-        <div className="wd-dashboard-course">
-          <img src={reactjsImg} width={200} alt="Algorithms Course" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5800/Home">
-              CS 5800 Algorithms
+        <div className="col">
+          <div className="card">
+            <a className="wd-dashboard-course-link text-decoration-none text-dark" href="#/Kanbas/Courses/5800/Home">
+              <img src={reactjsImg} className="card-img-top" alt="Algorithms Course" />
+              <div className="card-body">
+                <h5 className="wd-dashboard-course-title card-title">CS5800 Algorithms</h5>
+                <p className="card-text">Algorithms</p>
+                <a href="#/Kanbas/Courses/5800/Home" className="btn btn-primary">Go</a>
+              </div>
             </a>
-            <p className="wd-dashboard-course-title">
-              Algorithms
-            </p>
-            <a href="#/Kanbas/Courses/9101/Home"> Go </a>
           </div>
         </div>
-        <div className="wd-dashboard-course">
-          <img src={reactjsImg} width={200} alt="Web Development Course" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5810/Home">
-              CS 5810 Web Development
+        <div className="col">
+          <div className="card">
+            <a className="wd-dashboard-course-link text-decoration-none text-dark" href="#/Kanbas/Courses/5810/Home">
+              <img src={reactjsImg} className="card-img-top" alt="Web Development Course" />
+              <div className="card-body">
+                <h5 className="wd-dashboard-course-title card-title">CS5810 Web Development</h5>
+                <p className="card-text">Web Development</p>
+                <a href="#/Kanbas/Courses/5810/Home" className="btn btn-primary">Go</a>
+              </div>
             </a>
-            <p className="wd-dashboard-course-title">
-              Web Development
-            </p>
-            <a href="#/Kanbas/Courses/1122/Home"> Go </a>
           </div>
         </div>
-        <div className="wd-dashboard-course">
-          <img src={reactjsImg} width={200} alt="Data Science Course" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5290/Home">
-              CS5290 Data Science
+        <div className="col">
+          <div className="card">
+            <a className="wd-dashboard-course-link text-decoration-none text-dark" href="#/Kanbas/Courses/5290/Home">
+              <img src={reactjsImg} className="card-img-top" alt="Data Science Course" />
+              <div className="card-body">
+                <h5 className="wd-dashboard-course-title card-title">CS5290 Data Science</h5>
+                <p className="card-text">Introduction to Data Science</p>
+                <a href="#/Kanbas/Courses/5290/Home" className="btn btn-primary">Go</a>
+              </div>
             </a>
-            <p className="wd-dashboard-course-title">
-              Introduction to Data Science
-            </p>
-            <a href="#/Kanbas/Courses/3344/Home"> Go </a>
           </div>
         </div>
-        <div className="wd-dashboard-course">
-          <img src={reactjsImg} width={200} alt="Data Mining Course" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5700/Home">
-              CS5700 Data Mining
+        <div className="col">
+          <div className="card">
+            <a className="wd-dashboard-course-link text-decoration-none text-dark" href="#/Kanbas/Courses/5700/Home">
+              <img src={reactjsImg} className="card-img-top" alt="Data Mining Course" />
+              <div className="card-body">
+                <h5 className="wd-dashboard-course-title card-title">CS5700 Data Mining</h5>
+                <p className="card-text">Data Mining and Data Science</p>
+                <a href="#/Kanbas/Courses/5700/Home" className="btn btn-primary">Go</a>
+              </div>
             </a>
-            <p className="wd-dashboard-course-title">
-              Data Mining and Data Science
-            </p>
-            <a href="#/Kanbas/Courses/5566/Home"> Go </a>
           </div>
         </div>
-        <div className="wd-dashboard-course">
-          <img src={reactjsImg} width={200} alt="Information Assurance Course" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5670/Home">
-              CS5670 Information Assurance
+        <div className="col">
+          <div className="card">
+            <a className="wd-dashboard-course-link text-decoration-none text-dark" href="#/Kanbas/Courses/5670/Home">
+              <img src={reactjsImg} className="card-img-top" alt="Information Assurance Course" />
+              <div className="card-body">
+                <h5 className="wd-dashboard-course-title card-title">CS5670 Information Assurance</h5>
+                <p className="card-text">Fundamentals of Information Assurance</p>
+                <a href="#/Kanbas/Courses/5670/Home" className="btn btn-primary">Go</a>
+              </div>
             </a>
-            <p className="wd-dashboard-course-title">
-              Fundamentals of Information Assurance
-            </p>
-            <a href="#/Kanbas/Courses/7788/Home"> Go </a>
           </div>
         </div>
-        <div className="wd-dashboard-course">
-          <img src={reactjsImg} width={200} alt="Database Architecture Course" />
-          <div>
-            <a className="wd-dashboard-course-link" href="#/Kanbas/Courses/5400/Home">
-              CS5400 Database Architecture
+        <div className="col">
+          <div className="card">
+            <a className="wd-dashboard-course-link text-decoration-none text-dark" href="#/Kanbas/Courses/5400/Home">
+              <img src={reactjsImg} className="card-img-top" alt="Database Architecture Course" />
+              <div className="card-body">
+                <h5 className="wd-dashboard-course-title card-title">CS5400 Database Architecture</h5>
+                <p className="card-text">Intro to Database Architecture</p>
+                <a href="#/Kanbas/Courses/5400/Home" className="btn btn-primary">Go</a>
+              </div>
             </a>
-            <p className="wd-dashboard-course-title">
-              Intro to Database Architecture
-            </p>
-            <a href="#/Kanbas/Courses/9900/Home"> Go </a>
           </div>
         </div>
       </div>

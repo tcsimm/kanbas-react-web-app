@@ -4,18 +4,21 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/editor";
 import { Navigate, Route, Routes } from "react-router";
-import '../styles.css'; 
+import { FaAlignJustify } from "react-icons/fa";
 
 export default function Courses() {
   return (
-    <div id="wd-courses">
-      <h2>Course 1234</h2>
+    <div id="wd-courses" className="container-fluid">
+      <h2 className="text-danger">
+        <FaAlignJustify className="me-4 fs-4 mb-1" />
+        Course 1234
+      </h2>
       <hr />
-      <div className="d-flex">
-        <div className="me-3">
+      <div className="row">
+        <div className="col-md-3">
           <CoursesNavigation />
         </div>
-        <div className="flex-grow-1">
+        <div className="col-md-9">
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />
