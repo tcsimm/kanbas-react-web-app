@@ -4,6 +4,8 @@ import { FaPlus, FaCheckCircle, FaEllipsisV } from 'react-icons/fa';
 import './Assignments.css';
 
 const Assignments = () => {
+  console.log("Assignments component rendered"); // Debugging output
+
   return (
     <div>
       <h2>Assignments</h2>

@@ -11,3 +11,12 @@
     color: gray;
     font-size: 0.9rem;
   }
+
+  .card {
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
