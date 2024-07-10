@@ -33,6 +33,7 @@ body * {
 
 .wd-main-content-offset {
   flex-grow: 1;
+  margin-left: 120px; /* Match the width of the sidebar */
 }
 
 #wd-modules-controls {
@@ -67,7 +68,7 @@ body * {
 
 @media (min-width: 768px) {
   .wd-main-content-offset {
-    padding-left: 120px !important; /* Match the width of the sidebar */
+    padding-left: 0 !important;
   }
 }
 
