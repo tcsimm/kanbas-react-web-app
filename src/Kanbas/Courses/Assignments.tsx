@@ -1,9 +1,9 @@
 // src/Kanbas/Courses/Assignments.tsx
 import React from 'react';
-import { FaPlus, FaSearch, FaCheckCircle, FaEllipsisV } from 'react-icons/fa';
-import './Assignments.css'; // Import the custom CSS file
+import { FaPlus, FaCheckCircle, FaEllipsisV } from 'react-icons/fa';
+import './Assignments.css';
 
-export default function Assignments() {
+const Assignments = () => {
   return (
     <div>
       <h2>Assignments</h2>
@@ -64,4 +64,6 @@ export default function Assignments() {
       </div>
     </div>
   );
-}
+};
+
+export default Assignments;
