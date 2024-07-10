@@ -13,7 +13,7 @@ export default function CoursesNavigation() {
       <a id="wd-course-zoom-link" href="#/Kanbas/Courses/1234/Zoom"
          className="list-group-item text-danger border border-0"> Zoom </a>
       <a id="wd-course-assignments-link" href="#/Kanbas/Courses/1234/Assignments"
-         className="list-group-item text-danger border border-0"> Assignments </a> {/* Correct this link */}
+         className="list-group-item text-danger border border-0"> Assignments </a>
       <a id="wd-course-quizzes-link" href="#/Kanbas/Courses/1234/Quizzes"
          className="list-group-item text-danger border border-0"> Quizzes </a>
       <a id="wd-course-grades-link" href="#/Kanbas/Courses/1234/Grades"
