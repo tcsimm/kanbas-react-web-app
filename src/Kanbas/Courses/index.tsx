@@ -1,3 +1,4 @@
+// src/Kanbas/Courses/index.tsx
 import { Routes, Route, Navigate } from "react-router-dom";
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
@@ -5,7 +6,7 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/editor";
 import { FaAlignJustify } from "react-icons/fa";
-import "../styles.css";
+import "../styles.css"; 
 
 export default function Courses() {
   return (

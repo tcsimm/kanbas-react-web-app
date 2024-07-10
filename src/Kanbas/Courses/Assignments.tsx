@@ -1,3 +1,6 @@
+// src/Kanbas/Courses/Assignments.tsx
+import React from 'react';
+
 export default function Assignments() {
   return (
     <div>

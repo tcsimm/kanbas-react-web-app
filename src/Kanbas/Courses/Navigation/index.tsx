@@ -1,3 +1,4 @@
+// src/Kanbas/Courses/Navigation/index.tsx
 import "./index.css";
 
 export default function CoursesNavigation() {
