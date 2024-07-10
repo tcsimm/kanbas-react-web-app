@@ -33,12 +33,12 @@ body * {
   bottom: 0;
   left: 0;
   background-color: black;
-  z-index: 1000; /* Ensure it stays on top */
+  z-index: 1000; 
 }
 
 .wd-main-content-offset {
   flex-grow: 1;
-  padding-left: 140px; /* Adjust padding to ensure the main content doesn't overlap */
+  padding-left: 140px; 
 }
 
 #wd-modules-controls {
