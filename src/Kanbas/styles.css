@@ -67,7 +67,7 @@ body * {
 
 @media (min-width: 768px) {
   .wd-main-content-offset {
-    padding-left: 140px !important;
+    padding-left: 120px !important; /* Match the width of the sidebar */
   }
 }
 
