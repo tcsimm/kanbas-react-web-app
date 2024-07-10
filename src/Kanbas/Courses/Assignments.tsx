@@ -1,4 +1,3 @@
-// src/Kanbas/Courses/Assignments.tsx
 import React from 'react';
 import { FaPlus, FaCheckCircle, FaEllipsisV } from 'react-icons/fa';
 import './Assignments.css';

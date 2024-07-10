@@ -1,4 +1,3 @@
-// src/Kanbas/Courses/index.tsx
 import { Routes, Route, Navigate } from "react-router-dom";
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
