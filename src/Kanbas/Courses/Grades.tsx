@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaFileImport, FaFileExport, FaCog } from 'react-icons/fa';
-import './Grades.css'; // create this file for custom styles if needed
 
 const Grades = () => {
   return (
