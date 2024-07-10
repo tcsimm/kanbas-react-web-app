@@ -1,7 +1,10 @@
-import { FaSearch, FaPlus, FaCheckCircle } from "react-icons/fa";
-import "./Assignments.css";
+// src/Kanbas/Courses/Assignments/index.tsx
+import React from 'react';
+import { FaSearch, FaPlus, FaCheckCircle } from 'react-icons/fa';
+import './Assignments.css';
 
 export default function Assignments() {
+  console.log("Assignments component is rendering");
   return (
     <div id="wd-assignments" className="container-fluid">
       <h2>Assignments</h2>
