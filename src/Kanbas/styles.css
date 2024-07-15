@@ -77,3 +77,17 @@ body * {
   background-color: white;
   border-left: 3px solid black !important;
 }
+
+.list-group-item {
+  color: red;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.active-link {
+  color: black !important;
+  border-left: 3px solid black;
+  padding-left: 17px;
+  font-weight: bold;
+}
