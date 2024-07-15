@@ -10,6 +10,7 @@ import inorganicChemistryImg from '../../images/inorganic_chemistry.jpg';
 import physicalChemistryImg from '../../images/physical_chemistry.jpg';
 import defaultImg from '../../images/default.jpg';
 import hobbitImg from '../../images/hobbit.jpg';
+import elvesImg from '../../images/elves.jpg';
 
 const imageMap: { [key: string]: string } = {
   "rocket_propulsion.jpg": rocketPropulsionImg,
@@ -19,6 +20,7 @@ const imageMap: { [key: string]: string } = {
   "inorganic_chemistry.jpg": inorganicChemistryImg,
   "physical_chemistry.jpg": physicalChemistryImg,
   "hobbit.jpg": hobbitImg,
+  "elves.jpg": elvesImg,
 };
 
 export default function Dashboard() {
