@@ -2,16 +2,15 @@ import { Link } from "react-router-dom";
 import * as db from "../Database";
 import '../styles.css'; 
 
-// Import the images
 import rocketPropulsionImg from '../../images/rocket_propulsion.jpg';
 import aerodynamicsImg from '../../images/aerodynamics.jpg';
 import spacecraftDesignImg from '../../images/spacecraft_design.jpg';
 import organicChemistryImg from '../../images/organic_chemistry.jpg';
 import inorganicChemistryImg from '../../images/inorganic_chemistry.jpg';
 import physicalChemistryImg from '../../images/physical_chemistry.jpg';
-import defaultImg from '../../images/default.jpg'; // Default image
+import defaultImg from '../../images/default.jpg';
+import hobbitImg from '../../images/hobbit.jpg';
 
-// Map the image filenames to the imported images
 const imageMap: { [key: string]: string } = {
   "rocket_propulsion.jpg": rocketPropulsionImg,
   "aerodynamics.jpg": aerodynamicsImg,
@@ -19,7 +18,7 @@ const imageMap: { [key: string]: string } = {
   "organic_chemistry.jpg": organicChemistryImg,
   "inorganic_chemistry.jpg": inorganicChemistryImg,
   "physical_chemistry.jpg": physicalChemistryImg,
-  // Add other mappings similarly
+  "hobbit.jpg": hobbitImg,
 };
 
 export default function Dashboard() {
