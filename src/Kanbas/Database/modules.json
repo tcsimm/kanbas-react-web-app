@@ -1,0 +1,57 @@
+[
+    {
+      "course": "RS101",
+      "name": "Introduction to Rocket Propulsion",
+      "lessons": [
+        { "name": "Basics of Rocket Propulsion" },
+        { "name": "Fuel Types and Chemistry" },
+        { "name": "Practical Applications" }
+      ]
+    },
+    {
+      "course": "RS101",
+      "name": "Advanced Rocket Propulsion",
+      "lessons": [
+        { "name": "Advanced Fuel Chemistry" },
+        { "name": "Engine Design" },
+        { "name": "Performance Optimization" }
+      ]
+    },
+    {
+      "course": "RS101",
+      "name": "Rocket Propulsion Lab",
+      "lessons": [
+        { "name": "Lab Safety" },
+        { "name": "Hands-On Experiments" },
+        { "name": "Data Analysis" }
+      ]
+    },
+    {
+      "course": "RS102",
+      "name": "Aerodynamics Basics",
+      "lessons": [
+        { "name": "Principles of Aerodynamics" },
+        { "name": "Airflow and Pressure" },
+        { "name": "Lift and Drag" }
+      ]
+    },
+    {
+      "course": "RS102",
+      "name": "Advanced Aerodynamics",
+      "lessons": [
+        { "name": "Advanced Airfoil Design" },
+        { "name": "Aerodynamic Testing" },
+        { "name": "CFD Simulations" }
+      ]
+    },
+    {
+      "course": "RS102",
+      "name": "Aerodynamics Lab",
+      "lessons": [
+        { "name": "Wind Tunnel Testing" },
+        { "name": "Data Collection" },
+        { "name": "Analysis and Reporting" }
+      ]
+    }
+  ]
+  
