@@ -14,6 +14,8 @@ import ArrayIndexAndLength from "./ArrayIndexAndLength";
 import AddingAndRemovingToFromArrays from "./AddingAndRemovingToFromArrays";
 import ForLoops from "./ForLoops";
 import MapFunction from "./MapFunction";
+import FindFunction from "./FindFunction";
+import FindIndex from "./FindIndex";
 
 export default function Lab3() {
   return (
@@ -35,6 +37,8 @@ export default function Lab3() {
       <AddingAndRemovingToFromArrays />
       <ForLoops />
       <MapFunction />
+      <FindFunction />
+      <FindIndex />
     </div>
   );
 }
