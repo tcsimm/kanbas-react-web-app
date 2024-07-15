@@ -6,7 +6,7 @@ import Lab3 from "./Lab3";
 
 export default function Labs() {
   return (
-    <div className="container">
+    <div>
       <h1>Labs</h1>
       <h2>Thomas Simmons</h2>
       <TOC />
