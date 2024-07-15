@@ -98,7 +98,8 @@
       "department": "Mystical Studies",
       "credits": 4,
       "description": "This course delves into the mystical and magical aspects of Middle-earth, examining the sources, practitioners, and manifestations of magic. Covering a range of magical beings, including Wizards, Elves, and Ents, as well as artifacts like the Rings of Power and Palantíri, students will learn about the philosophical and ethical dimensions of magic use. The course combines theoretical study with practical insights, offering a unique perspective on the magical forces that shape the events and destinies in the world of Middle-earth.",
-      "author": "654f9ec2ea7ead465908d1e3"
+      "author": "654f9ec2ea7ead465908d1e3",
+      "image": "ring.jpg"
     },
     {
       "_id": "RS110",
@@ -108,7 +109,8 @@
       "endDate": "2023-05-15",
       "department": "Education",
       "credits": 3,
-      "description": "This course examines the foundations of democratic education, emphasizing the role of education in fostering civic responsibility, critical thinking, and social equality. It explores historical and contemporary models of democratic schooling, the importance of participatory learning, and the development of educational systems that reflect democratic values. Students will engage in discussions on the challenges and opportunities of implementing democratic principles in diverse educational settings."
+      "description": "This course examines the foundations of democratic education, emphasizing the role of education in fostering civic responsibility, critical thinking, and social equality. It explores historical and contemporary models of democratic schooling, the importance of participatory learning, and the development of educational systems that reflect democratic values. Students will engage in discussions on the challenges and opportunities of implementing democratic principles in diverse educational settings.",
+      "image": "demo.jpg"
     },
     {
       "_id": "RS111",

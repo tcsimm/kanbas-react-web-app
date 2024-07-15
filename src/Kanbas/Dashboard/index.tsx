@@ -11,6 +11,8 @@ import physicalChemistryImg from '../../images/physical_chemistry.jpg';
 import defaultImg from '../../images/default.jpg';
 import hobbitImg from '../../images/hobbit.jpg';
 import elvesImg from '../../images/elves.jpg';
+import ringImg from '../../images/ring.jpg';
+import demoImg from '../../images/demo.jpg';
 
 const imageMap: { [key: string]: string } = {
   "rocket_propulsion.jpg": rocketPropulsionImg,
@@ -21,6 +23,8 @@ const imageMap: { [key: string]: string } = {
   "physical_chemistry.jpg": physicalChemistryImg,
   "hobbit.jpg": hobbitImg,
   "elves.jpg": elvesImg,
+  "ring.jpg": ringImg,
+  "demo.jpg": demoImg
 };
 
 export default function Dashboard() {
