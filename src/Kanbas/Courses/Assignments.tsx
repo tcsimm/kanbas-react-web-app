@@ -1,7 +1,3 @@
-import React from 'react';
-import { FaPlus, FaCheck, FaEllipsisV } from 'react-icons/fa';
-import './AssignmentEditor.css';
-
 export default function AssignmentEditor() {
   return (
     <div className="container mt-4">
