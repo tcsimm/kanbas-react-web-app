@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useParams } from "react-router-dom";
+import { Navigate, Route, Routes, useParams, useLocation } from "react-router-dom";
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -12,12 +12,14 @@ import "../styles.css";
 export default function Courses() {
   const { cid } = useParams();
   const course = courses.find((course) => course._id === cid);
+  const { pathname } = useLocation();
+  const sectionName = pathname.split("/")[4];
 
   return (
     <div id="wd-courses" className="container-fluid">
       <h2 className="text-danger">
         <FaAlignJustify className="me-4 fs-4 mb-1" />
-        {course ? course.name : "Course not found"}
+        {course ? `${course.name} > ${sectionName.charAt(0).toUpperCase() + sectionName.slice(1)}` : "Course not found"}
       </h2>
       <hr />
       <div className="d-flex">
