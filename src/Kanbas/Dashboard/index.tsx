@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import * as db from "../Database";
 import '../styles.css'; 
+import rocketPropulsionImg from '../../images/rocket_propulsion.jpg';
 
 export default function Dashboard() {
   const courses = db.courses;
+
+  const imageMap: { [key: string]: string } = {
+    "rocket_propulsion.jpg": rocketPropulsionImg,
+  };
 
   return (
     <div id="wd-dashboard" className="container-fluid">
