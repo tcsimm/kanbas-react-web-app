@@ -5,7 +5,7 @@ import './Assignments.css';
 
 export default function Assignments() {
   const { cid } = useParams();
-  const assignments = db.assignments.filter((assignment: { course: string }) => assignment.course === cid);
+  const assignments = db.assignments.filter(assignment => assignment.course === cid);
 
   console.log("Assignments component is rendering"); // Ensure this logs in the console
 
@@ -35,7 +35,7 @@ export default function Assignments() {
         </div>
       </div>
       <ul id="wd-assignments-list" className="list-group">
-        {assignments.map((assignment: { _id: string, title: string }) => (
+        {assignments.map(assignment => (
           <li className="wd-assignment-item list-group-item" key={assignment._id}>
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center">
