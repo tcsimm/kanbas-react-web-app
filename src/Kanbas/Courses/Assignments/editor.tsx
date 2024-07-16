@@ -1,10 +1,14 @@
+// src/Kanbas/Courses/Assignments/Editor.tsx
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 export default function AssignmentEditor() {
+  const { id } = useParams();
+
   return (
     <div id="wd-assignments-editor">
       <label htmlFor="wd-name">Assignment Name</label>
-      <input id="wd-name" value="A1 - ENV + HTML" /><br /><br />
+      <input id="wd-name" value={id === "A1" ? "ENV + HTML" : id === "A2" ? "CSS" : "JavaScript"} readOnly /><br /><br />
       <textarea id="wd-description">
         The assignment is available online. Submit a link to the landing page of your application.
       </textarea>
@@ -16,7 +20,7 @@ export default function AssignmentEditor() {
               <label htmlFor="wd-points">Points</label>
             </td>
             <td>
-              <input id="wd-points" value={100} />
+              <input id="wd-points" value={100} readOnly />
             </td>
           </tr>
           <tr>
