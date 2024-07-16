@@ -1,6 +1,8 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 export default function AssignmentEditor() {
+  const { id } = useParams();
   return (
     <div id="wd-assignments-editor">
       <h2>Assignment Editor</h2>
@@ -33,7 +35,6 @@ export default function AssignmentEditor() {
               <td>
                 <select id="wd-group">
                   <option value="Assignments">Assignments</option>
-                  {/* Add other groups as needed */}
                 </select>
               </td>
             </tr>
@@ -45,7 +46,6 @@ export default function AssignmentEditor() {
                 <select id="wd-display-grade-as">
                   <option value="Percentage">Percentage</option>
                   <option value="Points">Points</option>
-                  {/* Add other grading methods as needed */}
                 </select>
               </td>
             </tr>
@@ -56,7 +56,6 @@ export default function AssignmentEditor() {
               <td>
                 <select id="wd-submission-type">
                   <option value="Online">Online</option>
-                  {/* Add other submission types as needed */}
                 </select>
               </td>
             </tr>
