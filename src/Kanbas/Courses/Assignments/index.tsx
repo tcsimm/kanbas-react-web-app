@@ -12,7 +12,7 @@ export default function Assignments() {
   const { cid } = useParams();
 
   return (
-    <div id="wd-assignments" className="container-fluid">
+    <div id="wd-assignments">
       <input id="wd-search-assignment" placeholder="Search for Assignments" />
       <button id="wd-add-assignment-group">+ Group</button>
       <button id="wd-add-assignment">+ Assignment</button>

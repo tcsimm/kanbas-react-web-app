@@ -12,10 +12,8 @@ export default function Courses() {
   const section = useLocation().pathname.split("/")[4];
 
   return (
-    <div id="wd-courses" className="container-fluid">
-      <h2 className="text-danger">
-        Course 1234 &gt; {section}
-      </h2>
+    <div id="wd-courses">
+      <h2>Course 1234 &gt; {section}</h2>
       <hr />
       <div className="d-flex">
         <div className="me-3">

@@ -8,7 +8,7 @@ export default function AssignmentEditor() {
   return (
     <div id="wd-assignments-editor">
       <label htmlFor="wd-name">Assignment Name</label>
-      <input id="wd-name" value={`Assignment ${id}`} /><br /><br />
+      <input id="wd-name" value={`Assignment ${id}`} readOnly /><br /><br />
       <textarea id="wd-description">
         The assignment is available online. Submit a link to the landing page of your application.
       </textarea>
