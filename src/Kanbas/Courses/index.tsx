@@ -12,7 +12,7 @@ export default function Courses() {
 
   return (
     <div id="wd-courses">
-      <h2>Course 1234 &gt; {section}</h2>
+      <h2>Course {cid} &gt; {section}</h2>
       <hr />
       <div className="d-flex">
         <div className="me-3">
