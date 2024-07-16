@@ -1,7 +1,8 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 export default function AssignmentEditor() {
-  const id = window.location.pathname.split("/").pop();
+  const { id } = useParams();
 
   return (
     <div id="wd-assignments-editor">
