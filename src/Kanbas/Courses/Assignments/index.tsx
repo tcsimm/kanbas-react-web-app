@@ -1,3 +1,4 @@
+// src/Kanbas/Courses/Assignments/index.tsx
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
