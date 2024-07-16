@@ -17,8 +17,8 @@ export default function Assignments() {
       <ul id="wd-assignment-list">
         {assignments.map(assignment => (
           <li className="wd-assignment-list-item" key={assignment._id}>
-            <Link className="wd-assignment-link" to={`/Kanbas/Courses/1234/Assignments/${assignment._id}`}>
-              {assignment.title}
+<Link className="wd-assignment-link" to={`/Kanbas/Courses/Assignments/${assignment._id}`}>
+{assignment.title}
             </Link>
           </li>
         ))}
