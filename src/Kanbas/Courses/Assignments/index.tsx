@@ -4,11 +4,11 @@ import * as db from "../../Database";
 import './Assignments.css';
 
 export default function Assignments() {
-  console.log("Assignments component is rendering"); 
-  
-  const { cid } = useParams<{ cid: string }>();
+  const { cid } = useParams();
   const assignments = db.assignments.filter((assignment: { course: string }) => assignment.course === cid);
-  
+
+  console.log("Assignments component is rendering"); // Ensure this logs in the console
+
   return (
     <div id="wd-assignments" className="container-fluid">
       <h2>Assignments</h2>
