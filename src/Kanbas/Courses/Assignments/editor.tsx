@@ -17,10 +17,10 @@ export default function AssignmentEditor() {
         <tbody>
           <tr>
             <td align="right" valign="top">
-              <label htmlFor="wd-points">Points</label>
+            <label htmlFor="wd-points">Points</label>
             </td>
             <td>
-              <input id="wd-points" value={100} />
+            <input id="wd-points" value={100} />
             </td>
           </tr>
           <tr>
