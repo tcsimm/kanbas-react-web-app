@@ -1,19 +1,22 @@
 import React from 'react';
+import { Navigate, Route, Routes, useParams, useLocation } from 'react-router-dom';
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/editor";
-import { Navigate, Route, Routes, useParams, useLocation } from "react-router";
+import { FaAlignJustify } from "react-icons/fa";
+import "../styles.css";
 
 export default function Courses() {
   const { cid } = useParams();
-  const { pathname } = useLocation();
-  const section = pathname.split("/")[4];
+  const section = useLocation().pathname.split("/")[4];
 
   return (
     <div id="wd-courses" className="container-fluid">
       <h2 className="text-danger">
+        <FaAlignJustify className="me-3 fs-4 mb-1" />
+        Course 1234 &gt; {section}
       </h2>
       <hr />
       <div className="d-flex">
