@@ -5,7 +5,6 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/editor";
-import { FaAlignJustify } from "react-icons/fa";
 
 export default function Courses() {
   const { cid } = useParams();
@@ -14,7 +13,6 @@ export default function Courses() {
   return (
     <div id="wd-courses" className="container-fluid">
       <h2 className="text-danger">
-        <FaAlignJustify className="me-3 fs-4 mb-1" />
         Course 1234 &gt; {section}
       </h2>
       <hr />
