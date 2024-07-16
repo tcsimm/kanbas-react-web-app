@@ -6,7 +6,6 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/editor";
 import { FaAlignJustify } from "react-icons/fa";
-import "../styles.css";
 
 export default function Courses() {
   const { cid } = useParams();
