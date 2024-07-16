@@ -1,8 +1,14 @@
+import { useParams } from "react-router-dom";
 import { FaSearch, FaPlus, FaCheckCircle } from 'react-icons/fa';
+import * as db from "../../Database";
 import './Assignments.css';
 
 export default function Assignments() {
-  console.log("Assignments component is rendering"); // Ensure this logs in the console
+  console.log("Assignments component is rendering"); 
+  
+  const { cid } = useParams<{ cid: string }>();
+  const assignments = db.assignments.filter((assignment: { course: string }) => assignment.course === cid);
+  
   return (
     <div id="wd-assignments" className="container-fluid">
       <h2>Assignments</h2>
@@ -29,57 +35,25 @@ export default function Assignments() {
         </div>
       </div>
       <ul id="wd-assignments-list" className="list-group">
-        <li className="wd-assignment-item list-group-item">
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex align-items-center">
-              <div className="wd-assignment-indicator bg-success"></div>
-              <div>
-                <h5 className="mb-0">A1</h5>
-                <small className="text-muted">
-                  Multiple Modules | Not available until May 6 at 12:00am |
-                  Due May 13 at 11:59pm | 100 pts
-                </small>
+        {assignments.map((assignment: { _id: string, title: string }) => (
+          <li className="wd-assignment-item list-group-item" key={assignment._id}>
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex align-items-center">
+                <div className="wd-assignment-indicator bg-success"></div>
+                <div>
+                  <h5 className="mb-0">{assignment.title}</h5>
+                  <small className="text-muted">
+                    Multiple Modules | Not available until May 6 at 12:00am |
+                    Due May 13 at 11:59pm | 100 pts
+                  </small>
+                </div>
+              </div>
+              <div className="text-success fs-5">
+                <FaCheckCircle />
               </div>
             </div>
-            <div className="text-success fs-5">
-              <FaCheckCircle />
-            </div>
-          </div>
-        </li>
-        <li className="wd-assignment-item list-group-item">
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex align-items-center">
-              <div className="wd-assignment-indicator bg-success"></div>
-              <div>
-                <h5 className="mb-0">A2</h5>
-                <small className="text-muted">
-                  Multiple Modules | Not available until May 13 at 12:00am |
-                  Due May 20 at 11:59pm | 100 pts
-                </small>
-              </div>
-            </div>
-            <div className="text-success fs-5">
-              <FaCheckCircle />
-            </div>
-          </div>
-        </li>
-        <li className="wd-assignment-item list-group-item">
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex align-items-center">
-              <div className="wd-assignment-indicator bg-success"></div>
-              <div>
-                <h5 className="mb-0">A3</h5>
-                <small className="text-muted">
-                  Multiple Modules | Not available until May 20 at 12:00am |
-                  Due May 27 at 11:59pm | 100 pts
-                </small>
-              </div>
-            </div>
-            <div className="text-success fs-5">
-              <FaCheckCircle />
-            </div>
-          </div>
-        </li>
+          </li>
+        ))}
       </ul>
     </div>
   );
