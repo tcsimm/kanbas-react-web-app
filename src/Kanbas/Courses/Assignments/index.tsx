@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import './Assignments.css';
 
 const assignments = [
   { _id: "A1", title: "ENV + HTML" },
