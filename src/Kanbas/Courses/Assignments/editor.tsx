@@ -1,13 +1,11 @@
-// src/Kanbas/Courses/Assignments/Editor.tsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
 export default function AssignmentEditor() {
-  const { cid, id } = useParams();
+  const { id } = useParams();
 
   return (
     <div id="wd-assignments-editor">
-      <h2>Course {cid} - Assignment {id}</h2>
       <label htmlFor="wd-name">Assignment Name</label>
       <input id="wd-name" value={`Assignment ${id}`} readOnly /><br /><br />
       <textarea id="wd-description">

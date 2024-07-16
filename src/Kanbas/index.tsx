@@ -1,4 +1,3 @@
-// src/Kanbas/index.tsx
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
@@ -18,7 +17,7 @@ export default function Kanbas() {
               <Routes>
                 <Route path="/" element={<Navigate to="Dashboard" />} />
                 <Route path="Dashboard" element={<Dashboard />} />
-                <Route path="Courses/:cid/*" element={<Courses />} />
+                <Route path="Courses/*" element={<Courses />} />
                 <Route path="LandingPage" element={<LandingPage />} />
               </Routes>
             </td>

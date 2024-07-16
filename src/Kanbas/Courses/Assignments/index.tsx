@@ -1,6 +1,5 @@
-// src/Kanbas/Courses/Assignments/index.tsx
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const assignments = [
   { _id: "A1", title: "ENV + HTML" },
@@ -9,8 +8,6 @@ const assignments = [
 ];
 
 export default function Assignments() {
-  const { cid } = useParams();
-
   return (
     <div id="wd-assignments">
       <input id="wd-search-assignment" placeholder="Search for Assignments" />
@@ -20,7 +17,7 @@ export default function Assignments() {
       <ul id="wd-assignment-list">
         {assignments.map(assignment => (
           <li className="wd-assignment-list-item" key={assignment._id}>
-            <Link className="wd-assignment-link" to={`/Kanbas/Courses/${cid}/Assignments/${assignment._id}`}>
+            <Link className="wd-assignment-link" to={`/Kanbas/Courses/1234/Assignments/${assignment._id}`}>
               {assignment.title}
             </Link>
           </li>

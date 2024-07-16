@@ -1,19 +1,15 @@
-// src/Kanbas/Courses/index.tsx
 import React from 'react';
-import { Navigate, Route, Routes, useParams, useLocation } from 'react-router-dom';
-import CoursesNavigation from "./Navigation";
-import Modules from "./Modules";
-import Home from "./Home";
-import Assignments from "./Assignments";
-import AssignmentEditor from "./Assignments/editor";
+import { Routes, Route, Navigate } from 'react-router-dom';
+import CoursesNavigation from './Navigation';
+import Modules from './Modules';
+import Home from './Home';
+import Assignments from './Assignments';
+import AssignmentEditor from './Assignments/editor';
 
 export default function Courses() {
-  const { cid } = useParams();
-  const section = useLocation().pathname.split("/")[4];
-
   return (
     <div id="wd-courses">
-      <h2>Course {cid} &gt; {section}</h2>
+      <h2>Course 1234</h2>
       <hr />
       <div className="d-flex">
         <div className="me-3">
