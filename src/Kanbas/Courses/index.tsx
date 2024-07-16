@@ -6,7 +6,6 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/editor";
 import { Navigate, Route, Routes, useParams, useLocation } from "react-router";
 import { FaAlignJustify } from "react-icons/fa";
-import "../styles.css";
 
 export default function Courses() {
   const { cid } = useParams();
