@@ -18,6 +18,7 @@ import centuryImg from '../../images/century.jpg';
 import ethicsImg from '../../images/ethics.jpg';
 import ageImg from '../../images/age.jpg';
 import commImg from '../../images/comm.jpg';
+import sufiImg from '../../images/sufi.jpg';
 
 const imageMap: { [key: string]: string } = {
   "rocket_propulsion.jpg": rocketPropulsionImg,
@@ -34,7 +35,8 @@ const imageMap: { [key: string]: string } = {
   "century.jpg": centuryImg,
   "ethics.jpg": ethicsImg,
   "age.jpg": ageImg,
-  "comm.jpg": commImg
+  "comm.jpg": commImg,
+  "sufi.jpg": sufiImg
 };
 
 export default function Dashboard() {
