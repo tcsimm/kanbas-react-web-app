@@ -167,7 +167,8 @@
       "department": "Ministry",
       "credits": 3,
       "description": "This course offers insights into effective leadership and service within Christian communities. Drawing on biblical teachings and the example of Saint Peter, it addresses the spiritual, ethical, and practical aspects of Christian leadership. Topics include pastoral care, community building, servant leadership, and the stewardship of church resources. Students will engage in practical exercises and discussions, preparing them for various roles in ministry and community service.",
-      "author": "65500111ea7ead465908d1fa"
+      "author": "65500111ea7ead465908d1fa",
+      "image": "comm.jpg"
     },
     {
       "_id": "RS116",

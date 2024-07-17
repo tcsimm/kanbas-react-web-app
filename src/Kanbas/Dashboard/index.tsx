@@ -16,7 +16,8 @@ import demoImg from '../../images/demo.jpg';
 import declarationImg from '../../images/declaration.jpg';
 import centuryImg from '../../images/century.jpg';
 import ethicsImg from '../../images/ethics.jpg';
-import ageImg from '../..images/age.jpg';
+import ageImg from '../../images/age.jpg';
+import commImg from '../../images/comm.jpg';
 
 const imageMap: { [key: string]: string } = {
   "rocket_propulsion.jpg": rocketPropulsionImg,
@@ -32,7 +33,8 @@ const imageMap: { [key: string]: string } = {
   "declaration.jpg": declarationImg,
   "century.jpg": centuryImg,
   "ethics.jpg": ethicsImg,
-  "age.jpg": ageImg
+  "age.jpg": ageImg,
+  "comm.jpg": commImg
 };
 
 export default function Dashboard() {
