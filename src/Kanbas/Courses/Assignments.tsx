@@ -15,7 +15,7 @@ export default function AssignmentEditor() {
             <div className="mb-3">
               <label className="form-label">Details</label>
               <div className="form-control">
-                The assignment is <a href="#" className="text-danger">available online</a><br />
+                blah blah blahThe assignment is <a href="#" className="text-danger">available online</a><br />
                 Submit a link to the landing page of your Web application running on <a href="https://www.netlify.com/" className="text-danger">Netlify</a>.<br />
                 The landing page should include the following:
                 <ul>
