@@ -1,10 +1,10 @@
-import { FaInbox, FaRegCircle } from "react-icons/fa";
+import { FaInbox, FaUserCircle } from "react-icons/fa"; // Use FaUserCircle instead
 import { AiOutlineDashboard } from "react-icons/ai";
 import { LiaBookSolid, LiaCogSolid } from "react-icons/lia";
 import { IoCalendarOutline } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
-import neuLogo from '../../images/NEU.png'; 
-import links from './links.json';  // Import the JSON data
+import neuLogo from '../../images/NEU.png';
+import links from './links.json';
 
 // Define the icon components type
 const iconComponents = {
@@ -31,7 +31,7 @@ export default function KanbasNavigation() {
       <Link key="/Kanbas/Account" to="/Kanbas/Account" 
             className={`list-group-item text-center border-0 bg-black 
                        ${pathname.includes("Account") ? "bg-white text-danger" : "bg-black text-white"}`}>
-        <FaRegCircle className={`fs-1 ${pathname.includes("Account") ? "text-danger" : "text-white"}`} />
+        <FaUserCircle className={`fs-1 ${pathname.includes("Account") ? "text-danger" : "text-white"}`} />
         <br />
         Account
       </Link>
