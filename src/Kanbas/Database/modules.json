@@ -1,314 +1,974 @@
 [
   {
-    "_id": "M101",
+    "course": "RS101",
     "name": "Introduction to Rocket Propulsion",
-    "description": "Basic principles of rocket propulsion and rocket engines.",
-    "course": "RS101",
     "lessons": [
-      {
-        "_id": "L101",
-        "name": "History of Rocketry",
-        "description": "A brief history of rocketry and space exploration.",
-        "module": "M101"
-      },
-      {
-        "_id": "L102",
-        "name": "Rocket Propulsion Fundamentals",
-        "description": "Basic principles of rocket propulsion.",
-        "module": "M101"
-      },
-      {
-        "_id": "L103",
-        "name": "Rocket Engine Types",
-        "description": "Overview of different types of rocket engines.",
-        "module": "M101"
-      }
+      { "name": "Basics of Rocket Propulsion" },
+      { "name": "Fuel Types and Chemistry" },
+      { "name": "Practical Applications" }
     ]
   },
   {
-    "_id": "M102",
-    "name": "Fuel and Combustion",
-    "description": "Understanding rocket fuel, combustion processes, and efficiency.",
     "course": "RS101",
+    "name": "Advanced Rocket Propulsion",
     "lessons": [
-      {
-        "_id": "L201",
-        "name": "Rocket Fuel",
-        "description": "Overview of different types of rocket fuels.",
-        "module": "M102"
-      },
-      {
-        "_id": "L202",
-        "name": "Combustion Processes",
-        "description": "Understanding combustion processes and efficiency.",
-        "module": "M102"
-      },
-      {
-        "_id": "L203",
-        "name": "Combustion Instability",
-        "description": "Understanding combustion instability and mitigation.",
-        "module": "M102"
-      }
+      { "name": "Advanced Fuel Chemistry" },
+      { "name": "Engine Design" },
+      { "name": "Performance Optimization" }
     ]
   },
   {
-    "_id": "M103",
-    "name": "Nozzle Design",
-    "description": "Principles of rocket nozzle design and performance optimization.",
     "course": "RS101",
+    "name": "Rocket Propulsion Lab",
     "lessons": [
-      {
-        "_id": "L301",
-        "name": "Nozzle Design",
-        "description": "Overview of different types of rocket nozzles.",
-        "module": "M103"
-      },
-      {
-        "_id": "L302",
-        "name": "Nozzle Performance",
-        "description": "Understanding nozzle performance and efficiency.",
-        "module": "M103"
-      },
-      {
-        "_id": "L303",
-        "name": "Nozzle Optimization",
-        "description": "Optimizing nozzle design for specific applications.",
-        "module": "M103"
-      }
+      { "name": "Lab Safety" },
+      { "name": "Hands-On Experiments" },
+      { "name": "Data Analysis" }
     ]
   },
   {
-    "_id": "M201",
+    "course": "RS102",
     "name": "Fundamentals of Aerodynamics",
-    "description": "Basic aerodynamic concepts and fluid dynamics principles.",
+    "lessons": [
+      { "name": "Aerodynamic Forces" },
+      { "name": "Airfoil Design" },
+      { "name": "Flow Visualization" }
+    ]
+  },
+  {
     "course": "RS102",
+    "name": "Advanced Aerodynamics",
     "lessons": [
-      {
-        "_id": "L401",
-        "name": "Introduction to Aerodynamics",
-        "description": "Overview of aerodynamic principles.",
-        "module": "M201"
-      },
-      {
-        "_id": "L402",
-        "name": "Aerodynamic Forces",
-        "description": "Understanding lift, drag, and other aerodynamic forces.",
-        "module": "M201"
-      },
-      {
-        "_id": "L403",
-        "name": "Wind Tunnel Testing",
-        "description": "Techniques and methods of wind tunnel testing.",
-        "module": "M201"
-      }
+      { "name": "Transonic Flow" },
+      { "name": "Supersonic Flow" },
+      { "name": "Hypersonic Flow" }
     ]
   },
   {
-    "_id": "M202",
-    "name": "Subsonic and Supersonic Flow",
-    "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
     "course": "RS102",
+    "name": "Aerodynamics Lab",
     "lessons": [
-      {
-        "_id": "L501",
-        "name": "Subsonic Flow",
-        "description": "Characteristics of subsonic aerodynamic flow.",
-        "module": "M202"
-      },
-      {
-        "_id": "L502",
-        "name": "Supersonic Flow",
-        "description": "Characteristics of supersonic aerodynamic flow.",
-        "module": "M202"
-      },
-      {
-        "_id": "L503",
-        "name": "Shock Waves",
-        "description": "Understanding shock waves in supersonic flow.",
-        "module": "M202"
-      }
+      { "name": "Wind Tunnel Testing" },
+      { "name": "Data Acquisition" },
+      { "name": "Flow Measurement Techniques" }
     ]
   },
   {
-    "_id": "M203",
-    "name": "Aerodynamic Heating",
-    "description": "Study of aerodynamic heating and thermal protection systems.",
-    "course": "RS102",
-    "lessons": [
-      {
-        "_id": "L601",
-        "name": "Heat Transfer",
-        "description": "Principles of heat transfer in aerodynamics.",
-        "module": "M203"
-      },
-      {
-        "_id": "L602",
-        "name": "Thermal Protection Systems",
-        "description": "Design and materials for thermal protection systems.",
-        "module": "M203"
-      },
-      {
-        "_id": "L603",
-        "name": "Heat Flux",
-        "description": "Understanding heat flux and its impact.",
-        "module": "M203"
-      }
-    ]
-  },
-  {
-    "_id": "M301",
-    "name": "Spacecraft Structural Design",
-    "description": "Fundamentals of designing spacecraft structures and materials selection.",
     "course": "RS103",
+    "name": "Introduction to Spacecraft Design",
     "lessons": [
-      {
-        "_id": "L701",
-        "name": "Material Selection",
-        "description": "Choosing the right materials for spacecraft design.",
-        "module": "M301"
-      },
-      {
-        "_id": "L702",
-        "name": "Structural Analysis",
-        "description": "Methods of structural analysis for spacecraft.",
-        "module": "M301"
-      },
-      {
-        "_id": "L703",
-        "name": "Load Testing",
-        "description": "Techniques for load testing spacecraft structures.",
-        "module": "M301"
-      }
+      { "name": "Spacecraft Structures" },
+      { "name": "Thermal Control" },
+      { "name": "Power Systems" }
     ]
   },
   {
-    "_id": "M302",
-    "name": "Orbital Mechanics",
-    "description": "Understanding orbital dynamics and mission planning.",
     "course": "RS103",
+    "name": "Advanced Spacecraft Design",
     "lessons": [
-      {
-        "_id": "L801",
-        "name": "Orbital Elements",
-        "description": "Basics of orbital elements and their significance.",
-        "module": "M302"
-      },
-      {
-        "_id": "L802",
-        "name": "Orbit Determination",
-        "description": "Techniques for determining spacecraft orbits.",
-        "module": "M302"
-      },
-      {
-        "_id": "L803",
-        "name": "Mission Planning",
-        "description": "Planning space missions using orbital mechanics.",
-        "module": "M302"
-      }
+      { "name": "Propulsion Systems" },
+      { "name": "Payload Integration" },
+      { "name": "Systems Engineering" }
     ]
   },
   {
-    "_id": "M303",
-    "name": "Spacecraft Systems Engineering",
-    "description": "Overview of spacecraft systems and subsystems engineering.",
     "course": "RS103",
+    "name": "Spacecraft Design Lab",
     "lessons": [
-      {
-        "_id": "L901",
-        "name": "Systems Engineering",
-        "description": "Introduction to systems engineering principles.",
-        "module": "M303"
-      },
-      {
-        "_id": "L902",
-        "name": "Subsystems Integration",
-        "description": "Integrating various subsystems in spacecraft.",
-        "module": "M303"
-      },
-      {
-        "_id": "L903",
-        "name": "Testing and Validation",
-        "description": "Testing and validating spacecraft systems.",
-        "module": "M303"
-      }
+      { "name": "CAD Modeling" },
+      { "name": "Simulation and Testing" },
+      { "name": "Design Reviews" }
     ]
   },
   {
-    "_id": "M401",
-    "name": "Chemical Structures",
-    "description": "Basic principles of chemical structures and bonding.",
     "course": "RS104",
+    "name": "Fundamentals of Organic Chemistry",
     "lessons": [
-      {
-        "_id": "L1001",
-        "name": "Atomic Structure",
-        "description": "Basics of atomic structure and elements.",
-        "module": "M401"
-      },
-      {
-        "_id": "L1002",
-        "name": "Chemical Bonds",
-        "description": "Understanding chemical bonds and reactions.",
-        "module": "M401"
-      },
-      {
-        "_id": "L1003",
-        "name": "Molecular Geometry",
-        "description": "Overview of molecular geometry and shapes.",
-        "module": "M401"
-      }
+      { "name": "Hydrocarbons" },
+      { "name": "Functional Groups" },
+      { "name": "Stereochemistry" }
     ]
   },
   {
-    "_id": "M402",
-    "name": "Organic Reactions",
-    "description": "Understanding various organic chemical reactions.",
     "course": "RS104",
+    "name": "Advanced Organic Chemistry",
     "lessons": [
-      {
-        "_id": "L1101",
-        "name": "Alkanes and Alkenes",
-        "description": "Reactions involving alkanes and alkenes.",
-        "module": "M402"
-      },
-      {
-        "_id": "L1102",
-        "name": "Aromatic Compounds",
-        "description": "Understanding reactions of aromatic compounds.",
-        "module": "M402"
-      },
-      {
-        "_id": "L1103",
-        "name": "Functional Groups",
-        "description": "Reactions of various functional groups in organic chemistry.",
-        "module": "M402"
-      }
+      { "name": "Reaction Mechanisms" },
+      { "name": "Organic Synthesis" },
+      { "name": "Spectroscopy" }
     ]
   },
   {
-    "_id": "M403",
-    "name": "Biochemistry",
-    "description": "Study of chemical processes within and relating to living organisms.",
     "course": "RS104",
+    "name": "Organic Chemistry Lab",
     "lessons": [
-      {
-        "_id": "L1201",
-        "name": "Proteins and Enzymes",
-        "description": "Structure and function of proteins and enzymes.",
-        "module": "M403"
-      },
-      {
-        "_id": "L1202",
-        "name": "Metabolic Pathways",
-        "description": "Overview of metabolic pathways in cells.",
-        "module": "M403"
-      },
-      {
-        "_id": "L1203",
-        "name": "Genetic Code",
-        "description": "Understanding the genetic code and its implications.",
-        "module": "M403"
-      }
+      { "name": "Lab Techniques" },
+      { "name": "Synthesis Experiments" },
+      { "name": "Spectroscopic Analysis" }
+    ]
+  },
+  {
+    "course": "RS105",
+    "name": "Fundamentals of Inorganic Chemistry",
+    "lessons": [
+      { "name": "Coordination Chemistry" },
+      { "name": "Bonding Theories" },
+      { "name": "Crystal Field Theory" }
+    ]
+  },
+  {
+    "course": "RS105",
+    "name": "Advanced Inorganic Chemistry",
+    "lessons": [
+      { "name": "Organometallic Chemistry" },
+      { "name": "Bioinorganic Chemistry" },
+      { "name": "Inorganic Materials" }
+    ]
+  },
+  {
+    "course": "RS105",
+    "name": "Inorganic Chemistry Lab",
+    "lessons": [
+      { "name": "Synthesis Techniques" },
+      { "name": "Analytical Methods" },
+      { "name": "Characterization of Compounds" }
+    ]
+  },
+  {
+    "course": "RS106",
+    "name": "Fundamentals of Physical Chemistry",
+    "lessons": [
+      { "name": "Thermodynamics" },
+      { "name": "Kinetics" },
+      { "name": "Quantum Mechanics" }
+    ]
+  },
+  {
+    "course": "RS106",
+    "name": "Advanced Physical Chemistry",
+    "lessons": [
+      { "name": "Spectroscopy" },
+      { "name": "Statistical Mechanics" },
+      { "name": "Surface Chemistry" }
+    ]
+  },
+  {
+    "course": "RS106",
+    "name": "Physical Chemistry Lab",
+    "lessons": [
+      { "name": "Experimental Techniques" },
+      { "name": "Data Analysis" },
+      { "name": "Molecular Simulations" }
+    ]
+  },
+  {
+    "course": "RS107",
+    "name": "Ancient Languages of Middle-earth",
+    "lessons": [
+      { "name": "Introduction to Sindarin" },
+      { "name": "Introduction to Quenya" },
+      { "name": "Introduction to Khuzdul" }
+    ]
+  },
+  {
+    "course": "RS107",
+    "name": "Scripts of Middle-earth",
+    "lessons": [
+      { "name": "Tengwar" },
+      { "name": "Cirth" },
+      { "name": "Black Speech" }
+    ]
+  },
+  {
+    "course": "RS107",
+    "name": "Philology in Middle-earth",
+    "lessons": [
+      { "name": "Historical Context" },
+      { "name": "Linguistic Structures" },
+      { "name": "Cultural Significance" }
+    ]
+  },
+  {
+    "course": "RS108",
+    "name": "Inter-species Diplomacy: History",
+    "lessons": [
+      { "name": "Historical Alliances" },
+      { "name": "Conflicts and Resolutions" },
+      { "name": "Leadership in Diplomacy" }
+    ]
+  },
+  {
+    "course": "RS108",
+    "name": "Inter-species Diplomacy: Theory",
+    "lessons": [
+      { "name": "Principles of Diplomacy" },
+      { "name": "Conflict Resolution" },
+      { "name": "Diplomatic Strategies" }
+    ]
+  },
+  {
+    "course": "RS108",
+    "name": "Inter-species Diplomacy: Case Studies",
+    "lessons": [
+      { "name": "Council of Elrond" },
+      { "name": "War of the Ring" },
+      { "name": "Modern Applications" }
+    ]
+  },
+  {
+    "course": "RS109",
+    "name": "History of Middle-earth Magic",
+    "lessons": [
+      { "name": "Origins of Magic" },
+      { "name": "Magical Beings" },
+      { "name": "Magical Artifacts" }
+    ]
+  },
+  {
+    "course": "RS109",
+    "name": "Theory of Middle-earth Magic",
+    "lessons": [
+      { "name": "Sources of Magic" },
+      { "name": "Ethics of Magic Use" },
+      { "name": "Philosophical Dimensions" }
+    ]
+  },
+  {
+    "course": "RS109",
+    "name": "Practical Magic in Middle-earth",
+    "lessons": [
+      { "name": "Wizards and Spells" },
+      { "name": "Elven Magic" },
+      { "name": "Enchanted Objects" }
+    ]
+  },
+  {
+    "course": "RS110",
+    "name": "Introduction to Democratic Education",
+    "lessons": [
+      { "name": "Foundations of Democracy" },
+      { "name": "Role of Education" },
+      { "name": "Civic Responsibility" }
+    ]
+  },
+  {
+    "course": "RS110",
+    "name": "Models of Democratic Education",
+    "lessons": [
+      { "name": "Historical Models" },
+      { "name": "Contemporary Models" },
+      { "name": "Participatory Learning" }
+    ]
+  },
+  {
+    "course": "RS110",
+    "name": "Challenges in Democratic Education",
+    "lessons": [
+      { "name": "Social Inequality" },
+      { "name": "Educational Policy" },
+      { "name": "Implementing Change" }
+    ]
+  },
+  {
+    "course": "RS111",
+    "name": "Philosophy of Independence",
+    "lessons": [
+      { "name": "Enlightenment Thought" },
+      { "name": "Key Figures" },
+      { "name": "Historical Contexts" }
+    ]
+  },
+  {
+    "course": "RS111",
+    "name": "Philosophy of Liberation",
+    "lessons": [
+      { "name": "Concepts of Freedom" },
+      { "name": "Nation-Building" },
+      { "name": "Contemporary Struggles" }
+    ]
+  },
+  {
+    "course": "RS111",
+    "name": "Case Studies in Independence",
+    "lessons": [
+      { "name": "Simón Bolívar" },
+      { "name": "Latin American Independence" },
+      { "name": "Modern Movements" }
+    ]
+  },
+  {
+    "course": "RS112",
+    "name": "Innovations in 19th Century Education",
+    "lessons": [
+      { "name": "Educational Reformers" },
+      { "name": "Practical and Theoretical Knowledge" },
+      { "name": "Impact on Modern Pedagogy" }
+    ]
+  },
+  {
+    "course": "RS112",
+    "name": "19th Century Educational Theories",
+    "lessons": [
+      { "name": "Simon Rodríguez" },
+      { "name": "Integration of Knowledge" },
+      { "name": "Social Change through Education" }
+    ]
+  },
+  {
+    "course": "RS112",
+    "name": "Critical Assessment of Early Innovations",
+    "lessons": [
+      { "name": "Lasting Impacts" },
+      { "name": "Contemporary Education Systems" },
+      { "name": "Future Directions" }
+    ]
+  },
+  {
+    "course": "RS113",
+    "name": "Foundations of Christian Ethics",
+    "lessons": [
+      { "name": "Biblical Texts" },
+      { "name": "Moral Decision-Making" },
+      { "name": "Virtues and Vices" }
+    ]
+  },
+  {
+    "course": "RS113",
+    "name": "Christian Ethics in Practice",
+    "lessons": [
+      { "name": "Ethical Living" },
+      { "name": "Contemporary Moral Issues" },
+      { "name": "Applying Christian Principles" }
+    ]
+  },
+  {
+    "course": "RS113",
+    "name": "Theological Traditions in Ethics",
+    "lessons": [
+      { "name": "Historical Perspectives" },
+      { "name": "Modern Applications" },
+      { "name": "Future Challenges" }
+    ]
+  },
+  {
+    "course": "RS114",
+    "name": "Early Christianity",
+    "lessons": [
+      { "name": "Life and Teachings of Jesus" },
+      { "name": "Role of the Apostles" },
+      { "name": "Spread of Christianity" }
+    ]
+  },
+  {
+    "course": "RS114",
+    "name": "The Apostolic Age",
+    "lessons": [
+      { "name": "New Testament Analysis" },
+      { "name": "Challenges of the Early Church" },
+      { "name": "Formation of Doctrines" }
+    ]
+  },
+  {
+    "course": "RS114",
+    "name": "Historical Context of Early Christianity",
+    "lessons": [
+      { "name": "Roman Empire" },
+      { "name": "Early Christian Communities" },
+      { "name": "Persecution and Growth" }
+    ]
+  },
+  {
+    "course": "RS115",
+    "name": "Leadership in Christian Communities",
+    "lessons": [
+      { "name": "Biblical Teachings" },
+      { "name": "Pastoral Care" },
+      { "name": "Community Building" }
+    ]
+  },
+  {
+    "course": "RS115",
+    "name": "Service in Christian Communities",
+    "lessons": [
+      { "name": "Servant Leadership" },
+      { "name": "Ethical Stewardship" },
+      { "name": "Practical Applications" }
+    ]
+  },
+  {
+    "course": "RS115",
+    "name": "Effective Leadership Practices",
+    "lessons": [
+      { "name": "Saint Peter's Example" },
+      { "name": "Modern Leadership Challenges" },
+      { "name": "Community Service" }
+    ]
+  },
+  {
+    "course": "RS116",
+    "name": "Introduction to Sufi Philosophy",
+    "lessons": [
+      { "name": "Historical Development" },
+      { "name": "Key Sufi Figures" },
+      { "name": "Philosophical Underpinnings" }
+    ]
+  },
+  {
+    "course": "RS116",
+    "name": "Mystical Traditions in Sufism",
+    "lessons": [
+      { "name": "Mystical Practices" },
+      { "name": "Sufi Orders" },
+      { "name": "Rituals and Contributions" }
+    ]
+  },
+  {
+    "course": "RS116",
+    "name": "Love and Divine Union in Sufism",
+    "lessons": [
+      { "name": "Teachings of Rumi" },
+      { "name": "Teachings of Hafiz" },
+      { "name": "Journey of the Soul" }
+    ]
+  },
+  {
+    "course": "RS117",
+    "name": "Ethical Wisdom in Islam",
+    "lessons": [
+      { "name": "Moral Teachings in the Quran" },
+      { "name": "Hadith and Ethical Guidance" },
+      { "name": "Role of Khidr" }
+    ]
+  },
+  {
+    "course": "RS117",
+    "name": "Moral Reasoning in Islam",
+    "lessons": [
+      { "name": "Divine Guidance" },
+      { "name": "Free Will and Morality" },
+      { "name": "Pursuit of Righteousness" }
+    ]
+  },
+  {
+    "course": "RS117",
+    "name": "Ethical Dilemmas in Islam",
+    "lessons": [
+      { "name": "Contemporary Issues" },
+      { "name": "Personal Spiritual Growth" },
+      { "name": "Ethical Solutions" }
+    ]
+  },
+  {
+    "course": "RS118",
+    "name": "Introduction to Islamic Esotericism",
+    "lessons": [
+      { "name": "Nature of the Unseen World" },
+      { "name": "Spiritual Symbolism" },
+      { "name": "Mystical Experiences" }
+    ]
+  },
+  {
+    "course": "RS118",
+    "name": "Advanced Islamic Esotericism",
+    "lessons": [
+      { "name": "Teachings of Khidr" },
+      { "name": "Interplay of Material and Spiritual Realms" },
+      { "name": "Reflective Approach" }
+    ]
+  },
+  {
+    "course": "RS118",
+    "name": "Practical Esotericism",
+    "lessons": [
+      { "name": "Spiritual Practices" },
+      { "name": "Esoteric Interpretations" },
+      { "name": "Application in Daily Life" }
+    ]
+  },
+  {
+    "course": "RS119",
+    "name": "Environmental Management in Ancient China",
+    "lessons": [
+      { "name": "Principles of Water Management" },
+      { "name": "Agricultural Practices" },
+      { "name": "Land Use and Governance" }
+    ]
+  },
+  {
+    "course": "RS119",
+    "name": "Achievements of Yu the Great",
+    "lessons": [
+      { "name": "Flood Control Systems" },
+      { "name": "Irrigation Techniques" },
+      { "name": "Engineering Marvels" }
+    ]
+  },
+  {
+    "course": "RS119",
+    "name": "Relevance to Modern Challenges",
+    "lessons": [
+      { "name": "Comparative Studies" },
+      { "name": "Lessons for Modern Environmental Management" },
+      { "name": "Integration with Chinese Philosophies" }
+    ]
+  },
+  {
+    "course": "RS120",
+    "name": "Leadership Lessons from Yu the Great",
+    "lessons": [
+      { "name": "Perseverance and Vision" },
+      { "name": "Ethical Governance" },
+      { "name": "Legendary Endeavors" }
+    ]
+  },
+  {
+    "course": "RS120",
+    "name": "Other Leadership Lessons from Chinese Mythology",
+    "lessons": [
+      { "name": "Notable Figures" },
+      { "name": "Cultural and Political Identity" },
+      { "name": "Historical Impact" }
+    ]
+  },
+  {
+    "course": "RS120",
+    "name": "Applications of Mythological Lessons",
+    "lessons": [
+      { "name": "Modern Leadership Challenges" },
+      { "name": "Case Studies" },
+      { "name": "Implementing Lessons in Practice" }
+    ]
+  },
+  {
+    "course": "RS121",
+    "name": "Hydraulic Engineering in Ancient China",
+    "lessons": [
+      { "name": "Design and Construction" },
+      { "name": "Dams and Canals" },
+      { "name": "Irrigation Systems" }
+    ]
+  },
+  {
+    "course": "RS121",
+    "name": "Comparative Hydraulic Engineering",
+    "lessons": [
+      { "name": "Mesopotamia" },
+      { "name": "Indus Valley" },
+      { "name": "Ancient Egypt" }
+    ]
+  },
+  {
+    "course": "RS121",
+    "name": "Technological Contexts",
+    "lessons": [
+      { "name": "Historical Development" },
+      { "name": "Engineering Techniques" },
+      { "name": "Modern Applications" }
     ]
   }
+,{
+  "course": "RS107",
+  "name": "Introduction to Ancient Languages",
+  "lessons": [
+    { "name": "Sindarin Basics" },
+    { "name": "Quenya Basics" },
+    { "name": "Khuzdul Basics" }
+  ]
+},
+{
+  "course": "RS107",
+  "name": "Scripts and Inscriptions",
+  "lessons": [
+    { "name": "Elvish Scripts" },
+    { "name": "Dwarvish Runes" },
+    { "name": "Black Speech of Mordor" }
+  ]
+},
+{
+  "course": "RS107",
+  "name": "Language and Culture",
+  "lessons": [
+    { "name": "Cultural Contexts" },
+    { "name": "Language Evolution" },
+    { "name": "Historical Significance" }
+  ]
+},
+{
+  "course": "RS108",
+  "name": "Diplomacy in Middle-earth",
+  "lessons": [
+    { "name": "Council of Elrond" },
+    { "name": "War of the Ring" },
+    { "name": "Peace Treaties" }
+  ]
+},
+{
+  "course": "RS108",
+  "name": "Inter-species Relations",
+  "lessons": [
+    { "name": "Elves and Men" },
+    { "name": "Dwarves and Elves" },
+    { "name": "Wizards and Men" }
+  ]
+},
+{
+  "course": "RS108",
+  "name": "Leadership and Wisdom",
+  "lessons": [
+    { "name": "Gandalf's Leadership" },
+    { "name": "Aragorn's Diplomacy" },
+    { "name": "Elrond's Wisdom" }
+  ]
+},
+{
+  "course": "RS109",
+  "name": "Fundamentals of Middle-earth Magic",
+  "lessons": [
+    { "name": "Sources of Magic" },
+    { "name": "Types of Magical Beings" },
+    { "name": "Magical Artifacts" }
+  ]
+},
+{
+  "course": "RS109",
+  "name": "Practitioners of Magic",
+  "lessons": [
+    { "name": "Wizards" },
+    { "name": "Elves" },
+    { "name": "Ents" }
+  ]
+},
+{
+  "course": "RS109",
+  "name": "Philosophical Dimensions",
+  "lessons": [
+    { "name": "Ethics of Magic Use" },
+    { "name": "Magic and Power" },
+    { "name": "Magical Conflicts" }
+  ]
+},
+{
+  "course": "RS110",
+  "name": "Foundations of Democratic Education",
+  "lessons": [
+    { "name": "Historical Models" },
+    { "name": "Participatory Learning" },
+    { "name": "Social Equality" }
+  ]
+},
+{
+  "course": "RS110",
+  "name": "Democratic Schooling",
+  "lessons": [
+    { "name": "Educational Systems" },
+    { "name": "Civic Responsibility" },
+    { "name": "Critical Thinking" }
+  ]
+},
+{
+  "course": "RS110",
+  "name": "Challenges and Opportunities",
+  "lessons": [
+    { "name": "Implementing Democratic Principles" },
+    { "name": "Diverse Educational Settings" },
+    { "name": "Future Prospects" }
+  ]
+},
+{
+  "course": "RS111",
+  "name": "Philosophies of Independence",
+  "lessons": [
+    { "name": "Concepts of Freedom" },
+    { "name": "Nation-Building" },
+    { "name": "Contemporary Struggles" }
+  ]
+},
+{
+  "course": "RS111",
+  "name": "Case Studies in Independence",
+  "lessons": [
+    { "name": "Simón Bolívar" },
+    { "name": "Latin American Independence" },
+    { "name": "Modern Movements" }
+  ]
+},
+{
+  "course": "RS111",
+  "name": "Independence Movements",
+  "lessons": [
+    { "name": "Historical Context" },
+    { "name": "Key Figures" },
+    { "name": "Impact and Legacy" }
+  ]
+},
+{
+  "course": "RS112",
+  "name": "Innovations in 19th Century Education",
+  "lessons": [
+    { "name": "Educational Reformers" },
+    { "name": "Practical and Theoretical Knowledge" },
+    { "name": "Impact on Modern Pedagogy" }
+  ]
+},
+{
+  "course": "RS112",
+  "name": "19th Century Educational Theories",
+  "lessons": [
+    { "name": "Simon Rodríguez" },
+    { "name": "Integration of Knowledge" },
+    { "name": "Social Change through Education" }
+  ]
+},
+{
+  "course": "RS112",
+  "name": "Critical Assessment of Early Innovations",
+  "lessons": [
+    { "name": "Lasting Impacts" },
+    { "name": "Contemporary Education Systems" },
+    { "name": "Future Directions" }
+  ]
+},
+{
+  "course": "RS113",
+  "name": "Foundations of Christian Ethics",
+  "lessons": [
+    { "name": "Biblical Texts" },
+    { "name": "Moral Decision-Making" },
+    { "name": "Virtues and Vices" }
+  ]
+},
+{
+  "course": "RS113",
+  "name": "Christian Ethics in Practice",
+  "lessons": [
+    { "name": "Ethical Living" },
+    { "name": "Contemporary Moral Issues" },
+    { "name": "Applying Christian Principles" }
+  ]
+},
+{
+  "course": "RS113",
+  "name": "Theological Traditions in Ethics",
+  "lessons": [
+    { "name": "Historical Perspectives" },
+    { "name": "Modern Applications" },
+    { "name": "Future Challenges" }
+  ]
+},
+{
+  "course": "RS114",
+  "name": "Early Christianity",
+  "lessons": [
+    { "name": "Life and Teachings of Jesus" },
+    { "name": "Role of the Apostles" },
+    { "name": "Spread of Christianity" }
+  ]
+},
+{
+  "course": "RS114",
+  "name": "The Apostolic Age",
+  "lessons": [
+    { "name": "New Testament Analysis" },
+    { "name": "Challenges of the Early Church" },
+    { "name": "Formation of Doctrines" }
+  ]
+},
+{
+  "course": "RS114",
+  "name": "Historical Context of Early Christianity",
+  "lessons": [
+    { "name": "Roman Empire" },
+    { "name": "Early Christian Communities" },
+    { "name": "Persecution and Growth" }
+  ]
+},
+{
+  "course": "RS115",
+  "name": "Leadership in Christian Communities",
+  "lessons": [
+    { "name": "Biblical Teachings" },
+    { "name": "Pastoral Care" },
+    { "name": "Community Building" }
+  ]
+},
+{
+  "course": "RS115",
+  "name": "Service in Christian Communities",
+  "lessons": [
+    { "name": "Servant Leadership" },
+    { "name": "Ethical Stewardship" },
+    { "name": "Practical Applications" }
+  ]
+},
+{
+  "course": "RS115",
+  "name": "Effective Leadership Practices",
+  "lessons": [
+    { "name": "Saint Peter's Example" },
+    { "name": "Modern Leadership Challenges" },
+    { "name": "Community Service" }
+  ]
+},
+{
+  "course": "RS116",
+  "name": "Introduction to Sufi Philosophy",
+  "lessons": [
+    { "name": "Historical Development" },
+    { "name": "Key Sufi Figures" },
+    { "name": "Philosophical Underpinnings" }
+  ]
+},
+{
+  "course": "RS116",
+  "name": "Mystical Traditions in Sufism",
+  "lessons": [
+    { "name": "Mystical Practices" },
+    { "name": "Sufi Orders" },
+    { "name": "Rituals and Contributions" }
+  ]
+},
+{
+  "course": "RS116",
+  "name": "Love and Divine Union in Sufism",
+  "lessons": [
+    { "name": "Teachings of Rumi" },
+    { "name": "Teachings of Hafiz" },
+    { "name": "Journey of the Soul" }
+  ]
+},
+{
+  "course": "RS117",
+  "name": "Ethical Wisdom in Islam",
+  "lessons": [
+    { "name": "Moral Teachings in the Quran" },
+    { "name": "Hadith and Ethical Guidance" },
+    { "name": "Role of Khidr" }
+  ]
+},
+{
+  "course": "RS117",
+  "name": "Moral Reasoning in Islam",
+  "lessons": [
+    { "name": "Divine Guidance" },
+    { "name": "Free Will" },
+    { "name": "Pursuit of Righteousness" }
+  ]
+},
+{
+  "course": "RS117",
+  "name": "Contemporary Ethical Dilemmas",
+  "lessons": [
+    { "name": "Modern Applications" },
+    { "name": "Personal Spiritual Growth" },
+    { "name": "Ethical Decision Making" }
+  ]
+},
+{
+  "course": "RS118",
+  "name": "Islamic Esotericism",
+  "lessons": [
+    { "name": "Nature of the Unseen World" },
+    { "name": "Spiritual Symbolism" },
+    { "name": "Mystical Experiences" }
+  ]
+},
+{
+  "course": "RS118",
+  "name": "Stories and Teachings of Khidr",
+  "lessons": [
+    { "name": "Symbolic Interpretations" },
+    { "name": "Role in Islamic Mysticism" },
+    { "name": "Reflective Practices" }
+  ]
+},
+{
+  "course": "RS118",
+  "name": "Material and Spiritual Realms",
+  "lessons": [
+    { "name": "Interplay and Balance" },
+    { "name": "Esoteric Practices" },
+    { "name": "Personal Reflections" }
+  ]
+},
+{
+  "course": "RS119",
+  "name": "Ancient Environmental Management",
+  "lessons": [
+    { "name": "Principles of Water Management" },
+    { "name": "Agricultural Practices" },
+    { "name": "Land Use Strategies" }
+  ]
+},
+{
+  "course": "RS119",
+  "name": "Yu the Great's Achievements",
+  "lessons": [
+    { "name": "Flood Control" },
+    { "name": "Irrigation Systems" },
+    { "name": "Environmental Legacy" }
+  ]
+},
+{
+  "course": "RS119",
+  "name": "Modern Environmental Relevance",
+  "lessons": [
+    { "name": "Ancient Practices Today" },
+    { "name": "Sustainable Techniques" },
+    { "name": "Integration with Modern Systems" }
+  ]
+},
+{
+  "course": "RS120",
+  "name": "Leadership in Chinese Mythology",
+  "lessons": [
+    { "name": "Qualities of Effective Leaders" },
+    { "name": "Yu the Great's Leadership" },
+    { "name": "Ethical Governance" }
+  ]
+},
+{
+  "course": "RS120",
+  "name": "Stories from Chinese Mythology",
+  "lessons": [
+    { "name": "Historical Contexts" },
+    { "name": "Legendary Leaders" },
+    { "name": "Cultural Impact" }
+  ]
+},
+{
+  "course": "RS120",
+  "name": "Formation of Cultural Identity",
+  "lessons": [
+    { "name": "Political Identity" },
+    { "name": "Mythological Influences" },
+    { "name": "Modern Perspectives" }
+  ]
+},
+{
+  "course": "RS121",
+  "name": "Hydraulic Engineering Principles",
+  "lessons": [
+    { "name": "Design and Construction" },
+    { "name": "Ancient Dams and Canals" },
+    { "name": "Irrigation Systems" }
+  ]
+},
+{
+  "course": "RS121",
+  "name": "Yu the Great's Projects",
+  "lessons": [
+    { "name": "Flood Control Systems" },
+    { "name": "Technological Innovations" },
+    { "name": "Environmental Impact" }
+  ]
+},
+{
+  "course": "RS121",
+  "name": "Comparative Studies",
+  "lessons": [
+    { "name": "Mesopotamia" },
+    { "name": "Indus Valley" },
+    { "name": "Broader Historical Context" }
+  ]
+}
 ]
