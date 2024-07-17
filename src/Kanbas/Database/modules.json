@@ -81,36 +81,234 @@
     "_id": "M201",
     "name": "Fundamentals of Aerodynamics",
     "description": "Basic aerodynamic concepts and fluid dynamics principles.",
-    "course": "RS102"
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L401",
+        "name": "Introduction to Aerodynamics",
+        "description": "Overview of aerodynamic principles.",
+        "module": "M201"
+      },
+      {
+        "_id": "L402",
+        "name": "Aerodynamic Forces",
+        "description": "Understanding lift, drag, and other aerodynamic forces.",
+        "module": "M201"
+      },
+      {
+        "_id": "L403",
+        "name": "Wind Tunnel Testing",
+        "description": "Techniques and methods of wind tunnel testing.",
+        "module": "M201"
+      }
+    ]
   },
   {
     "_id": "M202",
     "name": "Subsonic and Supersonic Flow",
     "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
-    "course": "RS102"
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L501",
+        "name": "Subsonic Flow",
+        "description": "Characteristics of subsonic aerodynamic flow.",
+        "module": "M202"
+      },
+      {
+        "_id": "L502",
+        "name": "Supersonic Flow",
+        "description": "Characteristics of supersonic aerodynamic flow.",
+        "module": "M202"
+      },
+      {
+        "_id": "L503",
+        "name": "Shock Waves",
+        "description": "Understanding shock waves in supersonic flow.",
+        "module": "M202"
+      }
+    ]
   },
   {
     "_id": "M203",
     "name": "Aerodynamic Heating",
     "description": "Study of aerodynamic heating and thermal protection systems.",
-    "course": "RS102"
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L601",
+        "name": "Heat Transfer",
+        "description": "Principles of heat transfer in aerodynamics.",
+        "module": "M203"
+      },
+      {
+        "_id": "L602",
+        "name": "Thermal Protection Systems",
+        "description": "Design and materials for thermal protection systems.",
+        "module": "M203"
+      },
+      {
+        "_id": "L603",
+        "name": "Heat Flux",
+        "description": "Understanding heat flux and its impact.",
+        "module": "M203"
+      }
+    ]
   },
   {
     "_id": "M301",
     "name": "Spacecraft Structural Design",
     "description": "Fundamentals of designing spacecraft structures and materials selection.",
-    "course": "RS103"
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L701",
+        "name": "Material Selection",
+        "description": "Choosing the right materials for spacecraft design.",
+        "module": "M301"
+      },
+      {
+        "_id": "L702",
+        "name": "Structural Analysis",
+        "description": "Methods of structural analysis for spacecraft.",
+        "module": "M301"
+      },
+      {
+        "_id": "L703",
+        "name": "Load Testing",
+        "description": "Techniques for load testing spacecraft structures.",
+        "module": "M301"
+      }
+    ]
   },
   {
     "_id": "M302",
     "name": "Orbital Mechanics",
     "description": "Understanding orbital dynamics and mission planning.",
-    "course": "RS103"
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L801",
+        "name": "Orbital Elements",
+        "description": "Basics of orbital elements and their significance.",
+        "module": "M302"
+      },
+      {
+        "_id": "L802",
+        "name": "Orbit Determination",
+        "description": "Techniques for determining spacecraft orbits.",
+        "module": "M302"
+      },
+      {
+        "_id": "L803",
+        "name": "Mission Planning",
+        "description": "Planning space missions using orbital mechanics.",
+        "module": "M302"
+      }
+    ]
   },
   {
     "_id": "M303",
     "name": "Spacecraft Systems Engineering",
     "description": "Overview of spacecraft systems and subsystems engineering.",
-    "course": "RS103"
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L901",
+        "name": "Systems Engineering",
+        "description": "Introduction to systems engineering principles.",
+        "module": "M303"
+      },
+      {
+        "_id": "L902",
+        "name": "Subsystems Integration",
+        "description": "Integrating various subsystems in spacecraft.",
+        "module": "M303"
+      },
+      {
+        "_id": "L903",
+        "name": "Testing and Validation",
+        "description": "Testing and validating spacecraft systems.",
+        "module": "M303"
+      }
+    ]
+  },
+  {
+    "_id": "M401",
+    "name": "Chemical Structures",
+    "description": "Basic principles of chemical structures and bonding.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L1001",
+        "name": "Atomic Structure",
+        "description": "Basics of atomic structure and elements.",
+        "module": "M401"
+      },
+      {
+        "_id": "L1002",
+        "name": "Chemical Bonds",
+        "description": "Understanding chemical bonds and reactions.",
+        "module": "M401"
+      },
+      {
+        "_id": "L1003",
+        "name": "Molecular Geometry",
+        "description": "Overview of molecular geometry and shapes.",
+        "module": "M401"
+      }
+    ]
+  },
+  {
+    "_id": "M402",
+    "name": "Organic Reactions",
+    "description": "Understanding various organic chemical reactions.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L1101",
+        "name": "Alkanes and Alkenes",
+        "description": "Reactions involving alkanes and alkenes.",
+        "module": "M402"
+      },
+      {
+        "_id": "L1102",
+        "name": "Aromatic Compounds",
+        "description": "Understanding reactions of aromatic compounds.",
+        "module": "M402"
+      },
+      {
+        "_id": "L1103",
+        "name": "Functional Groups",
+        "description": "Reactions of various functional groups in organic chemistry.",
+        "module": "M402"
+      }
+    ]
+  },
+  {
+    "_id": "M403",
+    "name": "Biochemistry",
+    "description": "Study of chemical processes within and relating to living organisms.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L1201",
+        "name": "Proteins and Enzymes",
+        "description": "Structure and function of proteins and enzymes.",
+        "module": "M403"
+      },
+      {
+        "_id": "L1202",
+        "name": "Metabolic Pathways",
+        "description": "Overview of metabolic pathways in cells.",
+        "module": "M403"
+      },
+      {
+        "_id": "L1203",
+        "name": "Genetic Code",
+        "description": "Understanding the genetic code and its implications.",
+        "module": "M403"
+      }
+    ]
   }
 ]
