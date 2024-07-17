@@ -4,8 +4,8 @@ import * as db from "../Database";
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
-import AssignmentsEditor from "./Assignments";
-import Assignment from "./Assignments/editor";
+import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments";
 import Grades from "./Grades";
 import "../styles.css";
 
@@ -31,8 +31,8 @@ export default function Courses() {
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />
             <Route path="Modules" element={<Modules />} />
-            <Route path="Assignments" element={<AssignmentsEditor />} />
-            <Route path="Assignments/:aid" element={<Assignment />} />
+            <Route path="Assignments" element={<Assignments />} />
+            <Route path="Assignments/:aid" element={<AssignmentEditor />} />
             <Route path="Piazza" element={<h3>Piazza</h3>} />
             <Route path="Zoom" element={<h4>Zoom</h4>} />
             <Route path="Quizzes" element={<h6>Quizzes</h6>} />
