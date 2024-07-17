@@ -155,7 +155,8 @@
       "department": "History",
       "credits": 4,
       "description": "This historical course delves into the development of early Christian communities and the Apostolic Age. It focuses on the life and teachings of Jesus Christ, the role of the Apostles, and the spread of Christianity across the Roman Empire. Students will explore primary sources, including the New Testament, to understand the challenges and triumphs of the early Church. The course also examines the formation of key Christian doctrines and the historical context of the Apostolic era.",
-      "author": "65500111ea7ead465908d1fa"
+      "author": "65500111ea7ead465908d1fa",
+      "image": "age.jpg"
     },
     {
       "_id": "RS115",
