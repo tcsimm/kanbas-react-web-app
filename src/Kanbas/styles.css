@@ -91,6 +91,7 @@ body * {
   padding-left: 17px;
   font-weight: bold;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -103,10 +104,15 @@ body * {
   flex-direction: column;
 }
 
+.card-title {
+  flex-grow: 0;
+}
+
 .card-text {
   flex-grow: 1;
   max-height: 53px;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-primary {
