@@ -22,6 +22,8 @@ import sufiImg from '../../images/sufi.jpg';
 import islamImg from '../../images/islam.jpg';
 import esoImg from '../../images/eso.jpg';
 import chinaImg from '../../images/china.jpg';
+import mythImg from '../../images/myth.jpg';
+import ancientImg from '../../images/ancient.jpg';
 
 const imageMap: { [key: string]: string } = {
   "rocket_propulsion.jpg": rocketPropulsionImg,
@@ -42,7 +44,9 @@ const imageMap: { [key: string]: string } = {
   "sufi.jpg": sufiImg,
   "islam.jpg": islamImg,
   "eso.jpg": esoImg,
-  "china.jpg": chinaImg
+  "china.jpg": chinaImg,
+  "myth.jpg": mythImg,
+  "ancient.jpg": ancientImg
 };
 
 export default function Dashboard() {
