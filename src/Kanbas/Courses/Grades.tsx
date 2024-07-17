@@ -1,7 +1,23 @@
 import React from 'react';
 import { FaFileImport, FaFileExport, FaCog } from 'react-icons/fa';
+import { useParams } from 'react-router';
+import * as db from '../Database';
 
 const Grades = () => {
+  const { cid } = useParams();
+
+  // Filter enrollments based on course ID
+  const courseEnrollments = db.enrollments.filter(enrollment => enrollment.course === cid);
+
+  // Filter assignments based on course ID
+  const courseAssignments = db.assignments.filter(assignment => assignment.course === cid);
+
+  // Map enrolled users to students
+  const students = courseEnrollments.map(enrollment => db.users.find(user => user._id === enrollment.user)).filter(student => student !== undefined);
+
+  // Filter grades based on assignments in the course
+  const grades = db.grades.filter(grade => courseAssignments.some(assignment => assignment._id === grade.assignment));
+
   return (
     <div className="container-fluid">
       <div className="d-flex justify-content-between align-items-center mb-3">
@@ -37,57 +53,24 @@ const Grades = () => {
           <thead>
             <tr>
               <th>Student Name</th>
-              <th>A1 SETUP<br /><small>Out of 100</small></th>
-              <th>A2 HTML<br /><small>Out of 100</small></th>
-              <th>A3 CSS<br /><small>Out of 100</small></th>
-              <th>A4 BOOTSTRAP<br /><small>Out of 100</small></th>
+              {courseAssignments.map(assignment => (
+                <th key={assignment._id}>
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Jane Adams</td>
-              <td>100%</td>
-              <td>96.67%</td>
-              <td>92.18%</td>
-              <td>66.22%</td>
-            </tr>
-            <tr>
-              <td>Christina Allen</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>Samreen Ansari</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>Han Bao</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>
-                <input type="text" className="form-control" defaultValue="88.03%" />
-              </td>
-              <td>98.99%</td>
-            </tr>
-            <tr>
-              <td>Mahi Sai Srinivas Bobbili</td>
-              <td>100%</td>
-              <td>96.67%</td>
-              <td>98.37%</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>Siran Cao</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-              <td>100%</td>
-            </tr>
+            {students.map(student => (
+              student && (
+                <tr key={student._id}>
+                  <td>{student.firstName} {student.lastName}</td>
+                  {courseAssignments.map(assignment => {
+                    const grade = grades.find(grade => grade.student === student._id && grade.assignment === assignment._id);
+                    return <td key={assignment._id}>{grade ? `${(Number(grade.grade)).toFixed(2)}%` : '-'}</td>;
+                  })}
+                </tr>
+              )
+            ))}
           </tbody>
         </table>
       </div>
