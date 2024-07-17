@@ -143,7 +143,8 @@
       "department": "Theology",
       "credits": 3,
       "description": "This course explores the core principles of Christian ethics as derived from biblical texts and theological traditions. It covers topics such as moral decision-making, virtues and vices, and the role of faith in ethical living. Students will examine contemporary moral issues through the lens of Christian ethics, learning to apply these principles in various real-life contexts. The course encourages critical thinking and compassionate action guided by Christian values.",
-      "author": "65500111ea7ead465908d1fa"
+      "author": "65500111ea7ead465908d1fa",
+      "image": "ethics.jpg"
     },
     {
       "_id": "RS114",
