@@ -2,7 +2,7 @@ import teslabotImg from '../../images/teslabot.jpg';
 
 export default function Lab1() {
   return (
-    <div id="wd-lab1">
+    <div id="wd-lab1" className="lab-container">
       <h2>Lab 1</h2>
       <h3>HTML Examples</h3>
       <div id="wd-h-tag">
