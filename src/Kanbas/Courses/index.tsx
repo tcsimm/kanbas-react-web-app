@@ -4,7 +4,7 @@ import * as db from "../Database";
 import CoursesNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
-import Assignments from "./Assignments";
+import Assignments from "./Assignments/index";
 import AssignmentEditor from "./Assignments/editor";
 import Grades from "./Grades";
 import "../styles.css";
