@@ -54,8 +54,7 @@ const Grades = () => {
             <tr>
               <th>Student Name</th>
               {courseAssignments.map(assignment => (
-                <th key={assignment._id}>
-                </th>
+                <th key={assignment._id}>{assignment.title}<br /><small>Out of 100</small></th>
               ))}
             </tr>
           </thead>
