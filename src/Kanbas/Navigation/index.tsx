@@ -6,7 +6,6 @@ import { Link, useLocation } from "react-router-dom";
 import neuLogo from '../../images/NEU.png';
 import links from './links.json';
 
-// Define the icon components type
 const iconComponents = {
   AiOutlineDashboard,
   LiaBookSolid,
@@ -15,7 +14,6 @@ const iconComponents = {
   LiaCogSolid
 };
 
-// Define the possible keys of iconComponents
 type IconKeys = keyof typeof iconComponents;
 
 export default function KanbasNavigation() {
