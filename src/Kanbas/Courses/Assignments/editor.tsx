@@ -1,16 +1,41 @@
+import { useParams, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import * as db from '../../Database';
+
+interface Assignment {
+  _id: string;
+  title: string;
+  course: string;
+}
+
 export default function AssignmentEditor() {
+  const { cid, id } = useParams<{ cid: string; id: string }>();
+  const [assignment, setAssignment] = useState<Assignment | null>(null);
+
+  useEffect(() => {
+    const foundAssignment = db.assignments.find(assignment => assignment._id === id) as Assignment;
+    setAssignment(foundAssignment);
+  }, [id]);
+
+  if (!assignment) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="container mt-4">
-      <h2 className="text-danger">
-        Assignment Editor
-      </h2>
+      <h2 className="text-danger">Assignment Editor</h2>
       <hr />
       <div className="row">
         <div className="col-md-12">
           <form>
             <div className="mb-3">
               <label htmlFor="assignmentName" className="form-label">Assignment Name</label>
-              <input type="text" className="form-control" id="assignmentName" defaultValue="A1" />
+              <input
+                type="text"
+                className="form-control"
+                id="assignmentName"
+                defaultValue={assignment.title}
+              />
             </div>
             <div className="mb-3">
               <label className="form-label">Details</label>
@@ -96,8 +121,8 @@ export default function AssignmentEditor() {
                 <input type="datetime-local" className="form-control" />
               </div>
             </div>
+            <Link to={`/Kanbas/Courses/${cid}/Assignments`} className="btn btn-secondary ms-2">Cancel</Link>
             <button type="submit" className="btn btn-danger">Save</button>
-            <button type="button" className="btn btn-secondary ms-2">Cancel</button>
           </form>
         </div>
       </div>
