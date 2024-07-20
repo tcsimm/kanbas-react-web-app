@@ -65,7 +65,7 @@ export default function Dashboard() {
               <Link className="wd-dashboard-course-link text-decoration-none text-dark" to={`/Kanbas/Courses/${course._id}/Home`}>
                 <img 
                   src={course.image && imageMap[course.image] ? imageMap[course.image] : defaultImg} 
-                  className="card-img-top" 
+                  className="card-img-top custom-img-size" 
                   alt={`${course.name} Course`} 
                 />
                 <div className="card-body">
