@@ -6,6 +6,7 @@ import EventObject from './EventObject'; // Ensure this path is correct
 import Counter from './Counter'; // Ensure this path is correct
 import BooleanStateVariables from './BooleanStateVariables'; // Ensure this path is correct
 import StringStateVariables from './StringStateVariables'; // Ensure this path is correct
+import DateStateVariable from './DateStateVariable'; // Ensure this path is correct
 
 export default function Lab4() {
   function sayHello() {
@@ -27,6 +28,7 @@ export default function Lab4() {
       <Counter />
       <BooleanStateVariables />
       <StringStateVariables />
+      <DateStateVariable />
     </div>
   );
 }
