@@ -63,11 +63,6 @@ export default function Dashboard() {
     setCourses([...courses, newCourse]);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setCourse({ ...course, [name]: value });
-  };
-
   return (
     <div id="wd-dashboard" className="container-fluid">
       <h1 id="wd-dashboard-title">Dashboard</h1>
@@ -78,17 +73,15 @@ export default function Dashboard() {
       </h5>
       <br />
       <input 
-        name="name"
         value={course.name} 
-        onChange={handleInputChange} 
-        className="form-control mb-2" 
+        className="form-control mb-2"
+        onChange={(e) => setCourse({ ...course, name: e.target.value }) } 
         placeholder="Course Name"
       />
       <textarea 
-        name="description"
         value={course.description} 
-        onChange={handleInputChange} 
-        className="form-control mb-2" 
+        className="form-control mb-2"
+        onChange={(e) => setCourse({ ...course, description: e.target.value }) } 
         placeholder="Course Description"
       />
       <hr />
