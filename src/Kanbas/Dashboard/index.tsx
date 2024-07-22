@@ -52,16 +52,20 @@ const imageMap: { [key: string]: string } = {
 
 export default function Dashboard() {
   const [courses, setCourses] = useState(db.courses);
-  
-  const course: any = {
+  const [course, setCourse] = useState<any>({
     _id: "0", name: "New Course", number: "New Number",
     startDate: "2023-09-10", endDate: "2023-12-15",
     image: "default.jpg", description: "New Description"
-  };
-  
+  });
+
   const addNewCourse = () => {
     const newCourse = { ...course, _id: new Date().getTime().toString() };
     setCourses([...courses, newCourse]);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setCourse({ ...course, [name]: value });
   };
 
   return (
@@ -72,6 +76,21 @@ export default function Dashboard() {
         New Course
         <button className="btn btn-primary float-end" id="wd-add-new-course-click" onClick={addNewCourse}> Add </button>
       </h5>
+      <br />
+      <input 
+        name="name"
+        value={course.name} 
+        onChange={handleInputChange} 
+        className="form-control mb-2" 
+        placeholder="Course Name"
+      />
+      <textarea 
+        name="description"
+        value={course.description} 
+        onChange={handleInputChange} 
+        className="form-control mb-2" 
+        placeholder="Course Description"
+      />
       <hr />
       <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
       <hr />
