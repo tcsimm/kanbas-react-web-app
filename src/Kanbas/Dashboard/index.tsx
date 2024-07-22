@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as db from "../Database";
 import '../styles.css'; 
-import React, { useState } from "react";
 
 import rocketPropulsionImg from '../../images/rocket_propulsion.jpg';
 import aerodynamicsImg from '../../images/aerodynamics.jpg';
@@ -52,22 +52,38 @@ const imageMap: { [key: string]: string } = {
 
 export default function Dashboard() {
   const [courses, setCourses] = useState(db.courses);
+  
+  const course: any = {
+    _id: "0", name: "New Course", number: "New Number",
+    startDate: "2023-09-10", endDate: "2023-12-15",
+    image: "default.jpg", description: "New Description"
+  };
+  
+  const addNewCourse = () => {
+    const newCourse = { ...course, _id: new Date().getTime().toString() };
+    setCourses([...courses, newCourse]);
+  };
 
   return (
     <div id="wd-dashboard" className="container-fluid">
-      <h1 id="wd-dashboard-title">Dashboard</h1> 
+      <h1 id="wd-dashboard-title">Dashboard</h1>
       <hr />
-      <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2> 
+      <h5>
+        New Course
+        <button className="btn btn-primary float-end" id="wd-add-new-course-click" onClick={addNewCourse}> Add </button>
+      </h5>
+      <hr />
+      <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
       <hr />
       <div id="wd-dashboard-courses" className="row row-cols-1 row-cols-md-4 g-4">
-          {courses.map((course) => (
+        {courses.map((course) => (
           <div className="col" key={course._id}>
             <div className="card">
               <Link className="wd-dashboard-course-link text-decoration-none text-dark" to={`/Kanbas/Courses/${course._id}/Home`}>
-                <img 
-                  src={course.image && imageMap[course.image] ? imageMap[course.image] : defaultImg} 
-                  className="card-img-top custom-img-size" 
-                  alt={`${course.name} Course`} 
+                <img
+                  src={course.image && imageMap[course.image] ? imageMap[course.image] : defaultImg}
+                  className="card-img-top custom-img-size"
+                  alt={`${course.name} Course`}
                 />
                 <div className="card-body">
                   <h5 className="wd-dashboard-course-title card-title">{course.name}</h5>
