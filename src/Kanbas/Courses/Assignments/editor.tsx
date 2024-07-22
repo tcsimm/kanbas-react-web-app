@@ -1,8 +1,11 @@
+import { useParams } from "react-router-dom";
+
 export default function AssignmentEditor() {
+  const { id } = useParams(); 
   return (
     <div className="container mt-4">
       <h2 className="text-danger">
-        Assignment Editor
+        Assignment Editor for {id}
       </h2>
       <hr />
       <div className="row">
