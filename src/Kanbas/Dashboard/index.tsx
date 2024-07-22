@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import * as db from "../Database";
 import '../styles.css'; 
+import React, { useState } from "react";
 
 import rocketPropulsionImg from '../../images/rocket_propulsion.jpg';
 import aerodynamicsImg from '../../images/aerodynamics.jpg';
@@ -50,7 +51,7 @@ const imageMap: { [key: string]: string } = {
 };
 
 export default function Dashboard() {
-  const courses = db.courses;
+  const [courses, setCourses] = useState(db.courses);
 
   return (
     <div id="wd-dashboard" className="container-fluid">
@@ -59,7 +60,7 @@ export default function Dashboard() {
       <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2> 
       <hr />
       <div id="wd-dashboard-courses" className="row row-cols-1 row-cols-md-4 g-4">
-        {courses.map((course) => (
+          {courses.map((course) => (
           <div className="col" key={course._id}>
             <div className="card">
               <Link className="wd-dashboard-course-link text-decoration-none text-dark" to={`/Kanbas/Courses/${course._id}/Home`}>
