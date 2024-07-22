@@ -3,6 +3,7 @@ import ClickEvent from './ClickEvent'; // Ensure this path is correct
 import PassingDataOnEvent from './PassingDataOnEvent'; // Ensure this path is correct
 import PassingFunctions from './PassingFunctions'; // Ensure this path is correct
 import EventObject from './EventObject'; // Ensure this path is correct
+import Counter from './Counter'; // Ensure this path is correct
 
 export default function Lab4() {
   function sayHello() {
@@ -20,6 +21,8 @@ export default function Lab4() {
       <PassingFunctions theFunction={sayHello} />
       <h3>The Event Object</h3>
       <EventObject />
+      <h3>Managing Component State</h3>
+      <Counter />
     </div>
   );
 }
