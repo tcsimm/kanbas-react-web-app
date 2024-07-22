@@ -5,6 +5,7 @@ import PassingFunctions from './PassingFunctions'; // Ensure this path is correc
 import EventObject from './EventObject'; // Ensure this path is correct
 import Counter from './Counter'; // Ensure this path is correct
 import BooleanStateVariables from './BooleanStateVariables'; // Ensure this path is correct
+import StringStateVariables from './StringStateVariables'; // Ensure this path is correct
 
 export default function Lab4() {
   function sayHello() {
@@ -25,6 +26,7 @@ export default function Lab4() {
       <h3>Managing Component State</h3>
       <Counter />
       <BooleanStateVariables />
+      <StringStateVariables />
     </div>
   );
 }
