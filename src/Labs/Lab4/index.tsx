@@ -2,6 +2,7 @@ import React from 'react';
 import ClickEvent from './ClickEvent'; // Ensure this path is correct
 import PassingDataOnEvent from './PassingDataOnEvent'; // Ensure this path is correct
 import PassingFunctions from './PassingFunctions'; // Ensure this path is correct
+import EventObject from './EventObject'; // Ensure this path is correct
 
 export default function Lab4() {
   function sayHello() {
@@ -17,6 +18,8 @@ export default function Lab4() {
       <PassingDataOnEvent />
       <h3>Passing Functions as Parameters</h3>
       <PassingFunctions theFunction={sayHello} />
+      <h3>The Event Object</h3>
+      <EventObject />
     </div>
   );
 }
