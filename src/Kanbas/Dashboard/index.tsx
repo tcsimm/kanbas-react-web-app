@@ -63,6 +63,10 @@ export default function Dashboard() {
     setCourses([...courses, newCourse]);
   };
 
+  const deleteCourse = (courseId: string) => {
+    setCourses(courses.filter((course) => course._id !== courseId));
+  };
+
   return (
     <div id="wd-dashboard" className="container-fluid">
       <h1 id="wd-dashboard-title">Dashboard</h1>
@@ -100,7 +104,19 @@ export default function Dashboard() {
                 <div className="card-body">
                   <h5 className="wd-dashboard-course-title card-title">{course.name}</h5>
                   <p className="card-text">{course.description}</p>
-                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">Go</Link>
+                  <div className="d-flex justify-content-between">
+                    <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">Go</Link>
+                    <button
+                      onClick={(event) => {
+                        event.preventDefault();
+                        deleteCourse(course._id);
+                      }}
+                      className="btn btn-danger"
+                      id="wd-delete-course-click"
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
               </Link>
             </div>
