@@ -9,6 +9,7 @@ import StringStateVariables from './StringStateVariables'; // Ensure this path i
 import DateStateVariable from './DateStateVariable'; // Ensure this path is correct
 import ObjectStateVariable from './ObjectStateVariable'; // Ensure this path is correct
 import ArrayStateVariable from './ArrayStateVariable'; // Ensure this path is correct
+import ParentStateComponent from './ParentStateComponent'; // Ensure this path is correct
 
 export default function Lab4() {
   function sayHello() {
@@ -33,6 +34,7 @@ export default function Lab4() {
       <DateStateVariable />
       <ObjectStateVariable />
       <ArrayStateVariable />
+      <ParentStateComponent />
     </div>
   );
 }
