@@ -5,66 +5,47 @@ import TodoItem from "./TodoItem";
 export default function TodoList() {
   const [todos, setTodos] = useState([
     { id: "1", title: "Learn React" },
-    { id: "2", title: "Learn Node"  }]);
-  const [todo, setTodo] = useState({ id: "-1", title: "Learn Mongo" });
-  const addTodo = (todo: any) => {
-    const newTodos = [ ...todos, { ...todo,
-      id: new Date().getTime().toString() }];
+    { id: "2", title: "Learn Node" }
+  ]);
+  const [todo, setTodo] = useState({ id: "-1", title: "" });
+
+  const addTodo = (todo: { id: string; title: string }) => {
+    const newTodos = [...todos, { ...todo, id: new Date().getTime().toString() }];
     setTodos(newTodos);
-    setTodo({id: "-1", title: ""});
+    setTodo({ id: "-1", title: "" });
   };
+
   const deleteTodo = (id: string) => {
     const newTodos = todos.filter((todo) => todo.id !== id);
     setTodos(newTodos);
   };
-  const updateTodo = (todo: any) => {
-    const newTodos = todos.map((item) =>
-      (item.id === todo.id ? todo : item));
+
+  const updateTodo = (todo: { id: string; title: string }) => {
+    const newTodos = todos.map((item) => (item.id === todo.id ? todo : item));
     setTodos(newTodos);
-    setTodo({id: "-1", title: ""});
+    setTodo({ id: "-1", title: "" });
   };
+
   return (
-    <div>
+    <div id="wd-todo-list-redux">
       <h2>Todo List</h2>
       <ul className="list-group">
-      <TodoForm
+        <TodoForm
           todo={todo}
           setTodo={setTodo}
           addTodo={addTodo}
-          updateTodo={updateTodo}/>
+          updateTodo={updateTodo}
+        />
         {todos.map((todo) => (
           <TodoItem
+            key={todo.id}
             todo={todo}
             deleteTodo={deleteTodo}
-            setTodo={setTodo} />
-        ))}
-        <li className="list-group-item">
-          <button onClick={() => addTodo(todo)}
-                  id="wd-add-todo-click">Add</button>
-          <button onClick={() => updateTodo(todo)}
-                  id="wd-update-todo-click">
-            Update </button>
-          <input value={todo.title}
-            onChange={(e) =>
-              setTodo({ ...todo,
-                title: e.target.value })
-            }
+            setTodo={setTodo}
           />
-        </li>
-        {todos.map((todo) => (
-          <li key={todo.id} className="list-group-item">
-            <button onClick={() => deleteTodo(todo.id)}
-                    id="wd-delete-todo-click">
-              Delete </button>
-            <button onClick={() => setTodo(todo)}
-                    id="wd-set-todo-click">
-              Edit </button>
-            {todo.title}
-          </li>
         ))}
       </ul>
-      <hr/>
+      <hr />
     </div>
   );
 }
-
