@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import ClickEvent from './ClickEvent'; // Ensure this path is correct
 import PassingDataOnEvent from './PassingDataOnEvent'; // Ensure this path is correct
 import PassingFunctions from './PassingFunctions'; // Ensure this path is correct
