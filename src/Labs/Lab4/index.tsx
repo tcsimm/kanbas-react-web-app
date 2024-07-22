@@ -1,21 +1,19 @@
-import React from "react";
-import ClickEvent from './ClickEvent'; // Ensure this path is correct
-import PassingDataOnEvent from './PassingDataOnEvent'; // Ensure this path is correct
-import PassingFunctions from './PassingFunctions'; // Ensure this path is correct
-import EventObject from './EventObject'; // Ensure this path is correct
-import Counter from './Counter'; // Ensure this path is correct
-import BooleanStateVariables from './BooleanStateVariables'; // Ensure this path is correct
-import StringStateVariables from './StringStateVariables'; // Ensure this path is correct
-import DateStateVariable from './DateStateVariable'; // Ensure this path is correct
-import ObjectStateVariable from './ObjectStateVariable'; // Ensure this path is correct
-import ArrayStateVariable from './ArrayStateVariable'; // Ensure this path is correct
-import ParentStateComponent from './ParentStateComponent'; // Ensure this path is correct
-import ReduxExamples from './ReduxExamples'; // Ensure this path is correct
+import React from 'react';
+import ClickEvent from './ClickEvent';
+import PassingDataOnEvent from './PassingDataOnEvent';
+import PassingFunctions from './PassingFunctions';
+import EventObject from './EventObject';
+import Counter from './Counter';
+import BooleanStateVariables from './BooleanStateVariables';
+import StringStateVariables from './StringStateVariables';
+import DateStateVariable from './DateStateVariable';
+import ObjectStateVariable from './ObjectStateVariable';
+import ArrayStateVariable from './ArrayStateVariable';
+import ParentStateComponent from './ParentStateComponent';
+import ReduxExamples from './ReduxExamples';
 
 export default function Lab4() {
-  function sayHello() {
-    alert("Hello");
-  }
+  console.log('Lab4 is rendering');
 
   return (
     <div id="wd-lab4" className="container">
@@ -25,7 +23,7 @@ export default function Lab4() {
       <h3>Passing Data on Event</h3>
       <PassingDataOnEvent />
       <h3>Passing Functions as Parameters</h3>
-      <PassingFunctions theFunction={sayHello} />
+      <PassingFunctions theFunction={() => console.log('Hello')} />
       <h3>The Event Object</h3>
       <EventObject />
       <h3>Managing Component State</h3>
