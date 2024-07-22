@@ -10,6 +10,7 @@ import DateStateVariable from './DateStateVariable'; // Ensure this path is corr
 import ObjectStateVariable from './ObjectStateVariable'; // Ensure this path is correct
 import ArrayStateVariable from './ArrayStateVariable'; // Ensure this path is correct
 import ParentStateComponent from './ParentStateComponent'; // Ensure this path is correct
+import ReduxExamples from './ReduxExamples'; // Ensure this path is correct
 
 export default function Lab4() {
   function sayHello() {
@@ -35,6 +36,7 @@ export default function Lab4() {
       <ObjectStateVariable />
       <ArrayStateVariable />
       <ParentStateComponent />
+      <ReduxExamples />
     </div>
   );
 }
