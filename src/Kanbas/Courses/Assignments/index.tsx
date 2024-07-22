@@ -1,4 +1,5 @@
 import { FaSearch, FaPlus, FaCheckCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Assignments.css';
 
 export default function Assignments() {
@@ -29,7 +30,7 @@ export default function Assignments() {
       </div>
       <ul id="wd-assignments-list" className="list-group">
         <li className="wd-assignment-item list-group-item">
-          <div className="d-flex justify-content-between align-items-center">
+          <Link to="/Assignments/A1" className="d-flex justify-content-between align-items-center text-decoration-none text-dark">
             <div className="d-flex align-items-center">
               <div className="wd-assignment-indicator bg-success"></div>
               <div>
@@ -43,10 +44,10 @@ export default function Assignments() {
             <div className="text-success fs-5">
               <FaCheckCircle />
             </div>
-          </div>
+          </Link>
         </li>
         <li className="wd-assignment-item list-group-item">
-          <div className="d-flex justify-content-between align-items-center">
+          <Link to="/Assignments/A2" className="d-flex justify-content-between align-items-center text-decoration-none text-dark">
             <div className="d-flex align-items-center">
               <div className="wd-assignment-indicator bg-success"></div>
               <div>
@@ -60,10 +61,10 @@ export default function Assignments() {
             <div className="text-success fs-5">
               <FaCheckCircle />
             </div>
-          </div>
+          </Link>
         </li>
         <li className="wd-assignment-item list-group-item">
-          <div className="d-flex justify-content-between align-items-center">
+          <Link to="/Assignments/A3" className="d-flex justify-content-between align-items-center text-decoration-none text-dark">
             <div className="d-flex align-items-center">
               <div className="wd-assignment-indicator bg-success"></div>
               <div>
@@ -77,7 +78,7 @@ export default function Assignments() {
             <div className="text-success fs-5">
               <FaCheckCircle />
             </div>
-          </div>
+          </Link>
         </li>
       </ul>
     </div>
