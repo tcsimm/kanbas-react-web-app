@@ -63,6 +63,18 @@ export default function Dashboard() {
     setCourses([...courses, newCourse]);
   };
 
+  const updateCourse = () => {
+    setCourses(
+      courses.map((c) => {
+        if (c._id === course._id) {
+          return course;
+        } else {
+          return c;
+        }
+      })
+    );
+  };
+
   const deleteCourse = (courseId: string) => {
     setCourses(courses.filter((course) => course._id !== courseId));
   };
@@ -74,6 +86,7 @@ export default function Dashboard() {
       <h5>
         New Course
         <button className="btn btn-primary float-end" id="wd-add-new-course-click" onClick={addNewCourse}> Add </button>
+        <button className="btn btn-warning float-end me-2" id="wd-update-course-click" onClick={updateCourse}> Update </button>
       </h5>
       <br />
       <input 
@@ -106,6 +119,16 @@ export default function Dashboard() {
                   <p className="card-text">{course.description}</p>
                   <div className="d-flex justify-content-between">
                     <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">Go</Link>
+                    <button
+                      onClick={(event) => {
+                        event.preventDefault();
+                        setCourse(course);
+                      }}
+                      className="btn btn-warning me-2"
+                      id="wd-edit-course-click"
+                    >
+                      Edit
+                    </button>
                     <button
                       onClick={(event) => {
                         event.preventDefault();
