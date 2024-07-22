@@ -13,7 +13,10 @@ import ParentStateComponent from './ParentStateComponent';
 import ReduxExamples from "./ReduxExamples";
 
 export default function Lab4() {
-  console.log('Lab4 is rendering');
+
+  function sayHello() {
+    alert("Hello");
+  }
 
   return (
     <div id="wd-lab4" className="container">
@@ -23,7 +26,7 @@ export default function Lab4() {
       <h3>Passing Data on Event</h3>
       <PassingDataOnEvent />
       <h3>Passing Functions as Parameters</h3>
-      <PassingFunctions theFunction={() => console.log('Hello')} />
+      <PassingFunctions theFunction={sayHello} />
       <h3>The Event Object</h3>
       <EventObject />
       <h3>Managing Component State</h3>
