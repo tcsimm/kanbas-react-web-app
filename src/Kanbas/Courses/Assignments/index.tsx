@@ -1,86 +1,75 @@
-import { FaSearch, FaPlus, FaCheckCircle } from 'react-icons/fa';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './Assignments.css';
+import { FaPlus, FaEllipsisV, FaCheckCircle } from 'react-icons/fa';
+import './Assignments.css'; // Ensure you create and import this CSS file
 
-export default function Assignments() {
+const Assignments = () => {
+  // Hardcoded assignments data
+  const assignments = [
+    {
+      _id: 'A1',
+      title: 'A1',
+      details: 'Multiple Modules',
+      availableDate: 'May 6 at 12:00am',
+      dueDate: 'May 13 at 11:59pm',
+      points: 100,
+    },
+    {
+      _id: 'A2',
+      title: 'A2',
+      details: 'Multiple Modules',
+      availableDate: 'May 13 at 12:00am',
+      dueDate: 'May 20 at 11:59pm',
+      points: 100,
+    },
+    {
+      _id: 'A3',
+      title: 'A3',
+      details: 'Multiple Modules',
+      availableDate: 'May 20 at 12:00am',
+      dueDate: 'May 27 at 11:59pm',
+      points: 100,
+    },
+  ];
+
   return (
-    <div id="wd-assignments" className="container-fluid">
-      <h2>Assignments</h2>
+    <div className="container mt-4">
+      <h2 className="text-danger">Assignments</h2>
+      <hr />
       <div className="d-flex justify-content-between align-items-center mb-3">
-        <div className="input-group">
-          <span className="input-group-text" id="basic-addon1">
-            <FaSearch />
-          </span>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search for Assignment"
-            aria-label="Search"
-            aria-describedby="basic-addon1"
-          />
-        </div>
+        <input type="text" className="form-control search-bar" placeholder="Search..." />
         <div>
-          <button className="btn btn-secondary me-2">
-            <FaPlus /> Group
-          </button>
-          <button className="btn btn-danger">
-            <FaPlus /> Assignment
-          </button>
+          <button className="btn btn-outline-secondary me-2">+ Group</button>
+          <button className="btn btn-danger">+ Assignment</button>
         </div>
       </div>
-      <ul id="wd-assignments-list" className="list-group">
-        <li className="wd-assignment-item list-group-item">
-          <Link to="/Assignments/A1" className="d-flex justify-content-between align-items-center text-decoration-none text-dark">
-            <div className="d-flex align-items-center">
-              <div className="wd-assignment-indicator bg-success"></div>
-              <div>
-                <h5 className="mb-0">A1</h5>
-                <small className="text-muted">
-                  Multiple Modules | Not available until May 6 at 12:00am |
-                  Due May 13 at 11:59pm | 100 pts
-                </small>
+      <div className="assignments-list">
+        {assignments.map((assignment) => (
+          <div key={assignment._id} className="assignment-item">
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex align-items-center">
+                <div className="drag-handle me-3">
+                  <FaEllipsisV />
+                </div>
+                <div>
+                  <Link to={`/Kanbas/Courses/Assignments/${assignment._id}`} className="assignment-title">
+                    {assignment.title}
+                  </Link>
+                  <div className="assignment-details">
+                    {assignment.details} | Not available until {assignment.availableDate} | Due {assignment.dueDate} | {assignment.points} pts
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex align-items-center">
+                <FaCheckCircle className="check-circle me-3" />
+                <FaEllipsisV />
               </div>
             </div>
-            <div className="text-success fs-5">
-              <FaCheckCircle />
-            </div>
-          </Link>
-        </li>
-        <li className="wd-assignment-item list-group-item">
-          <Link to="/Assignments/A2" className="d-flex justify-content-between align-items-center text-decoration-none text-dark">
-            <div className="d-flex align-items-center">
-              <div className="wd-assignment-indicator bg-success"></div>
-              <div>
-                <h5 className="mb-0">A2</h5>
-                <small className="text-muted">
-                  Multiple Modules | Not available until May 13 at 12:00am |
-                  Due May 20 at 11:59pm | 100 pts
-                </small>
-              </div>
-            </div>
-            <div className="text-success fs-5">
-              <FaCheckCircle />
-            </div>
-          </Link>
-        </li>
-        <li className="wd-assignment-item list-group-item">
-          <Link to="/Assignments/A3" className="d-flex justify-content-between align-items-center text-decoration-none text-dark">
-            <div className="d-flex align-items-center">
-              <div className="wd-assignment-indicator bg-success"></div>
-              <div>
-                <h5 className="mb-0">A3</h5>
-                <small className="text-muted">
-                  Multiple Modules | Not available until May 20 at 12:00am |
-                  Due May 27 at 11:59pm | 100 pts
-                </small>
-              </div>
-            </div>
-            <div className="text-success fs-5">
-              <FaCheckCircle />
-            </div>
-          </Link>
-        </li>
-      </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default Assignments;
