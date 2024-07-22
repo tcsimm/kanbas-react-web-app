@@ -64,6 +64,8 @@ export default function Dashboard(
       <hr />
       <h5>
         New Course
+        <button className="btn btn-primary float-end" id="wd-add-new-course-click" onClick={addNewCourse}> Add </button>
+        <button className="btn btn-warning float-end me-2" id="wd-update-course-click" onClick={updateCourse}> Update </button>
       </h5>
       <br />
       <input 
@@ -109,6 +111,7 @@ export default function Dashboard(
                     <button
                       onClick={(event) => {
                         event.preventDefault();
+                        deleteCourse(course._id);
                       }}
                       className="btn btn-danger"
                       id="wd-delete-course-click"
