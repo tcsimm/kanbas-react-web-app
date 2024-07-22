@@ -50,43 +50,20 @@ const imageMap: { [key: string]: string } = {
   "ancient.jpg": ancientImg
 };
 
-export default function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
-  const [course, setCourse] = useState<any>({
-    _id: "0", name: "New Course", number: "New Number",
-    startDate: "2023-09-10", endDate: "2023-12-15",
-    image: "default.jpg", description: "New Description"
-  });
+export default function Dashboard(
 
-  const addNewCourse = () => {
-    const newCourse = { ...course, _id: new Date().getTime().toString() };
-    setCourses([...courses, newCourse]);
-  };
-
-  const updateCourse = () => {
-    setCourses(
-      courses.map((c) => {
-        if (c._id === course._id) {
-          return course;
-        } else {
-          return c;
-        }
-      })
-    );
-  };
-
-  const deleteCourse = (courseId: string) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
-  };
-
+  { courses, course, setCourse, addNewCourse,
+    deleteCourse, updateCourse }: {
+    courses: any[]; course: any; setCourse: (course: any) => void;
+    addNewCourse: () => void; deleteCourse: (course: any) => void;
+    updateCourse: () => void; })
+{
   return (
     <div id="wd-dashboard" className="container-fluid">
       <h1 id="wd-dashboard-title">Dashboard</h1>
       <hr />
       <h5>
         New Course
-        <button className="btn btn-primary float-end" id="wd-add-new-course-click" onClick={addNewCourse}> Add </button>
-        <button className="btn btn-warning float-end me-2" id="wd-update-course-click" onClick={updateCourse}> Update </button>
       </h5>
       <br />
       <input 
@@ -132,7 +109,6 @@ export default function Dashboard() {
                     <button
                       onClick={(event) => {
                         event.preventDefault();
-                        deleteCourse(course._id);
                       }}
                       className="btn btn-danger"
                       id="wd-delete-course-click"
