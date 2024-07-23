@@ -11,15 +11,15 @@ export default function ModulesControls(
       <button
         id="wd-add-module-btn"
         className="btn btn-lg btn-danger me-1 float-end"
-        data-bs-toggle="modal"
-        data-bs-target="#wd-add-module-dialog"
+        data-toggle="modal"
+        data-target="#wd-add-module-dialog"
       >
         <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
         Module
       </button>
       <div className="dropdown d-inline me-1 float-end">
         <button id="wd-publish-all-btn" className="btn btn-lg btn-secondary dropdown-toggle"
-          type="button" data-bs-toggle="dropdown">
+          type="button" data-toggle="dropdown">
           <GreenCheckmark />
           Publish All
         </button>
