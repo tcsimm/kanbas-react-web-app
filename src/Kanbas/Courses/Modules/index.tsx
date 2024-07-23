@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import { BsGripVertical } from "react-icons/bs";
 import ModuleControlButtons from "./ModuleControlButtons";
 import LessonControlButtons from "./LessonControlButtons";
@@ -7,22 +7,20 @@ import ModulesControls from "./ModulesControls";
 import { addModule, editModule, updateModule, deleteModule } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
 
-const Modules: React.FC = () => {
-  const { cid } = useParams<{ cid: string }>(); // Use the defined Params type
+export default function Modules() {
+  const { cid } = useParams();
   const [moduleName, setModuleName] = useState<string>("");
   const { modules } = useSelector((state: any) => state.modulesReducer);
   const dispatch = useDispatch();
 
   return (
-    <div id="wd-modules" className="container mt-4">
+    <div id="wd-modules">
       <ModulesControls 
         moduleName={moduleName}
         setModuleName={setModuleName}
         addModule={() => {
-          if (cid) { // Ensure cid is defined
-            dispatch(addModule({ name: moduleName, course: cid }));
-            setModuleName("");
-          }
+          dispatch(addModule({ name: moduleName, course: cid }));
+          setModuleName("");
         }}
       />
       <br /><br /><br />
@@ -68,6 +66,4 @@ const Modules: React.FC = () => {
       </ul>
     </div>
   );
-};
-
-export default Modules;
+}
