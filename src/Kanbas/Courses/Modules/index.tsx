@@ -6,7 +6,6 @@ import LessonControlButtons from "./LessonControlButtons";
 import ModulesControls from "./ModulesControls";
 import { addModule, editModule, updateModule, deleteModule } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
-import './Modules.css'; // Ensure you create and import this CSS file
 
 const Modules: React.FC = () => {
   const { cid } = useParams<{ cid: string }>(); // Use the defined Params type
