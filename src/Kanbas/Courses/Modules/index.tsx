@@ -11,7 +11,7 @@ import ModulesControls from "./ModulesControls";
 export default function Modules() {
   const { cid } = useParams();
   const [moduleName, setModuleName] = useState("");
-  const { modules } = useSelector((state: any) => state.modules);
+  const { modules } = useSelector((state: any) => state.modulesReducer);
   const dispatch = useDispatch();
 
   return (
