@@ -12,13 +12,13 @@ export default function Modules() {
   const [moduleName, setModuleName] = useState<string>("");
 
   const addModule = () => {
-    const newModule = { name: moduleName, course: cid, lessons: [] };
+    const newModule = { _id: new Date().getTime().toString(), name: moduleName, course: cid, lessons: [] };
     setModules([...modules, newModule]);
     setModuleName("");
   };
 
   return (
-    <div id="wd-modules">
+    <div className="wd-modules">
       <ModulesControls 
         moduleName={moduleName}
         setModuleName={setModuleName}
@@ -29,7 +29,7 @@ export default function Modules() {
         {modules
           .filter((module) => module.course === cid)
           .map((module) => (
-            <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray" key={module.name}>
+            <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray" key={module._id}>
               <div className="wd-title p-3 ps-2 bg-secondary">
                 <BsGripVertical className="me-2 fs-3" />
                 {module.name}
