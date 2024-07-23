@@ -1,22 +1,21 @@
-// src/Kanbas/Courses/Modules/index.tsx
 import React, { useState } from "react";
 import { useParams } from "react-router";
-import { useSelector, useDispatch } from "react-redux";
-import { addModule, editModule, updateModule, deleteModule } from "./reducer";
 import { BsGripVertical } from "react-icons/bs";
 import ModuleControlButtons from "./ModuleControlButtons";
 import LessonControlButtons from "./LessonControlButtons";
 import ModulesControls from "./ModulesControls";
+import { addModule, editModule, updateModule, deleteModule } from "./reducer";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Modules() {
   const { cid } = useParams();
-  const [moduleName, setModuleName] = useState("");
+  const [moduleName, setModuleName] = useState<string>("");
   const { modules } = useSelector((state: any) => state.modulesReducer);
   const dispatch = useDispatch();
 
   return (
     <div id="wd-modules">
-      <ModulesControls
+      <ModulesControls 
         moduleName={moduleName}
         setModuleName={setModuleName}
         addModule={() => {
@@ -47,9 +46,7 @@ export default function Modules() {
                 )}
                 <ModuleControlButtons
                   moduleId={module._id}
-                  deleteModule={(moduleId) => {
-                    dispatch(deleteModule(moduleId));
-                  }}
+                  deleteModule={(moduleId) => dispatch(deleteModule(moduleId))}
                   editModule={(moduleId) => dispatch(editModule(moduleId))}
                 />
               </div>
