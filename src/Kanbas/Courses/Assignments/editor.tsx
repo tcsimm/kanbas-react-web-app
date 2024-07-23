@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addAssignment, updateAssignment } from './reducer';
 import * as db from '../../Database';
 
@@ -19,11 +19,12 @@ export default function AssignmentEditor() {
   const { cid, id } = useParams<{ cid: string; id: string }>();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const assignments = useSelector((state: any) => state.assignmentsReducer.assignments);
   const [assignment, setAssignment] = useState<Assignment | null>(null);
 
   useEffect(() => {
     if (id !== 'new') {
-      const foundAssignment = db.assignments.find(assignment => assignment._id === id) as Assignment;
+      const foundAssignment = assignments.find((assignment: Assignment) => assignment._id === id) as Assignment;
       setAssignment(foundAssignment);
     } else {
       setAssignment({
@@ -37,7 +38,7 @@ export default function AssignmentEditor() {
         availableUntil: ''
       });
     }
-  }, [id, cid]);
+  }, [id, cid, assignments]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
