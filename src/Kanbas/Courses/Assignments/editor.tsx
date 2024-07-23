@@ -1,21 +1,63 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addAssignment, updateAssignment } from './reducer';
 import * as db from '../../Database';
 
 interface Assignment {
   _id: string;
   title: string;
   course: string;
+  description?: string;
+  points?: number;
+  dueDate?: string;
+  availableFrom?: string;
+  availableUntil?: string;
 }
 
 export default function AssignmentEditor() {
   const { cid, id } = useParams<{ cid: string; id: string }>();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [assignment, setAssignment] = useState<Assignment | null>(null);
 
   useEffect(() => {
-    const foundAssignment = db.assignments.find(assignment => assignment._id === id) as Assignment;
-    setAssignment(foundAssignment);
-  }, [id]);
+    if (id !== 'new') {
+      const foundAssignment = db.assignments.find(assignment => assignment._id === id) as Assignment;
+      setAssignment(foundAssignment);
+    } else {
+      setAssignment({
+        _id: '',
+        title: '',
+        course: cid || '',
+        description: '',
+        points: 0,
+        dueDate: '',
+        availableFrom: '',
+        availableUntil: ''
+      });
+    }
+  }, [id, cid]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setAssignment(prev => (prev ? { ...prev, [name]: value } : null));
+  };
+
+  const handleSave = () => {
+    if (assignment) {
+      if (id === 'new') {
+        dispatch(addAssignment(assignment));
+      } else {
+        dispatch(updateAssignment(assignment));
+      }
+      navigate(`/Kanbas/Courses/${cid}/Assignments`);
+    }
+  };
+
+  const handleCancel = () => {
+    navigate(`/Kanbas/Courses/${cid}/Assignments`);
+  };
 
   if (!assignment) {
     return <div>Loading...</div>;
@@ -23,106 +65,80 @@ export default function AssignmentEditor() {
 
   return (
     <div className="container mt-4">
-      <h2 className="text-danger">Assignment Editor</h2>
+      <h2 className="text-danger">{id === 'new' ? 'Create Assignment' : 'Edit Assignment'}</h2>
       <hr />
       <div className="row">
         <div className="col-md-12">
           <form>
             <div className="mb-3">
-              <label htmlFor="assignmentName" className="form-label">Assignment Name</label>
+              <label htmlFor="title" className="form-label">Assignment Name</label>
               <input
                 type="text"
                 className="form-control"
-                id="assignmentName"
-                defaultValue={assignment.title}
+                id="title"
+                name="title"
+                value={assignment.title}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-3">
-              <label className="form-label">Details</label>
-              <div className="form-control">
-                The assignment is <a href="#" className="text-danger">available online</a><br />
-                Submit a link to the landing page of your Web application running on <a href="https://www.netlify.com/" className="text-danger">Netlify</a>.<br />
-                The landing page should include the following:
-                <ul>
-                  <li>Your full name and section</li>
-                  <li>Links to each of the lab assignments</li>
-                  <li>Link to the Kanbas application</li>
-                  <li>Links to all relevant source code repositories</li>
-                </ul>
-                The Kanbas application should include a link to navigate back to the landing page.
-              </div>
+              <label htmlFor="description" className="form-label">Description</label>
+              <textarea
+                className="form-control"
+                id="description"
+                name="description"
+                value={assignment.description}
+                onChange={handleChange}
+              />
             </div>
             <div className="row">
               <div className="col-md-3 mb-3">
                 <label htmlFor="points" className="form-label">Points</label>
-                <input type="number" className="form-control" id="points" defaultValue="100" />
+                <input
+                  type="number"
+                  className="form-control"
+                  id="points"
+                  name="points"
+                  value={assignment.points}
+                  onChange={handleChange}
+                />
               </div>
               <div className="col-md-3 mb-3">
-                <label htmlFor="assignmentGroup" className="form-label">Assignment Group</label>
-                <select className="form-control" id="assignmentGroup">
-                  <option>ASSIGNMENTS</option>
-                </select>
+                <label htmlFor="dueDate" className="form-label">Due Date</label>
+                <input
+                  type="datetime-local"
+                  className="form-control"
+                  id="dueDate"
+                  name="dueDate"
+                  value={assignment.dueDate}
+                  onChange={handleChange}
+                />
               </div>
               <div className="col-md-3 mb-3">
-                <label htmlFor="displayGradeAs" className="form-label">Display Grade as</label>
-                <select className="form-control" id="displayGradeAs">
-                  <option>Percentage</option>
-                </select>
+                <label htmlFor="availableFrom" className="form-label">Available From</label>
+                <input
+                  type="datetime-local"
+                  className="form-control"
+                  id="availableFrom"
+                  name="availableFrom"
+                  value={assignment.availableFrom}
+                  onChange={handleChange}
+                />
               </div>
               <div className="col-md-3 mb-3">
-                <label htmlFor="submissionType" className="form-label">Submission Type</label>
-                <select className="form-control" id="submissionType">
-                  <option>Online</option>
-                </select>
+                <label htmlFor="availableUntil" className="form-label">Available Until</label>
+                <input
+                  type="datetime-local"
+                  className="form-control"
+                  id="availableUntil"
+                  name="availableUntil"
+                  value={assignment.availableUntil}
+                  onChange={handleChange}
+                />
               </div>
             </div>
-            <div className="mb-3">
-              <label className="form-label">Online Entry Options</label>
-              <div className="form-control">
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="textEntry" />
-                  <label className="form-check-label" htmlFor="textEntry">Text Entry</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="websiteURL" defaultChecked />
-                  <label className="form-check-label" htmlFor="websiteURL">Website URL</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="mediaRecordings" />
-                  <label className="form-check-label" htmlFor="mediaRecordings">Media Recordings</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="studentAnnotation" />
-                  <label className="form-check-label" htmlFor="studentAnnotation">Student Annotation</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="fileUploads" />
-                  <label className="form-check-label" htmlFor="fileUploads">File Uploads</label>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6 mb-3">
-                <label className="form-label">Assign to</label>
-                <select className="form-control" id="assignTo">
-                  <option>Everyone</option>
-                </select>
-              </div>
-              <div className="col-md-3 mb-3">
-                <label className="form-label">Due</label>
-                <input type="datetime-local" className="form-control" defaultValue="2024-05-13T23:59" />
-              </div>
-              <div className="col-md-3 mb-3">
-                <label className="form-label">Available from</label>
-                <input type="datetime-local" className="form-control" defaultValue="2024-05-06T00:00" />
-              </div>
-              <div className="col-md-3 mb-3">
-                <label className="form-label">Until</label>
-                <input type="datetime-local" className="form-control" />
-              </div>
-            </div>
-            <Link to={`/Kanbas/Courses/${cid}/Assignments`} className="btn btn-secondary ms-2">Cancel</Link>
-            <button type="submit" className="btn btn-danger">Save</button>
+            <button type="button" className="btn btn-secondary me-2" onClick={handleCancel}>Cancel</button>
+            <button type="button" className="btn btn-danger" onClick={handleSave}>Save</button>
           </form>
         </div>
       </div>

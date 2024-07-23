@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { FaPlus, FaEllipsisV, FaCheckCircle } from 'react-icons/fa';
-import * as db from '../../Database';
+import { useSelector } from 'react-redux';
 import './Assignments.css'; // Ensure you create and import this CSS file
 
 const Assignments = () => {
   const { cid } = useParams();
-  const assignments = db.assignments.filter(assignment => assignment.course === cid);
+  const assignments = useSelector((state: any) => state.assignmentsReducer.assignments.filter((assignment: any) => assignment.course === cid));
+  const navigate = useNavigate();
 
   return (
     <div className="container mt-4">
@@ -16,11 +17,11 @@ const Assignments = () => {
         <input type="text" className="form-control search-bar" placeholder="Search..." />
         <div>
           <button className="btn btn-outline-secondary me-2">+ Group</button>
-          <button className="btn btn-danger">+ Assignment</button>
+          <button className="btn btn-danger" onClick={() => navigate(`/Kanbas/Courses/${cid}/Assignments/new`)}>+ Assignment</button>
         </div>
       </div>
       <div className="assignments-list">
-        {assignments.map((assignment) => (
+        {assignments.map((assignment: any) => (
           <div key={assignment._id} className="assignment-item">
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center">
@@ -32,7 +33,7 @@ const Assignments = () => {
                     {assignment.title}
                   </Link>
                   <div className="assignment-details">
-                    Multiple Modules | Not available until May 6 at 12:00am | Due May 13 at 11:59pm | 100 pts
+                    Multiple Modules | Not available until {assignment.availableFrom} | Due {assignment.dueDate} | {assignment.points} pts
                   </div>
                 </div>
               </div>
