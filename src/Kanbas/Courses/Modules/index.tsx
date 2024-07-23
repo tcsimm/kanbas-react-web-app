@@ -18,7 +18,7 @@ export default function Modules() {
   };
 
   return (
-    <div className="wd-modules">
+    <div id="wd-modules">
       <ModulesControls 
         moduleName={moduleName}
         setModuleName={setModuleName}
