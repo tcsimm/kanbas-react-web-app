@@ -11,6 +11,8 @@ const defaultLessons = [
   { name: "Lesson 3" }
 ];
 
+const defaultName = "New Module";
+
 const modulesSlice = createSlice({
   name: "modules",
   initialState,
@@ -19,7 +21,7 @@ const modulesSlice = createSlice({
       const newModule: any = {
         _id: new Date().getTime().toString(),
         lessons: defaultLessons,
-        name: module.name,
+        name: defaultName,
         course: module.course,
       };
       state.modules = [...state.modules, newModule] as any;
