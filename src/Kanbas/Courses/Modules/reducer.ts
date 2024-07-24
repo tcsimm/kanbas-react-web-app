@@ -5,33 +5,38 @@ const initialState = {
   modules: modules,
 };
 
+const defaultLessons = [
+  { name: "Lesson 1" },
+  { name: "Lesson 2" },
+  { name: "Lesson 3" }
+];
+
 const modulesSlice = createSlice({
   name: "modules",
   initialState,
   reducers: {
     addModule: (state, { payload: module }) => {
       const newModule: any = {
-        _id: new Date().getTime().toString(),
-        lessons: [],
+        id: new Date().getTime().toString(),
+        lessons: defaultLessons,
         name: module.name,
         course: module.course,
       };
-      state.modules = [...state.modules, newModule] as any;
+      state.modules = [...state.modules, newModule];
     },
     deleteModule: (state, { payload: moduleId }) => {
-      console.log(state.modules)
-      const newModules = state.modules.filter((m: any) => m._id !== moduleId);
-      state.modules = newModules
+      const newModules = state.modules.filter((m: any) => m.id !== moduleId);
+      state.modules = newModules;
     },
     updateModule: (state, { payload: module }) => {
       state.modules = state.modules.map((m: any) =>
-        m._id === module._id ? module : m
-      ) as any;
+        m.id === module.id ? module : m
+      );
     },
     editModule: (state, { payload: moduleId }) => {
       state.modules = state.modules.map((m: any) =>
-        m._id === moduleId ? { ...m, editing: true } : m
-      ) as any;
+        m.id === moduleId ? { ...m, editing: true } : m
+      );
     },
   },
 });
