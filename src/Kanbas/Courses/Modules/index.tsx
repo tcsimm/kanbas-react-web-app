@@ -28,7 +28,7 @@ export default function Modules() {
         {modules
           .filter((module: any) => module.course === cid)
           .map((module: any) => (
-            <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray" key={module.id}>
+            <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray" key={module._id}>
               <div className="wd-title p-3 ps-2 bg-secondary">
                 <BsGripVertical className="me-2 fs-3" />
                 {!module.editing && module.name}
@@ -45,7 +45,7 @@ export default function Modules() {
                   />
                 )}
                 <ModuleControlButtons
-                  moduleId={module.id}
+                  moduleId={module._id}
                   deleteModule={(moduleId) => dispatch(deleteModule(moduleId))}
                   editModule={(moduleId) => dispatch(editModule(moduleId))}
                 />
