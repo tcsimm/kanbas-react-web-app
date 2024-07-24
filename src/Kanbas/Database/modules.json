@@ -1,5 +1,6 @@
 [
   {
+    "id": "module1",
     "course": "RS101",
     "name": "Introduction to Rocket Propulsion",
     "lessons": [
@@ -9,6 +10,7 @@
     ]
   },
   {
+    "id": "module2",
     "course": "RS101",
     "name": "Advanced Rocket Propulsion",
     "lessons": [
@@ -18,6 +20,7 @@
     ]
   },
   {
+    "id": "module3",
     "course": "RS101",
     "name": "Rocket Propulsion Lab",
     "lessons": [
@@ -27,6 +30,7 @@
     ]
   },
   {
+    "id": "module4",
     "course": "RS102",
     "name": "Fundamentals of Aerodynamics",
     "lessons": [
@@ -36,6 +40,7 @@
     ]
   },
   {
+    "id": "module5",
     "course": "RS102",
     "name": "Advanced Aerodynamics",
     "lessons": [
@@ -45,6 +50,7 @@
     ]
   },
   {
+    "id": "module6",
     "course": "RS102",
     "name": "Aerodynamics Lab",
     "lessons": [
@@ -54,6 +60,7 @@
     ]
   },
   {
+    "id": "module7",
     "course": "RS103",
     "name": "Introduction to Spacecraft Design",
     "lessons": [
@@ -63,6 +70,7 @@
     ]
   },
   {
+    "id": "module8",
     "course": "RS103",
     "name": "Advanced Spacecraft Design",
     "lessons": [
@@ -72,6 +80,7 @@
     ]
   },
   {
+    "id": "module9",
     "course": "RS103",
     "name": "Spacecraft Design Lab",
     "lessons": [
@@ -81,6 +90,7 @@
     ]
   },
   {
+    "id": "module10",
     "course": "RS104",
     "name": "Fundamentals of Organic Chemistry",
     "lessons": [
@@ -90,6 +100,7 @@
     ]
   },
   {
+    "id": "module11",
     "course": "RS104",
     "name": "Advanced Organic Chemistry",
     "lessons": [
@@ -99,6 +110,7 @@
     ]
   },
   {
+    "id": "module12",
     "course": "RS104",
     "name": "Organic Chemistry Lab",
     "lessons": [
@@ -108,6 +120,7 @@
     ]
   },
   {
+    "id": "module13",
     "course": "RS105",
     "name": "Fundamentals of Inorganic Chemistry",
     "lessons": [
@@ -117,6 +130,7 @@
     ]
   },
   {
+    "id": "module14",
     "course": "RS105",
     "name": "Advanced Inorganic Chemistry",
     "lessons": [
@@ -126,6 +140,7 @@
     ]
   },
   {
+    "id": "module15",
     "course": "RS105",
     "name": "Inorganic Chemistry Lab",
     "lessons": [
@@ -135,6 +150,7 @@
     ]
   },
   {
+    "id": "module16",
     "course": "RS106",
     "name": "Fundamentals of Physical Chemistry",
     "lessons": [
@@ -144,6 +160,7 @@
     ]
   },
   {
+    "id": "module17",
     "course": "RS106",
     "name": "Advanced Physical Chemistry",
     "lessons": [
@@ -153,6 +170,7 @@
     ]
   },
   {
+    "id": "module18",
     "course": "RS106",
     "name": "Physical Chemistry Lab",
     "lessons": [
@@ -162,6 +180,7 @@
     ]
   },
   {
+    "id": "module19",
     "course": "RS107",
     "name": "Ancient Languages of Middle-earth",
     "lessons": [
@@ -171,6 +190,7 @@
     ]
   },
   {
+    "id": "module20",
     "course": "RS107",
     "name": "Scripts of Middle-earth",
     "lessons": [
@@ -180,6 +200,7 @@
     ]
   },
   {
+    "id": "module21",
     "course": "RS107",
     "name": "Philology in Middle-earth",
     "lessons": [
@@ -189,6 +210,7 @@
     ]
   },
   {
+    "id": "module22",
     "course": "RS108",
     "name": "Inter-species Diplomacy: History",
     "lessons": [
@@ -198,6 +220,7 @@
     ]
   },
   {
+    "id": "module23",
     "course": "RS108",
     "name": "Inter-species Diplomacy: Theory",
     "lessons": [
@@ -207,6 +230,7 @@
     ]
   },
   {
+    "id": "module24",
     "course": "RS108",
     "name": "Inter-species Diplomacy: Case Studies",
     "lessons": [
@@ -216,6 +240,7 @@
     ]
   },
   {
+    "id": "module25",
     "course": "RS109",
     "name": "History of Middle-earth Magic",
     "lessons": [
@@ -225,6 +250,7 @@
     ]
   },
   {
+    "id": "module26",
     "course": "RS109",
     "name": "Theory of Middle-earth Magic",
     "lessons": [
@@ -234,6 +260,7 @@
     ]
   },
   {
+    "id": "module27",
     "course": "RS109",
     "name": "Practical Magic in Middle-earth",
     "lessons": [
@@ -243,6 +270,7 @@
     ]
   },
   {
+    "id": "module28",
     "course": "RS110",
     "name": "Introduction to Democratic Education",
     "lessons": [
@@ -252,6 +280,7 @@
     ]
   },
   {
+    "id": "module29",
     "course": "RS110",
     "name": "Models of Democratic Education",
     "lessons": [
@@ -261,6 +290,7 @@
     ]
   },
   {
+    "id": "module30",
     "course": "RS110",
     "name": "Challenges in Democratic Education",
     "lessons": [
@@ -270,6 +300,7 @@
     ]
   },
   {
+    "id": "module31",
     "course": "RS111",
     "name": "Philosophy of Independence",
     "lessons": [
@@ -279,6 +310,7 @@
     ]
   },
   {
+    "id": "module32",
     "course": "RS111",
     "name": "Philosophy of Liberation",
     "lessons": [
@@ -288,6 +320,7 @@
     ]
   },
   {
+    "id": "module33",
     "course": "RS111",
     "name": "Case Studies in Independence",
     "lessons": [
@@ -297,6 +330,7 @@
     ]
   },
   {
+    "id": "module34",
     "course": "RS112",
     "name": "Innovations in 19th Century Education",
     "lessons": [
@@ -306,6 +340,7 @@
     ]
   },
   {
+    "id": "module35",
     "course": "RS112",
     "name": "19th Century Educational Theories",
     "lessons": [
@@ -315,6 +350,7 @@
     ]
   },
   {
+    "id": "module36",
     "course": "RS112",
     "name": "Critical Assessment of Early Innovations",
     "lessons": [
@@ -324,6 +360,7 @@
     ]
   },
   {
+    "id": "module37",
     "course": "RS113",
     "name": "Foundations of Christian Ethics",
     "lessons": [
@@ -333,6 +370,7 @@
     ]
   },
   {
+    "id": "module38",
     "course": "RS113",
     "name": "Christian Ethics in Practice",
     "lessons": [
@@ -342,6 +380,7 @@
     ]
   },
   {
+    "id": "module39",
     "course": "RS113",
     "name": "Theological Traditions in Ethics",
     "lessons": [
@@ -351,6 +390,7 @@
     ]
   },
   {
+    "id": "module40",
     "course": "RS114",
     "name": "Early Christianity",
     "lessons": [
@@ -360,6 +400,7 @@
     ]
   },
   {
+    "id": "module41",
     "course": "RS114",
     "name": "The Apostolic Age",
     "lessons": [
@@ -369,6 +410,7 @@
     ]
   },
   {
+    "id": "module42",
     "course": "RS114",
     "name": "Historical Context of Early Christianity",
     "lessons": [
@@ -378,6 +420,7 @@
     ]
   },
   {
+    "id": "module43",
     "course": "RS115",
     "name": "Leadership in Christian Communities",
     "lessons": [
@@ -387,6 +430,7 @@
     ]
   },
   {
+    "id": "module44",
     "course": "RS115",
     "name": "Service in Christian Communities",
     "lessons": [
@@ -396,6 +440,7 @@
     ]
   },
   {
+    "id": "module45",
     "course": "RS115",
     "name": "Effective Leadership Practices",
     "lessons": [
@@ -405,6 +450,7 @@
     ]
   },
   {
+    "id": "module46",
     "course": "RS116",
     "name": "Introduction to Sufi Philosophy",
     "lessons": [
@@ -414,6 +460,7 @@
     ]
   },
   {
+    "id": "module47",
     "course": "RS116",
     "name": "Mystical Traditions in Sufism",
     "lessons": [
@@ -423,6 +470,7 @@
     ]
   },
   {
+    "id": "module48",
     "course": "RS116",
     "name": "Love and Divine Union in Sufism",
     "lessons": [
@@ -432,6 +480,7 @@
     ]
   },
   {
+    "id": "module49",
     "course": "RS117",
     "name": "Ethical Wisdom in Islam",
     "lessons": [
@@ -441,6 +490,7 @@
     ]
   },
   {
+    "id": "module50",
     "course": "RS117",
     "name": "Moral Reasoning in Islam",
     "lessons": [
@@ -450,6 +500,7 @@
     ]
   },
   {
+    "id": "module51",
     "course": "RS117",
     "name": "Ethical Dilemmas in Islam",
     "lessons": [
@@ -459,6 +510,7 @@
     ]
   },
   {
+    "id": "module52",
     "course": "RS118",
     "name": "Introduction to Islamic Esotericism",
     "lessons": [
@@ -468,6 +520,7 @@
     ]
   },
   {
+    "id": "module53",
     "course": "RS118",
     "name": "Advanced Islamic Esotericism",
     "lessons": [
@@ -477,6 +530,7 @@
     ]
   },
   {
+    "id": "module54",
     "course": "RS118",
     "name": "Practical Esotericism",
     "lessons": [
@@ -486,6 +540,7 @@
     ]
   },
   {
+    "id": "module55",
     "course": "RS119",
     "name": "Environmental Management in Ancient China",
     "lessons": [
@@ -495,6 +550,7 @@
     ]
   },
   {
+    "id": "module56",
     "course": "RS119",
     "name": "Achievements of Yu the Great",
     "lessons": [
@@ -504,6 +560,7 @@
     ]
   },
   {
+    "id": "module57",
     "course": "RS119",
     "name": "Relevance to Modern Challenges",
     "lessons": [
@@ -513,6 +570,7 @@
     ]
   },
   {
+    "id": "module58",
     "course": "RS120",
     "name": "Leadership Lessons from Yu the Great",
     "lessons": [
@@ -522,6 +580,7 @@
     ]
   },
   {
+    "id": "module59",
     "course": "RS120",
     "name": "Other Leadership Lessons from Chinese Mythology",
     "lessons": [
@@ -531,6 +590,7 @@
     ]
   },
   {
+    "id": "module60",
     "course": "RS120",
     "name": "Applications of Mythological Lessons",
     "lessons": [
@@ -540,6 +600,7 @@
     ]
   },
   {
+    "id": "module61",
     "course": "RS121",
     "name": "Hydraulic Engineering in Ancient China",
     "lessons": [
@@ -549,6 +610,7 @@
     ]
   },
   {
+    "id": "module62",
     "course": "RS121",
     "name": "Comparative Hydraulic Engineering",
     "lessons": [
@@ -558,6 +620,457 @@
     ]
   },
   {
+    "id": "module63",
+    "course": "RS121",
+    "name": "Technological Contexts",
+    "lessons": [
+      { "name": "Historical Development" },
+      { "name": "Engineering Techniques" },
+      { "name": "Modern Applications" }
+    ]
+  },
+  {
+    "id": "module64",
+    "course": "RS107",
+    "name": "Introduction to Ancient Languages",
+    "lessons": [
+      { "name": "Sindarin Basics" },
+      { "name": "Quenya Basics" },
+      { "name": "Khuzdul Basics" }
+    ]
+  },
+  {
+    "id": "module65",
+    "course": "RS107",
+    "name": "Scripts and Inscriptions",
+    "lessons": [
+      { "name": "Elvish Scripts" },
+      { "name": "Dwarvish Runes" },
+      { "name": "Black Speech of Mordor" }
+    ]
+  },
+  {
+    "id": "module66",
+    "course": "RS107",
+    "name": "Language and Culture",
+    "lessons": [
+      { "name": "Cultural Contexts" },
+      { "name": "Language Evolution" },
+      { "name": "Historical Significance" }
+    ]
+  },
+  {
+    "id": "module67",
+    "course": "RS108",
+    "name": "Diplomacy in Middle-earth",
+    "lessons": [
+      { "name": "Council of Elrond" },
+      { "name": "War of the Ring" },
+      { "name": "Peace Treaties" }
+    ]
+  },
+  {
+    "id": "module68",
+    "course": "RS108",
+    "name": "Inter-species Relations",
+    "lessons": [
+      { "name": "Elves and Men" },
+      { "name": "Dwarves and Elves" },
+      { "name": "Wizards and Men" }
+    ]
+  },
+  {
+    "id": "module69",
+    "course": "RS108",
+    "name": "Leadership and Wisdom",
+    "lessons": [
+      { "name": "Gandalf's Leadership" },
+      { "name": "Aragorn's Diplomacy" },
+      { "name": "Elrond's Wisdom" }
+    ]
+  },
+  {
+    "id": "module70",
+    "course": "RS109",
+    "name": "Fundamentals of Middle-earth Magic",
+    "lessons": [
+      { "name": "Sources of Magic" },
+      { "name": "Types of Magical Beings" },
+      { "name": "Magical Artifacts" }
+    ]
+  },
+  {
+    "id": "module71",
+    "course": "RS109",
+    "name": "Practitioners of Magic",
+    "lessons": [
+      { "name": "Wizards" },
+      { "name": "Elves" },
+      { "name": "Ents" }
+    ]
+  },
+  {
+    "id": "module72",
+    "course": "RS109",
+    "name": "Philosophical Dimensions",
+    "lessons": [
+      { "name": "Ethics of Magic Use" },
+      { "name": "Magic and Power" },
+      { "name": "Magical Conflicts" }
+    ]
+  },
+  {
+    "id": "module73",
+    "course": "RS110",
+    "name": "Foundations of Democratic Education",
+    "lessons": [
+      { "name": "Historical Models" },
+      { "name": "Participatory Learning" },
+      { "name": "Social Equality" }
+    ]
+  },
+  {
+    "id": "module74",
+    "course": "RS110",
+    "name": "Democratic Schooling",
+    "lessons": [
+      { "name": "Educational Systems" },
+      { "name": "Civic Responsibility" },
+      { "name": "Critical Thinking" }
+    ]
+  },
+  {
+    "id": "module75",
+    "course": "RS110",
+    "name": "Challenges and Opportunities",
+    "lessons": [
+      { "name": "Implementing Democratic Principles" },
+      { "name": "Diverse Educational Settings" },
+      { "name": "Future Prospects" }
+    ]
+  },
+  {
+    "id": "module76",
+    "course": "RS111",
+    "name": "Philosophies of Independence",
+    "lessons": [
+      { "name": "Concepts of Freedom" },
+      { "name": "Nation-Building" },
+      { "name": "Contemporary Struggles" }
+    ]
+  },
+  {
+    "id": "module77",
+    "course": "RS111",
+    "name": "Case Studies in Independence",
+    "lessons": [
+      { "name": "Simón Bolívar" },
+      { "name": "Latin American Independence" },
+      { "name": "Modern Movements" }
+    ]
+  },
+  {
+    "id": "module78",
+    "course": "RS111",
+    "name": "Independence Movements",
+    "lessons": [
+      { "name": "Historical Context" },
+      { "name": "Key Figures" },
+      { "name": "Impact and Legacy" }
+    ]
+  },
+  {
+    "id": "module79",
+    "course": "RS112",
+    "name": "Innovations in 19th Century Education",
+    "lessons": [
+      { "name": "Educational Reformers" },
+      { "name": "Practical and Theoretical Knowledge" },
+      { "name": "Impact on Modern Pedagogy" }
+    ]
+  },
+  {
+    "id": "module80",
+    "course": "RS112",
+    "name": "19th Century Educational Theories",
+    "lessons": [
+      { "name": "Simon Rodríguez" },
+      { "name": "Integration of Knowledge" },
+      { "name": "Social Change through Education" }
+    ]
+  },
+  {
+    "id": "module81",
+    "course": "RS112",
+    "name": "Critical Assessment of Early Innovations",
+    "lessons": [
+      { "name": "Lasting Impacts" },
+      { "name": "Contemporary Education Systems" },
+      { "name": "Future Directions" }
+    ]
+  },
+  {
+    "id": "module82",
+    "course": "RS113",
+    "name": "Foundations of Christian Ethics",
+    "lessons": [
+      { "name": "Biblical Texts" },
+      { "name": "Moral Decision-Making" },
+      { "name": "Virtues and Vices" }
+    ]
+  },
+  {
+    "id": "module83",
+    "course": "RS113",
+    "name": "Christian Ethics in Practice",
+    "lessons": [
+      { "name": "Ethical Living" },
+      { "name": "Contemporary Moral Issues" },
+      { "name": "Applying Christian Principles" }
+    ]
+  },
+  {
+    "id": "module84",
+    "course": "RS113",
+    "name": "Theological Traditions in Ethics",
+    "lessons": [
+      { "name": "Historical Perspectives" },
+      { "name": "Modern Applications" },
+      { "name": "Future Challenges" }
+    ]
+  },
+  {
+    "id": "module85",
+    "course": "RS114",
+    "name": "Early Christianity",
+    "lessons": [
+      { "name": "Life and Teachings of Jesus" },
+      { "name": "Role of the Apostles" },
+      { "name": "Spread of Christianity" }
+    ]
+  },
+  {
+    "id": "module86",
+    "course": "RS114",
+    "name": "The Apostolic Age",
+    "lessons": [
+      { "name": "New Testament Analysis" },
+      { "name": "Challenges of the Early Church" },
+      { "name": "Formation of Doctrines" }
+    ]
+  },
+  {
+    "id": "module87",
+    "course": "RS114",
+    "name": "Historical Context of Early Christianity",
+    "lessons": [
+      { "name": "Roman Empire" },
+      { "name": "Early Christian Communities" },
+      { "name": "Persecution and Growth" }
+    ]
+  },
+  {
+    "id": "module88",
+    "course": "RS115",
+    "name": "Leadership in Christian Communities",
+    "lessons": [
+      { "name": "Biblical Teachings" },
+      { "name": "Pastoral Care" },
+      { "name": "Community Building" }
+    ]
+  },
+  {
+    "id": "module89",
+    "course": "RS115",
+    "name": "Service in Christian Communities",
+    "lessons": [
+      { "name": "Servant Leadership" },
+      { "name": "Ethical Stewardship" },
+      { "name": "Practical Applications" }
+    ]
+  },
+  {
+    "id": "module90",
+    "course": "RS115",
+    "name": "Effective Leadership Practices",
+    "lessons": [
+      { "name": "Saint Peter's Example" },
+      { "name": "Modern Leadership Challenges" },
+      { "name": "Community Service" }
+    ]
+  },
+  {
+    "id": "module91",
+    "course": "RS116",
+    "name": "Introduction to Sufi Philosophy",
+    "lessons": [
+      { "name": "Historical Development" },
+      { "name": "Key Sufi Figures" },
+      { "name": "Philosophical Underpinnings" }
+    ]
+  },
+  {
+    "id": "module92",
+    "course": "RS116",
+    "name": "Mystical Traditions in Sufism",
+    "lessons": [
+      { "name": "Mystical Practices" },
+      { "name": "Sufi Orders" },
+      { "name": "Rituals and Contributions" }
+    ]
+  },
+  {
+    "id": "module93",
+    "course": "RS116",
+    "name": "Love and Divine Union in Sufism",
+    "lessons": [
+      { "name": "Teachings of Rumi" },
+      { "name": "Teachings of Hafiz" },
+      { "name": "Journey of the Soul" }
+    ]
+  },
+  {
+    "id": "module94",
+    "course": "RS117",
+    "name": "Ethical Wisdom in Islam",
+    "lessons": [
+      { "name": "Moral Teachings in the Quran" },
+      { "name": "Hadith and Ethical Guidance" },
+      { "name": "Role of Khidr" }
+    ]
+  },
+  {
+    "id": "module95",
+    "course": "RS117",
+    "name": "Moral Reasoning in Islam",
+    "lessons": [
+      { "name": "Divine Guidance" },
+      { "name": "Free Will and Morality" },
+      { "name": "Pursuit of Righteousness" }
+    ]
+  },
+  {
+    "id": "module96",
+    "course": "RS117",
+    "name": "Ethical Dilemmas in Islam",
+    "lessons": [
+      { "name": "Contemporary Issues" },
+      { "name": "Personal Spiritual Growth" },
+      { "name": "Ethical Solutions" }
+    ]
+  },
+  {
+    "id": "module97",
+    "course": "RS118",
+    "name": "Introduction to Islamic Esotericism",
+    "lessons": [
+      { "name": "Nature of the Unseen World" },
+      { "name": "Spiritual Symbolism" },
+      { "name": "Mystical Experiences" }
+    ]
+  },
+  {
+    "id": "module98",
+    "course": "RS118",
+    "name": "Advanced Islamic Esotericism",
+    "lessons": [
+      { "name": "Teachings of Khidr" },
+      { "name": "Interplay of Material and Spiritual Realms" },
+      { "name": "Reflective Approach" }
+    ]
+  },
+  {
+    "id": "module99",
+    "course": "RS118",
+    "name": "Practical Esotericism",
+    "lessons": [
+      { "name": "Spiritual Practices" },
+      { "name": "Esoteric Interpretations" },
+      { "name": "Application in Daily Life" }
+    ]
+  },
+  {
+    "id": "module100",
+    "course": "RS119",
+    "name": "Environmental Management in Ancient China",
+    "lessons": [
+      { "name": "Principles of Water Management" },
+      { "name": "Agricultural Practices" },
+      { "name": "Land Use and Governance" }
+    ]
+  },
+  {
+    "id": "module101",
+    "course": "RS119",
+    "name": "Achievements of Yu the Great",
+    "lessons": [
+      { "name": "Flood Control Systems" },
+      { "name": "Irrigation Techniques" },
+      { "name": "Engineering Marvels" }
+    ]
+  },
+  {
+    "id": "module102",
+    "course": "RS119",
+    "name": "Relevance to Modern Challenges",
+    "lessons": [
+      { "name": "Comparative Studies" },
+      { "name": "Lessons for Modern Environmental Management" },
+      { "name": "Integration with Chinese Philosophies" }
+    ]
+  },
+  {
+    "id": "module103",
+    "course": "RS120",
+    "name": "Leadership Lessons from Yu the Great",
+    "lessons": [
+      { "name": "Perseverance and Vision" },
+      { "name": "Ethical Governance" },
+      { "name": "Legendary Endeavors" }
+    ]
+  },
+  {
+    "id": "module104",
+    "course": "RS120",
+    "name": "Other Leadership Lessons from Chinese Mythology",
+    "lessons": [
+      { "name": "Notable Figures" },
+      { "name": "Cultural and Political Identity" },
+      { "name": "Historical Impact" }
+    ]
+  },
+  {
+    "id": "module105",
+    "course": "RS120",
+    "name": "Applications of Mythological Lessons",
+    "lessons": [
+      { "name": "Modern Leadership Challenges" },
+      { "name": "Case Studies" },
+      { "name": "Implementing Lessons in Practice" }
+    ]
+  },
+  {
+    "id": "module106",
+    "course": "RS121",
+    "name": "Hydraulic Engineering in Ancient China",
+    "lessons": [
+      { "name": "Design and Construction" },
+      { "name": "Dams and Canals" },
+      { "name": "Irrigation Systems" }
+    ]
+  },
+  {
+    "id": "module107",
+    "course": "RS121",
+    "name": "Comparative Hydraulic Engineering",
+    "lessons": [
+      { "name": "Mesopotamia" },
+      { "name": "Indus Valley" },
+      { "name": "Ancient Egypt" }
+    ]
+  },
+  {
+    "id": "module108",
     "course": "RS121",
     "name": "Technological Contexts",
     "lessons": [
@@ -566,409 +1079,4 @@
       { "name": "Modern Applications" }
     ]
   }
-,{
-  "course": "RS107",
-  "name": "Introduction to Ancient Languages",
-  "lessons": [
-    { "name": "Sindarin Basics" },
-    { "name": "Quenya Basics" },
-    { "name": "Khuzdul Basics" }
-  ]
-},
-{
-  "course": "RS107",
-  "name": "Scripts and Inscriptions",
-  "lessons": [
-    { "name": "Elvish Scripts" },
-    { "name": "Dwarvish Runes" },
-    { "name": "Black Speech of Mordor" }
-  ]
-},
-{
-  "course": "RS107",
-  "name": "Language and Culture",
-  "lessons": [
-    { "name": "Cultural Contexts" },
-    { "name": "Language Evolution" },
-    { "name": "Historical Significance" }
-  ]
-},
-{
-  "course": "RS108",
-  "name": "Diplomacy in Middle-earth",
-  "lessons": [
-    { "name": "Council of Elrond" },
-    { "name": "War of the Ring" },
-    { "name": "Peace Treaties" }
-  ]
-},
-{
-  "course": "RS108",
-  "name": "Inter-species Relations",
-  "lessons": [
-    { "name": "Elves and Men" },
-    { "name": "Dwarves and Elves" },
-    { "name": "Wizards and Men" }
-  ]
-},
-{
-  "course": "RS108",
-  "name": "Leadership and Wisdom",
-  "lessons": [
-    { "name": "Gandalf's Leadership" },
-    { "name": "Aragorn's Diplomacy" },
-    { "name": "Elrond's Wisdom" }
-  ]
-},
-{
-  "course": "RS109",
-  "name": "Fundamentals of Middle-earth Magic",
-  "lessons": [
-    { "name": "Sources of Magic" },
-    { "name": "Types of Magical Beings" },
-    { "name": "Magical Artifacts" }
-  ]
-},
-{
-  "course": "RS109",
-  "name": "Practitioners of Magic",
-  "lessons": [
-    { "name": "Wizards" },
-    { "name": "Elves" },
-    { "name": "Ents" }
-  ]
-},
-{
-  "course": "RS109",
-  "name": "Philosophical Dimensions",
-  "lessons": [
-    { "name": "Ethics of Magic Use" },
-    { "name": "Magic and Power" },
-    { "name": "Magical Conflicts" }
-  ]
-},
-{
-  "course": "RS110",
-  "name": "Foundations of Democratic Education",
-  "lessons": [
-    { "name": "Historical Models" },
-    { "name": "Participatory Learning" },
-    { "name": "Social Equality" }
-  ]
-},
-{
-  "course": "RS110",
-  "name": "Democratic Schooling",
-  "lessons": [
-    { "name": "Educational Systems" },
-    { "name": "Civic Responsibility" },
-    { "name": "Critical Thinking" }
-  ]
-},
-{
-  "course": "RS110",
-  "name": "Challenges and Opportunities",
-  "lessons": [
-    { "name": "Implementing Democratic Principles" },
-    { "name": "Diverse Educational Settings" },
-    { "name": "Future Prospects" }
-  ]
-},
-{
-  "course": "RS111",
-  "name": "Philosophies of Independence",
-  "lessons": [
-    { "name": "Concepts of Freedom" },
-    { "name": "Nation-Building" },
-    { "name": "Contemporary Struggles" }
-  ]
-},
-{
-  "course": "RS111",
-  "name": "Case Studies in Independence",
-  "lessons": [
-    { "name": "Simón Bolívar" },
-    { "name": "Latin American Independence" },
-    { "name": "Modern Movements" }
-  ]
-},
-{
-  "course": "RS111",
-  "name": "Independence Movements",
-  "lessons": [
-    { "name": "Historical Context" },
-    { "name": "Key Figures" },
-    { "name": "Impact and Legacy" }
-  ]
-},
-{
-  "course": "RS112",
-  "name": "Innovations in 19th Century Education",
-  "lessons": [
-    { "name": "Educational Reformers" },
-    { "name": "Practical and Theoretical Knowledge" },
-    { "name": "Impact on Modern Pedagogy" }
-  ]
-},
-{
-  "course": "RS112",
-  "name": "19th Century Educational Theories",
-  "lessons": [
-    { "name": "Simon Rodríguez" },
-    { "name": "Integration of Knowledge" },
-    { "name": "Social Change through Education" }
-  ]
-},
-{
-  "course": "RS112",
-  "name": "Critical Assessment of Early Innovations",
-  "lessons": [
-    { "name": "Lasting Impacts" },
-    { "name": "Contemporary Education Systems" },
-    { "name": "Future Directions" }
-  ]
-},
-{
-  "course": "RS113",
-  "name": "Foundations of Christian Ethics",
-  "lessons": [
-    { "name": "Biblical Texts" },
-    { "name": "Moral Decision-Making" },
-    { "name": "Virtues and Vices" }
-  ]
-},
-{
-  "course": "RS113",
-  "name": "Christian Ethics in Practice",
-  "lessons": [
-    { "name": "Ethical Living" },
-    { "name": "Contemporary Moral Issues" },
-    { "name": "Applying Christian Principles" }
-  ]
-},
-{
-  "course": "RS113",
-  "name": "Theological Traditions in Ethics",
-  "lessons": [
-    { "name": "Historical Perspectives" },
-    { "name": "Modern Applications" },
-    { "name": "Future Challenges" }
-  ]
-},
-{
-  "course": "RS114",
-  "name": "Early Christianity",
-  "lessons": [
-    { "name": "Life and Teachings of Jesus" },
-    { "name": "Role of the Apostles" },
-    { "name": "Spread of Christianity" }
-  ]
-},
-{
-  "course": "RS114",
-  "name": "The Apostolic Age",
-  "lessons": [
-    { "name": "New Testament Analysis" },
-    { "name": "Challenges of the Early Church" },
-    { "name": "Formation of Doctrines" }
-  ]
-},
-{
-  "course": "RS114",
-  "name": "Historical Context of Early Christianity",
-  "lessons": [
-    { "name": "Roman Empire" },
-    { "name": "Early Christian Communities" },
-    { "name": "Persecution and Growth" }
-  ]
-},
-{
-  "course": "RS115",
-  "name": "Leadership in Christian Communities",
-  "lessons": [
-    { "name": "Biblical Teachings" },
-    { "name": "Pastoral Care" },
-    { "name": "Community Building" }
-  ]
-},
-{
-  "course": "RS115",
-  "name": "Service in Christian Communities",
-  "lessons": [
-    { "name": "Servant Leadership" },
-    { "name": "Ethical Stewardship" },
-    { "name": "Practical Applications" }
-  ]
-},
-{
-  "course": "RS115",
-  "name": "Effective Leadership Practices",
-  "lessons": [
-    { "name": "Saint Peter's Example" },
-    { "name": "Modern Leadership Challenges" },
-    { "name": "Community Service" }
-  ]
-},
-{
-  "course": "RS116",
-  "name": "Introduction to Sufi Philosophy",
-  "lessons": [
-    { "name": "Historical Development" },
-    { "name": "Key Sufi Figures" },
-    { "name": "Philosophical Underpinnings" }
-  ]
-},
-{
-  "course": "RS116",
-  "name": "Mystical Traditions in Sufism",
-  "lessons": [
-    { "name": "Mystical Practices" },
-    { "name": "Sufi Orders" },
-    { "name": "Rituals and Contributions" }
-  ]
-},
-{
-  "course": "RS116",
-  "name": "Love and Divine Union in Sufism",
-  "lessons": [
-    { "name": "Teachings of Rumi" },
-    { "name": "Teachings of Hafiz" },
-    { "name": "Journey of the Soul" }
-  ]
-},
-{
-  "course": "RS117",
-  "name": "Ethical Wisdom in Islam",
-  "lessons": [
-    { "name": "Moral Teachings in the Quran" },
-    { "name": "Hadith and Ethical Guidance" },
-    { "name": "Role of Khidr" }
-  ]
-},
-{
-  "course": "RS117",
-  "name": "Moral Reasoning in Islam",
-  "lessons": [
-    { "name": "Divine Guidance" },
-    { "name": "Free Will" },
-    { "name": "Pursuit of Righteousness" }
-  ]
-},
-{
-  "course": "RS117",
-  "name": "Contemporary Ethical Dilemmas",
-  "lessons": [
-    { "name": "Modern Applications" },
-    { "name": "Personal Spiritual Growth" },
-    { "name": "Ethical Decision Making" }
-  ]
-},
-{
-  "course": "RS118",
-  "name": "Islamic Esotericism",
-  "lessons": [
-    { "name": "Nature of the Unseen World" },
-    { "name": "Spiritual Symbolism" },
-    { "name": "Mystical Experiences" }
-  ]
-},
-{
-  "course": "RS118",
-  "name": "Stories and Teachings of Khidr",
-  "lessons": [
-    { "name": "Symbolic Interpretations" },
-    { "name": "Role in Islamic Mysticism" },
-    { "name": "Reflective Practices" }
-  ]
-},
-{
-  "course": "RS118",
-  "name": "Material and Spiritual Realms",
-  "lessons": [
-    { "name": "Interplay and Balance" },
-    { "name": "Esoteric Practices" },
-    { "name": "Personal Reflections" }
-  ]
-},
-{
-  "course": "RS119",
-  "name": "Ancient Environmental Management",
-  "lessons": [
-    { "name": "Principles of Water Management" },
-    { "name": "Agricultural Practices" },
-    { "name": "Land Use Strategies" }
-  ]
-},
-{
-  "course": "RS119",
-  "name": "Yu the Great's Achievements",
-  "lessons": [
-    { "name": "Flood Control" },
-    { "name": "Irrigation Systems" },
-    { "name": "Environmental Legacy" }
-  ]
-},
-{
-  "course": "RS119",
-  "name": "Modern Environmental Relevance",
-  "lessons": [
-    { "name": "Ancient Practices Today" },
-    { "name": "Sustainable Techniques" },
-    { "name": "Integration with Modern Systems" }
-  ]
-},
-{
-  "course": "RS120",
-  "name": "Leadership in Chinese Mythology",
-  "lessons": [
-    { "name": "Qualities of Effective Leaders" },
-    { "name": "Yu the Great's Leadership" },
-    { "name": "Ethical Governance" }
-  ]
-},
-{
-  "course": "RS120",
-  "name": "Stories from Chinese Mythology",
-  "lessons": [
-    { "name": "Historical Contexts" },
-    { "name": "Legendary Leaders" },
-    { "name": "Cultural Impact" }
-  ]
-},
-{
-  "course": "RS120",
-  "name": "Formation of Cultural Identity",
-  "lessons": [
-    { "name": "Political Identity" },
-    { "name": "Mythological Influences" },
-    { "name": "Modern Perspectives" }
-  ]
-},
-{
-  "course": "RS121",
-  "name": "Hydraulic Engineering Principles",
-  "lessons": [
-    { "name": "Design and Construction" },
-    { "name": "Ancient Dams and Canals" },
-    { "name": "Irrigation Systems" }
-  ]
-},
-{
-  "course": "RS121",
-  "name": "Yu the Great's Projects",
-  "lessons": [
-    { "name": "Flood Control Systems" },
-    { "name": "Technological Innovations" },
-    { "name": "Environmental Impact" }
-  ]
-},
-{
-  "course": "RS121",
-  "name": "Comparative Studies",
-  "lessons": [
-    { "name": "Mesopotamia" },
-    { "name": "Indus Valley" },
-    { "name": "Broader Historical Context" }
-  ]
-}
 ]
