@@ -12,8 +12,12 @@ import * as client from "./Courses/client";
 export default function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
   const [course, setCourse] = useState<any>({
-    _id: "1234", name: "New Course", number: "New Number",
-    startDate: "2023-09-10", endDate: "2023-12-15", description: "New Description",
+    _id: "1234",
+    name: "New Course",
+    number: "New Number",
+    startDate: "2023-09-10",
+    endDate: "2023-12-15",
+    description: "New Description",
   });
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -29,24 +33,36 @@ export default function Kanbas() {
     fetchCourses();
   }, []);
 
-  const addNewCourse = () => {
-    setCourses([...courses, { ...course, _id: new Date().getTime().toString() }]);
+  const addNewCourse = async () => {
+    try {
+      const newCourse = await client.createCourse(course);
+      setCourses([...courses, newCourse]);
+      setErrorMessage(null); // Clear any previous error messages
+    } catch (error) {
+      setErrorMessage("Failed to create a new course.");
+    }
   };
 
-  const deleteCourse = (courseId: any) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
+  const deleteCourse = async (courseId: any) => {
+    try {
+      await client.deleteCourse(courseId);
+      setCourses(courses.filter((course) => course._id !== courseId));
+      setErrorMessage(null); // Clear any previous error messages
+    } catch (error) {
+      setErrorMessage("Failed to delete the course.");
+    }
   };
 
-  const updateCourse = () => {
-    setCourses(
-      courses.map((c) => {
-        if (c._id === course._id) {
-          return course;
-        } else {
-          return c;
-        }
-      })
-    );
+  const updateCourse = async () => {
+    try {
+      await client.updateCourse(course);
+      setCourses(
+        courses.map((c) => (c._id === course._id ? course : c))
+      );
+      setErrorMessage(null); // Clear any previous error messages
+    } catch (error) {
+      setErrorMessage("Failed to update the course.");
+    }
   };
 
   return (

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import * as db from "../Database";
 import '../styles.css'; 
 
 import rocketPropulsionImg from '../../images/rocket_propulsion.jpg';
@@ -50,14 +49,16 @@ const imageMap: { [key: string]: string } = {
   "ancient.jpg": ancientImg
 };
 
-export default function Dashboard(
-
-  { courses, course, setCourse, addNewCourse,
-    deleteCourse, updateCourse }: {
-    courses: any[]; course: any; setCourse: (course: any) => void;
-    addNewCourse: () => void; deleteCourse: (course: any) => void;
-    updateCourse: () => void; })
-{
+export default function Dashboard({
+  courses, course, setCourse, addNewCourse, deleteCourse, updateCourse 
+}: {
+  courses: any[]; 
+  course: any; 
+  setCourse: (course: any) => void;
+  addNewCourse: () => void; 
+  deleteCourse: (course: any) => void;
+  updateCourse: () => void;
+}) {
   return (
     <div id="wd-dashboard" className="container-fluid">
       <h1 id="wd-dashboard-title">Dashboard</h1>
