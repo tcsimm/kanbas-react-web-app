@@ -6,6 +6,8 @@ export default function WorkingWithArrays() {
   const [todo, setTodo] = useState({
     id: "1",
     title: "Task Title",
+    completed: false,
+    description: "Task Description",
   });
 
   return (
@@ -76,6 +78,39 @@ export default function WorkingWithArrays() {
         value={todo.title}
         className="form-control w-50 float-start"
         onChange={(e) => setTodo({ ...todo, title: e.target.value })}
+      />
+      <br />
+      <br />
+      <hr />
+      <h4>Updating Completed Status</h4>
+      <a
+        id="wd-update-todo-completed"
+        className="btn btn-primary float-end"
+        href={`${API}/${todo.id}/completed/${todo.completed}`}
+      >
+        Update Completed Status
+      </a>
+      <input
+        type="checkbox"
+        checked={todo.completed}
+        className="form-control w-25 float-start me-2"
+        onChange={(e) => setTodo({ ...todo, completed: e.target.checked })}
+      />
+      <br />
+      <br />
+      <hr />
+      <h4>Updating Description</h4>
+      <a
+        id="wd-update-todo-description"
+        className="btn btn-primary float-end"
+        href={`${API}/${todo.id}/description/${todo.description}`}
+      >
+        Update Description
+      </a>
+      <input
+        value={todo.description}
+        className="form-control w-75 float-start"
+        onChange={(e) => setTodo({ ...todo, description: e.target.value })}
       />
       <br />
       <br />
