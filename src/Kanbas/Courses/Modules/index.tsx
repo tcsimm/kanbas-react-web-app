@@ -1,17 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { BsGripVertical } from "react-icons/bs";
 import ModuleControlButtons from "./ModuleControlButtons";
 import LessonControlButtons from "./LessonControlButtons";
 import ModulesControls from "./ModulesControls";
-import { addModule, editModule, updateModule, deleteModule } from "./reducer";
+import { addModule, editModule, updateModule, deleteModule, setModules } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
+import * as client from "./client";
 
 export default function Modules() {
-  const { cid } = useParams();
+  const { cid } = useParams<{ cid: string }>();
   const [moduleName, setModuleName] = useState<string>("");
   const { modules } = useSelector((state: any) => state.modulesReducer);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fetchModules = async () => {
+      try {
+        if (cid) {
+          const modules = await client.findModulesForCourse(cid);
+          dispatch(setModules(modules));
+        }
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          console.error("Error fetching modules:", error.message);
+        } else {
+          console.error("An unknown error occurred");
+        }
+      }
+    };
+    fetchModules();
+  }, [cid, dispatch]);
 
   return (
     <div id="wd-modules">
@@ -19,8 +38,10 @@ export default function Modules() {
         moduleName={moduleName}
         setModuleName={setModuleName}
         addModule={() => {
-          dispatch(addModule({ name: moduleName, course: cid }));
-          setModuleName("");
+          if (cid) {
+            dispatch(addModule({ name: moduleName, course: cid }));
+            setModuleName("");
+          }
         }}
       />
       <br /><br /><br />
