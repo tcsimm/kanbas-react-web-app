@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import * as client from "./client";
-import { FaTrash } from "react-icons/fa";
+import { FaTrash, FaPlusCircle } from "react-icons/fa";
+
+const REMOTE_SERVER = process.env.REACT_APP_REMOTE_SERVER;
 
 export default function WorkingWithArraysAsynchronously() {
   const [todos, setTodos] = useState<any[]>([]);
@@ -15,6 +17,11 @@ export default function WorkingWithArraysAsynchronously() {
     setTodos(updatedTodos);
   };
 
+  const createTodo = async () => {
+    const todos = await client.createTodo();
+    setTodos(todos);
+  };
+
   useEffect(() => {
     fetchTodos();
   }, []);
@@ -22,7 +29,14 @@ export default function WorkingWithArraysAsynchronously() {
   return (
     <div id="wd-asynchronous-arrays">
       <h3>Working with Arrays Asynchronously</h3>
-      <h4>Todos</h4>
+      <h4>
+        Todos
+        <FaPlusCircle
+          onClick={createTodo}
+          className="text-success float-end fs-3"
+          id="wd-create-todo"
+        />
+      </h4>
       <ul className="list-group">
         {todos.map((todo) => (
           <li key={todo.id} className="list-group-item">
