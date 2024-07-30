@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as client from "./client";
 
 export default function HttpClient() {
   const [welcomeOnClick, setWelcomeOnClick] = useState("");
+  const [welcomeOnLoad, setWelcomeOnLoad] = useState("");
 
   const fetchWelcomeOnClick = async () => {
     try {
@@ -12,6 +13,19 @@ export default function HttpClient() {
       console.error("Error fetching welcome message:", error);
     }
   };
+
+  const fetchWelcomeOnLoad = async () => {
+    try {
+      const welcome = await client.fetchWelcomeMessage();
+      setWelcomeOnLoad(welcome);
+    } catch (error) {
+      console.error("Error fetching welcome message on load:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchWelcomeOnLoad();
+  }, []);
 
   return (
     <div>
@@ -23,6 +37,10 @@ export default function HttpClient() {
       </button>
       <br />
       Response from server: <b>{welcomeOnClick}</b>
+      <hr />
+      <h4>Requesting on Load</h4>
+      Response from server: <b>{welcomeOnLoad}</b>
+      <hr />
     </div>
   );
 }
