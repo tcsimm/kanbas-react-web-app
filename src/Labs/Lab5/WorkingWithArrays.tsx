@@ -38,13 +38,23 @@ export default function WorkingWithArrays() {
       </a>
       <hr />
       <h4>Creating new Items in an Array</h4>
-      <a
-        id="wd-create-todo"
-        className="btn btn-primary"
-        href={`${API}/create`}
-      >
+      <a id="wd-create-todo" className="btn btn-primary" href={`${API}/create`}>
         Create Todo
       </a>
+      <hr />
+      <h4>Deleting from an Array</h4>
+      <a
+        id="wd-delete-todo"
+        className="btn btn-primary float-end"
+        href={`${API}/${todo.id}/delete`}
+      >
+        Delete Todo with ID = {todo.id}
+      </a>
+      <input
+        value={todo.id}
+        className="form-control w-50"
+        onChange={(e) => setTodo({ ...todo, id: e.target.value })}
+      />
       <hr />
     </div>
   );
