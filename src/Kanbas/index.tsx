@@ -12,12 +12,8 @@ import * as client from "./Courses/client";
 export default function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
   const [course, setCourse] = useState<any>({
-    _id: "1234",
-    name: "New Course",
-    number: "New Number",
-    startDate: "2023-09-10",
-    endDate: "2023-12-15",
-    description: "New Description",
+    _id: "1234", name: "New Course", number: "New Number",
+    startDate: "2023-09-10", endDate: "2023-12-15", description: "New Description",
   });
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -37,17 +33,15 @@ export default function Kanbas() {
     try {
       const newCourse = await client.createCourse(course);
       setCourses([...courses, newCourse]);
-      setErrorMessage(null); // Clear any previous error messages
     } catch (error) {
       setErrorMessage("Failed to create a new course.");
     }
   };
 
-  const deleteCourse = async (courseId: any) => {
+  const deleteCourse = async (courseId: string) => {
     try {
       await client.deleteCourse(courseId);
       setCourses(courses.filter((course) => course._id !== courseId));
-      setErrorMessage(null); // Clear any previous error messages
     } catch (error) {
       setErrorMessage("Failed to delete the course.");
     }
@@ -59,7 +53,6 @@ export default function Kanbas() {
       setCourses(
         courses.map((c) => (c._id === course._id ? course : c))
       );
-      setErrorMessage(null); // Clear any previous error messages
     } catch (error) {
       setErrorMessage("Failed to update the course.");
     }
