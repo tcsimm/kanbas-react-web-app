@@ -18,8 +18,9 @@ export default function WorkingWithArraysAsynchronously() {
 
   const createTodo = async () => {
     try {
-      const todos = await client.createTodo();
-      setTodos(todos);
+      const newTodo = { title: "New Todo", completed: false }; // Example new todo data
+      const todos = await client.createTodo(newTodo);
+      setTodos([...todos]);
     } catch (error: any) {
       setErrorMessage(error.response?.data?.message || "Error creating todo");
     }

@@ -1,3 +1,4 @@
+// src/Labs/Lab5/client.ts
 import axios from "axios";
 
 // Update the base URL as per your server configuration
@@ -21,8 +22,8 @@ export const fetchTodos = async () => {
 };
 
 // Create a new todo
-export const createTodo = async () => {
-  const response = await axios.get(`${TODOS_API}/create`);
+export const createTodo = async (todo: any) => {
+  const response = await axios.post(TODOS_API, todo);
   return response.data;
 };
 

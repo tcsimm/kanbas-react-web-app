@@ -12,12 +12,8 @@ import * as client from "./Courses/client";
 export default function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
   const [course, setCourse] = useState<any>({
-    _id: "1234",
-    name: "New Course",
-    number: "New Number",
-    startDate: "2023-09-10",
-    endDate: "2023-12-15",
-    description: "New Description",
+    _id: "1234", name: "New Course", number: "New Number",
+    startDate: "2023-09-10", endDate: "2023-12-15", description: "New Description",
   });
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
