@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { BsGripVertical } from "react-icons/bs";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { BsGripVertical } from "react-icons/bs";  // Add this line
+import { setModules, addModule, deleteModule as deleteModuleReducer, updateModule, editModule } from "./reducer";
+import * as client from "./client";
 import ModuleControlButtons from "./ModuleControlButtons";
 import LessonControlButtons from "./LessonControlButtons";
 import ModulesControls from "./ModulesControls";
-import { addModule, editModule, updateModule, deleteModule, setModules } from "./reducer";
-import { useSelector, useDispatch } from "react-redux";
-import * as client from "./client";
 
 export default function Modules() {
   const { cid } = useParams<{ cid: string }>();
+  const dispatch = useDispatch();
   const [moduleName, setModuleName] = useState<string>("");
   const { modules } = useSelector((state: any) => state.modulesReducer);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchModules = async () => {
@@ -21,27 +21,41 @@ export default function Modules() {
           const modules = await client.findModulesForCourse(cid);
           dispatch(setModules(modules));
         }
-      } catch (error: unknown) {
-        if (error instanceof Error) {
-          console.error("Error fetching modules:", error.message);
-        } else {
-          console.error("An unknown error occurred");
-        }
+      } catch (error: any) {
+        console.error("Error fetching modules:", error.message);
       }
     };
     fetchModules();
   }, [cid, dispatch]);
 
+  const createModule = async (module: any) => {
+    try {
+      if (cid) {
+        const newModule = await client.createModule(cid, module);
+        dispatch(addModule(newModule));
+      }
+    } catch (error: any) {
+      console.error("Error creating module:", error.message);
+    }
+  };
+
+  const removeModule = async (moduleId: string) => {
+    try {
+      await client.deleteModule(moduleId);
+      dispatch(deleteModuleReducer(moduleId));
+    } catch (error: any) {
+      console.error("Error deleting module:", error.message);
+    }
+  };
+
   return (
     <div id="wd-modules">
-      <ModulesControls 
+      <ModulesControls
         moduleName={moduleName}
         setModuleName={setModuleName}
         addModule={() => {
-          if (cid) {
-            dispatch(addModule({ name: moduleName, course: cid }));
-            setModuleName("");
-          }
+          createModule({ name: moduleName, course: cid });
+          setModuleName("");
         }}
       />
       <br /><br /><br />
@@ -67,8 +81,8 @@ export default function Modules() {
                 )}
                 <ModuleControlButtons
                   moduleId={module._id}
-                  deleteModule={(moduleId) => dispatch(deleteModule(module._id))}
-                  editModule={(moduleId) => dispatch(editModule(module._id))}
+                  deleteModule={() => { removeModule(module._id); }}
+                  editModule={() => dispatch(editModule(module._id))}
                 />
               </div>
               {module.lessons && (
