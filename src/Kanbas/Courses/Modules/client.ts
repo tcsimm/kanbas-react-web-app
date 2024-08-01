@@ -5,7 +5,9 @@ const COURSES_API = `${BASE_URL}/api/courses`;
 const MODULES_API = `${BASE_URL}/api/modules`;
 
 export const findModulesForCourse = async (courseId: string) => {
+  console.log(`Fetching modules for course ID: ${courseId}`);
   const response = await axios.get(`${COURSES_API}/${courseId}/modules`);
+  console.log(`Modules fetched: ${JSON.stringify(response.data)}`); 
   return response.data;
 };
 
@@ -14,8 +16,8 @@ export const createModule = async (courseId: string, module: any) => {
   return response.data;
 };
 
-export const deleteModule = async (moduleId: string) => {
-  const response = await axios.delete(`${MODULES_API}/${moduleId}`);
+export const deleteModule = async (id: string) => {
+  const response = await axios.delete(`${MODULES_API}/${id}`);
   return response.data;
 };
 

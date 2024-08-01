@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { BsGripVertical } from "react-icons/bs";  // Add this line
+import { BsGripVertical } from "react-icons/bs";
 import { setModules, addModule, deleteModule as deleteModuleReducer, updateModule, editModule } from "./reducer";
 import * as client from "./client";
 import ModuleControlButtons from "./ModuleControlButtons";
@@ -18,7 +18,9 @@ export default function Modules() {
     const fetchModules = async () => {
       try {
         if (cid) {
+          console.log(`Fetching modules for course ID: ${cid}`);
           const modules = await client.findModulesForCourse(cid);
+          console.log(`Modules fetched: ${JSON.stringify(modules)}`);
           dispatch(setModules(modules));
         }
       } catch (error: any) {

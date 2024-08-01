@@ -35,14 +35,8 @@ const modulesSlice = createSlice({
     setModules: (state, action: PayloadAction<Module[]>) => {
       state.modules = action.payload;
     },
-    addModule: (state, action: PayloadAction<{ name: string, course: string }>) => {
-      const newModule: Module = {
-        _id: new Date().getTime().toString(),
-        lessons: defaultLessons,
-        name: action.payload.name || defaultName,
-        course: action.payload.course,
-      };
-      state.modules = [...state.modules, newModule];
+    addModule: (state, action: PayloadAction<Module>) => {
+      state.modules = [...state.modules, action.payload];
     },
     deleteModule: (state, action: PayloadAction<string>) => {
       state.modules = state.modules.filter((m) => m._id !== action.payload);
