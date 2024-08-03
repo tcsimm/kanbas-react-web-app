@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const BASE_URL = process.env.REACT_APP_REMOTE_SERVER || "http://localhost:4000";
-const ASSIGNMENTS_API = `${BASE_URL}/api/courses/assignments`;
 const COURSES_API = `${BASE_URL}/api/courses`;
 
 export const createAssignment = async (courseId: string, assignment: any) => {
@@ -15,11 +14,11 @@ export const getAssignmentsForCourse = async (courseId: string) => {
 };
 
 export const updateAssignment = async (assignment: any) => {
-  const response = await axios.put(`${ASSIGNMENTS_API}/${assignment._id}`, assignment);
+  const response = await axios.put(`${BASE_URL}/api/assignments/${assignment._id}`, assignment);
   return response.data;
 };
 
 export const deleteAssignment = async (id: string) => {
-  const response = await axios.delete(`${ASSIGNMENTS_API}/${id}`);
+  const response = await axios.delete(`${BASE_URL}/api/assignments/${id}`);
   return response.data;
 };

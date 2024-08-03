@@ -31,14 +31,8 @@ export default function Modules() {
   }, [cid, dispatch]);
 
   const createModule = async (module: any) => {
-    try {
-      if (cid) {
-        const newModule = await client.createModule(cid, module);
-        dispatch(addModule(newModule));
-      }
-    } catch (error: any) {
-      console.error("Error creating module:", error.message);
-    }
+    const newModule = await client.createModule(cid as string, module);
+    dispatch(addModule(newModule));
   };
 
   const removeModule = async (moduleId: string) => {
