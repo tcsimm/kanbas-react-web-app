@@ -1,8 +1,8 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addAssignment, updateAssignment } from './reducer';
-import * as db from '../../Database';
+import * as client from './client'; 
 
 interface Assignment {
   _id: string;
@@ -45,11 +45,13 @@ export default function AssignmentEditor() {
     setAssignment(prev => (prev ? { ...prev, [name]: value } : null));
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (assignment) {
       if (id === 'new') {
-        dispatch(addAssignment(assignment));
+        const newAssignment = await client.createAssignment(cid!, assignment);
+        dispatch(addAssignment(newAssignment));
       } else {
+        await client.updateAssignment(assignment);
         dispatch(updateAssignment(assignment));
       }
       navigate(`/Kanbas/Courses/${cid}/Assignments`);

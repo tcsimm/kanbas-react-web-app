@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { FaPlus, FaEllipsisV, FaCheckCircle, FaTrash } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteAssignment } from './reducer';
-import './Assignments.css'; // Ensure you create and import this CSS file
+import { setAssignments, deleteAssignment } from './reducer';
+import * as client from './client';
+import './Assignments.css'; 
 
 const Assignments = () => {
   const { cid } = useParams();
@@ -12,9 +13,30 @@ const Assignments = () => {
   const dispatch = useDispatch();
   const [selectedAssignment, setSelectedAssignment] = useState<string | null>(null);
 
-  const handleDelete = (assignmentId: string) => {
-    dispatch(deleteAssignment(assignmentId));
-    setSelectedAssignment(null);
+  useEffect(() => {
+    const fetchAssignments = async () => {
+      try {
+        if (cid) {
+          console.log(`Fetching assignments for course ID: ${cid}`);
+          const fetchedAssignments = await client.getAssignmentsForCourse(cid);
+          console.log(`Assignments fetched: ${JSON.stringify(fetchedAssignments)}`);
+          dispatch(setAssignments(fetchedAssignments));
+        }
+      } catch (error: any) {
+        console.error("Error fetching assignments:", error.message);
+      }
+    };
+    fetchAssignments();
+  }, [cid, dispatch]);
+
+  const handleDelete = async (assignmentId: string) => {
+    try {
+      await client.deleteAssignment(assignmentId);
+      dispatch(deleteAssignment(assignmentId));
+      setSelectedAssignment(null);
+    } catch (error: any) {
+      console.error("Error deleting assignment:", error.message);
+    }
   };
 
   return (
