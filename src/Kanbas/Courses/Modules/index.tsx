@@ -30,8 +30,14 @@ export default function Modules() {
     fetchModules();
   }, [cid, dispatch]);
 
+  const defaultLessons = [
+    { name: "Lesson 1" },
+    { name: "Lesson 2" },
+    { name: "Lesson 3" }
+  ];
+
   const createModule = async (module: any) => {
-    const newModule = await client.createModule(cid as string, module);
+    const newModule = await client.createModule(cid as string, { ...module, lessons: defaultLessons });
     dispatch(addModule(newModule));
   };
 
