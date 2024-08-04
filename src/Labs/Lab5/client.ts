@@ -7,7 +7,6 @@ const WELCOME_API = `${BASE_URL}/api/welcome`;
 const ASSIGNMENTS_API = `${BASE_URL}/api/assignments`;
 const COURSES_API = `${BASE_URL}/api/courses`;
 
-// Todos APIs
 export const fetchTodos = async () => {
   const response = await axios.get(TODOS_API);
   return response.data;
@@ -38,13 +37,11 @@ export const postTodo = async (todo: any) => {
   return response.data;
 };
 
-// Welcome API
 export const fetchWelcomeMessage = async () => {
   const response = await axios.get(WELCOME_API);
   return response.data;
 };
 
-// Assignments APIs
 export const fetchAssignment = async () => {
   const response = await axios.get(ASSIGNMENTS_API);
   return response.data;
@@ -55,7 +52,6 @@ export const updateTitle = async (title: string) => {
   return response.data;
 };
 
-// Courses APIs
 export const fetchAllCourses = async () => {
   const { data } = await axios.get(COURSES_API);
   return data;
