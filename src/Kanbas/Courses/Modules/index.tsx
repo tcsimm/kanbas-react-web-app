@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { BsGripVertical } from "react-icons/bs";
-import { setModules, addModule, deleteModule as deleteModuleReducer, updateModule, editModule } from "./reducer";
+import { setModules, addModule, deleteModule as deleteModuleReducer, updateModule as updateModuleReducer, editModule } from "./reducer";
 import * as client from "./client";
 import ModuleControlButtons from "./ModuleControlButtons";
 import LessonControlButtons from "./LessonControlButtons";
@@ -33,6 +33,11 @@ export default function Modules() {
   const createModule = async (module: any) => {
     const newModule = await client.createModule(cid as string, module);
     dispatch(addModule(newModule));
+  };
+
+  const saveModule = async (module: any) => {
+    const updatedModule = await client.updateModule(module._id, module);
+    dispatch(updateModuleReducer(updatedModule));
   };
 
   const removeModule = async (moduleId: string) => {
@@ -66,10 +71,10 @@ export default function Modules() {
                 {module.editing && (
                   <input
                     className="form-control w-50 d-inline-block"
-                    onChange={(e) => dispatch(updateModule({ ...module, name: e.target.value }))}
+                    onChange={(e) => dispatch(updateModuleReducer({ ...module, name: e.target.value }))}
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
-                        dispatch(updateModule({ ...module, editing: false }));
+                        saveModule({ ...module, editing: false });
                       }
                     }}
                     value={module.name}
