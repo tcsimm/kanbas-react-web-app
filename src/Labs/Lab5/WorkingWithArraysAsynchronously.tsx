@@ -18,7 +18,7 @@ export default function WorkingWithArraysAsynchronously() {
 
   const createTodo = async () => {
     try {
-      const newTodo = { title: "New Todo", completed: false }; // Example new todo data
+      const newTodo = { title: "New Todo", completed: false }; 
       const todos = await client.createTodo(newTodo);
       setTodos([...todos]);
     } catch (error: any) {
