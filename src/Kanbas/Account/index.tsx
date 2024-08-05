@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Signin from "./SignIn";
+import Signup from "./SignUp";
 import Profile from "./Profile"; 
 import AccountNavigation from "./Navigation/index";
 
@@ -14,6 +15,7 @@ export default function Account() {
           <Routes>
             <Route path="/" element={<Navigate to="/Kanbas/Account/Signin" />} />
             <Route path="/Signin" element={<Signin />} />
+            <Route path="/Signup" element={<Signup />} />
             <Route path="/Profile" element={<Profile />} /> 
           </Routes>
         </div>
