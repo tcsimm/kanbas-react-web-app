@@ -1,6 +1,5 @@
-// src/Kanbas/Courses/People/Details.tsx
 import { useEffect, useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaEdit, FaCheck } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import * as client from "./client";
@@ -8,6 +7,10 @@ import * as client from "./client";
 export default function PeopleDetails({ fetchUsers }: { fetchUsers: () => void; }) {
   const { uid, cid } = useParams();
   const [user, setUser] = useState<any>({});
+  const [name, setName] = useState("");
+  const [editing, setEditing] = useState(false);
+  const [email, setEmail] = useState("");
+  const [role, setRole] = useState("");
   const navigate = useNavigate();
 
   const fetchUser = async () => {
@@ -15,8 +18,25 @@ export default function PeopleDetails({ fetchUsers }: { fetchUsers: () => void; 
     try {
       const user = await client.findUserById(uid);
       setUser(user);
+      setName(`${user.firstName} ${user.lastName}`);
+      setEmail(user.email);
+      setRole(user.role);
     } catch (error) {
       console.error('Error fetching user:', error);
+    }
+  };
+
+  const saveUser = async () => {
+    const [firstName, lastName] = name.split(" ");
+    const updatedUser = { ...user, firstName, lastName, email, role };
+    try {
+      await client.updateUser(updatedUser);
+      setUser(updatedUser);
+      setEditing(false);
+      fetchUsers();
+      navigate(`/Kanbas/Courses/${cid}/People`);
+    } catch (error) {
+      console.error('Error saving user:', error);
     }
   };
 
@@ -45,8 +65,57 @@ export default function PeopleDetails({ fetchUsers }: { fetchUsers: () => void; 
         <FaUserCircle className="text-secondary me-2 fs-1" />
       </div>
       <hr />
-      <div className="text-danger fs-4 wd-name">{user.firstName} {user.lastName}</div>
-      <b>Roles:</b> <span className="wd-roles">{user.role}</span> <br />
+      <div className="text-danger fs-4">
+        {!editing && (
+          <div onClick={() => setEditing(true)} className="wd-name">
+            {user.firstName} {user.lastName}
+            <FaEdit className="float-end fs-5 mt-2 wd-edit" onClick={() => setEditing(true)} />
+          </div>
+        )}
+        {editing && (
+          <>
+            <input 
+              className="form-control w-50 wd-edit-name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") saveUser();
+              }}
+            />
+            <FaCheck 
+              className="float-end fs-5 mt-2 me-2 wd-save" 
+              onClick={saveUser} 
+            />
+          </>
+        )}
+      </div>
+      <b>Roles:</b>
+      {editing ? (
+        <select 
+          className="form-control" 
+          value={role} 
+          onChange={(e) => setRole(e.target.value)}
+        >
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          <option value="guest">Guest</option>
+        </select>
+      ) : (
+        <span className="wd-roles">{user.role}</span>
+      )}
+      <br />
+      <b>Email:</b>
+      {editing ? (
+        <input 
+          type="email" 
+          className="form-control" 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      ) : (
+        <span className="wd-email">{user.email}</span>
+      )}
+      <br />
       <b>Login ID:</b> <span className="wd-login-id">{user.loginId}</span> <br />
       <b>Section:</b> <span className="wd-section">{user.section}</span> <br />
       <b>Total Activity:</b> <span className="wd-total-activity">{user.totalActivity}</span>
