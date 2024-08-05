@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import * as client from "./Courses/client";
+import Account from "./Account";
 
 export default function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
@@ -67,6 +68,7 @@ export default function Kanbas() {
             <div className="alert alert-danger">{errorMessage}</div>
           )}
           <Routes>
+          <Route path="/Account/*" element={<Account />} />
             <Route path="/" element={<Navigate to="Dashboard" />} />
             <Route
               path="Dashboard"
