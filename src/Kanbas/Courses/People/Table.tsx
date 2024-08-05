@@ -1,7 +1,9 @@
+// src/Kanbas/Courses/People/Table.tsx
 import React, { useState, useEffect } from "react";
 import * as client from "./client";
 import { Link, useParams } from "react-router-dom";
 import PeopleDetails from "./Details";
+import { FaPlus } from "react-icons/fa";
 
 export default function PeopleTable() {
   const { cid } = useParams();
@@ -10,27 +12,55 @@ export default function PeopleTable() {
   const [name, setName] = useState("");
 
   const fetchUsers = async () => {
-    const users = await client.findAllUsers();
-    setUsers(users);
+    try {
+      const users = await client.findAllUsers();
+      setUsers(users);
+    } catch (error) {
+      console.error('Error fetching users:', error);
+    }
   };
 
   const filterUsersByRole = async (role: string) => {
     setRole(role);
-    if (role) {
-      const users = await client.findUsersByRole(role);
-      setUsers(users);
-    } else {
-      fetchUsers();
+    try {
+      if (role) {
+        const users = await client.findUsersByRole(role);
+        setUsers(users);
+      } else {
+        fetchUsers();
+      }
+    } catch (error) {
+      console.error('Error filtering users by role:', error);
     }
   };
 
   const filterUsersByName = async (name: string) => {
     setName(name);
-    if (name) {
-      const users = await client.findUsersByPartialName(name);
-      setUsers(users);
-    } else {
-      fetchUsers();
+    try {
+      if (name) {
+        const users = await client.findUsersByPartialName(name);
+        setUsers(users);
+      } else {
+        fetchUsers();
+      }
+    } catch (error) {
+      console.error('Error filtering users by name:', error);
+    }
+  };
+
+  const createUser = async () => {
+    try {
+      const user = await client.createUser({
+        firstName: "New",
+        lastName: `User${users.length + 1}`,
+        username: `newuser${Date.now()}`,
+        password: "password123",
+        section: "S101",
+        role: "STUDENT",
+      });
+      setUsers([...users, user]);
+    } catch (error) {
+      console.error('Error creating user:', error);
     }
   };
 
@@ -84,6 +114,10 @@ export default function PeopleTable() {
           ))}
         </tbody>
       </table>
+      <button onClick={createUser} className="float-end btn btn-danger wd-add-people">
+        <FaPlus className="me-2" />
+        People
+      </button>
       <PeopleDetails fetchUsers={fetchUsers} />
     </div>
   );
