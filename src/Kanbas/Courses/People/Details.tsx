@@ -1,3 +1,4 @@
+// src/Kanbas/Courses/People/Details.tsx
 import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
@@ -8,19 +9,19 @@ import * as client from "./client";
 export default function PeopleDetails() {
   const { uid, cid } = useParams();
   const [user, setUser] = useState<any>({});
-
   const fetchUser = async () => {
     if (!uid) return;
-    const user = await client.findUserById(uid);
-    setUser(user);
+    try {
+      const user = await client.findUserById(uid);
+      setUser(user);
+    } catch (error) {
+      console.error("Error fetching user:", error);
+    }
   };
-
   useEffect(() => {
     if (uid) fetchUser();
   }, [uid]);
-
   if (!uid) return null;
-
   return (
     <div className="wd-people-details position-fixed top-0 end-0 bottom-0 bg-white p-4 shadow w-25">
       <Link to={`/Kanbas/Courses/${cid}/People`} className="btn position-fixed end-0 top-0 wd-close-details">
