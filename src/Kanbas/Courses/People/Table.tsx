@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
 import * as client from "./client";
+import { Link, useParams } from "react-router-dom";
 import PeopleDetails from "./Details";
 
 export default function PeopleTable() {
-  const { cid, uid } = useParams();
+  const { cid } = useParams();
   const [users, setUsers] = useState<any[]>([]);
   const [role, setRole] = useState("");
   const [name, setName] = useState("");
+
+  const fetchUsers = async () => {
+    const users = await client.findAllUsers();
+    setUsers(users);
+  };
 
   const filterUsersByRole = async (role: string) => {
     setRole(role);
@@ -29,11 +34,6 @@ export default function PeopleTable() {
     }
   };
 
-  const fetchUsers = async () => {
-    const users = await client.findAllUsers();
-    setUsers(users);
-  };
-
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -42,7 +42,7 @@ export default function PeopleTable() {
     <div id="wd-people-table">
       <input
         onChange={(e) => filterUsersByName(e.target.value)}
-        placeholder="Search by name"
+        placeholder="Search people"
         className="form-control float-start w-25 me-2 wd-filter-by-name"
       />
       <select
@@ -55,7 +55,7 @@ export default function PeopleTable() {
         <option value="TA">Assistants</option>
         <option value="FACULTY">Faculty</option>
       </select>
-      <table className="table table-striped mt-3">
+      <table className="table table-striped">
         <thead>
           <tr>
             <th>Name</th>
@@ -84,7 +84,7 @@ export default function PeopleTable() {
           ))}
         </tbody>
       </table>
-      {uid && <PeopleDetails />}
+      <PeopleDetails fetchUsers={fetchUsers} />
     </div>
   );
 }
