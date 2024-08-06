@@ -1,24 +1,30 @@
+import * as client from "./client";
+import { useDispatch } from "react-redux";
+import { setCurrentUser } from "./reducer";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import * as client from "./client";
 
 export default function Signin() {
   const [credentials, setCredentials] = useState<any>({});
+  const [error, setError] = useState<string>("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const signin = async () => {
     try {
-      await client.signin(credentials);
+      const currentUser = await client.signin(credentials);
+      dispatch(setCurrentUser(currentUser));
       navigate("/Kanbas/Account/Profile");
-    } catch (error) {
-      console.error('Error signing in:', error);
-      // Add user feedback for sign-in errors if necessary
+    } catch (err: any) {
+      console.error('Error signing in:', err);
+      setError(err.response?.data?.message || 'An error occurred. Please try again.');
     }
   };
 
   return (
     <div id="wd-signin-screen">
       <h1>Sign in</h1>
+      {error && <div className="wd-error alert alert-danger">{error}</div>}
       <input
         id="wd-username"
         onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
