@@ -23,6 +23,16 @@ export const signin = async (credentials: any) => {
   }
 };
 
+export const signout = async () => {
+  try {
+    const response = await axios.post(`${USERS_API}/signout`);
+    return response.data;
+  } catch (error) {
+    console.error('Error signing out:', error);
+    throw error;
+  }
+};
+
 export const profile = async () => {
   try {
     const response = await axios.post(`${USERS_API}/profile`);
