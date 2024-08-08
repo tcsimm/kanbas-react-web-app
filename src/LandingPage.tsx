@@ -16,6 +16,7 @@ export default function LandingPage() {
       <h3>Links to Kanbas Application</h3>
       <ul>
         <li><a href="#/Kanbas">Kanbas</a></li>
+        <li><a href="https://a6-xjm6.onrender.com" target="_blank" rel="noopener noreferrer">Render</a></li>
       </ul>
       <h3>Source Code Repositories</h3>
       <ul>

@@ -44,3 +44,9 @@ export const profile = async () => {
     throw error;
   }
 };
+
+export const deleteUser = async (userId: string) => {
+  const response = await axios.delete( `${USERS_API}/${userId}` );
+  return response.data;
+};
+
