@@ -17,20 +17,24 @@ export default function PeopleDetails({ fetchUsers }: { fetchUsers: () => void; 
     if (!uid) return;
     try {
       const user = await client.findUserById(uid);
-      setUser(user);
-      setName(`${user.firstName} ${user.lastName}`);
-      setEmail(user.email);
-      setRole(user.role);
+      if (user) {
+        setUser(user);
+        setName(`${user.firstName} ${user.lastName}`);
+        setEmail(user.email);
+        setRole(user.role);
+      } else {
+        console.error("User not found");
+      }
     } catch (error) {
       console.error('Error fetching user:', error);
     }
   };
 
   const saveUser = async () => {
-    const [firstName, lastName] = name.split(" ");
-    const updatedUser = { ...user, firstName, lastName, email, role };
+    const [firstName, lastName] = name.split(" ").length > 1 ? name.split(" ") : [name, ""];
+    const updatedUser = { ...user, firstName, lastName, email, role, _id: uid }; 
     try {
-      await client.updateUser(updatedUser);
+      await client.updateUser(updatedUser); 
       setUser(updatedUser);
       setEditing(false);
       fetchUsers();
@@ -38,7 +42,7 @@ export default function PeopleDetails({ fetchUsers }: { fetchUsers: () => void; 
     } catch (error) {
       console.error('Error saving user:', error);
     }
-  };
+  };  
 
   const deleteUser = async (uid: string) => {
     try {
@@ -96,9 +100,10 @@ export default function PeopleDetails({ fetchUsers }: { fetchUsers: () => void; 
           value={role} 
           onChange={(e) => setRole(e.target.value)}
         >
-          <option value="admin">Admin</option>
-          <option value="user">User</option>
-          <option value="guest">Guest</option>
+          <option value="USER">User</option>
+          <option value="ADMIN">Admin</option>
+          <option value="FACULTY">Faculty</option>
+          <option value="STUDENT">Student</option>
         </select>
       ) : (
         <span className="wd-roles">{user.role}</span>

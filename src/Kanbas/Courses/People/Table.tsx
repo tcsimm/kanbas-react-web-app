@@ -49,6 +49,7 @@ export default function PeopleTable() {
 
   const createUser = async () => {
     try {
+      const now = new Date().toISOString();
       const user = await client.createUser({
         firstName: "New",
         lastName: `User${users.length + 1}`,
@@ -56,6 +57,9 @@ export default function PeopleTable() {
         password: "password123",
         section: "S101",
         role: "STUDENT",
+        loginId: `login${users.length + 1}`, 
+        lastActivity: now, 
+        totalActivity: "0 hours", 
       });
       setUsers([...users, user]);
     } catch (error) {
@@ -67,7 +71,6 @@ export default function PeopleTable() {
     fetchUsers();
   }, []);
 
-  // Filter out users with missing or empty names
   const validUsers = users.filter(user => user.firstName?.trim() && user.lastName?.trim());
 
   return (

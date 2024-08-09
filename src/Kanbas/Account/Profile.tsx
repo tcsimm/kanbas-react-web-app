@@ -23,7 +23,7 @@ export default function Profile() {
   const signout = async () => {
     try {
       await client.signout();
-      dispatch(setCurrentUser(null)); // Clear the current user from the Redux store
+      dispatch(setCurrentUser(null));
       navigate("/Kanbas/Account/Signin");
     } catch (err: any) {
       console.error('Error signing out:', err);
@@ -36,45 +36,51 @@ export default function Profile() {
   }, []);
 
   return (
-    <div className="wd-profile-screen">
-      <h1>Profile</h1>
+    <div className="wd-profile-screen p-4">
+      <h1 className="text-center">Profile</h1>
       {error && <div className="wd-error alert alert-danger">{error}</div>}
       {profile && (
-        <div>
+        <div className="d-flex flex-column align-items-center">
           <input
-            className="wd-username"
+            className="form-control mb-3"
+            placeholder="Username"
             value={profile.username || ''}
             onChange={(e) => setProfile({ ...profile, username: e.target.value })}
           />
           <input
-            className="wd-password"
+            className="form-control mb-3"
+            placeholder="Password"
             value={profile.password || ''}
             onChange={(e) => setProfile({ ...profile, password: e.target.value })}
             type="password"
           />
           <input
-            className="wd-firstname"
+            className="form-control mb-3"
+            placeholder="First Name"
             value={profile.firstName || ''}
             onChange={(e) => setProfile({ ...profile, firstName: e.target.value })}
           />
           <input
-            className="wd-lastname"
+            className="form-control mb-3"
+            placeholder="Last Name"
             value={profile.lastName || ''}
             onChange={(e) => setProfile({ ...profile, lastName: e.target.value })}
           />
           <input
-            className="wd-dob"
+            className="form-control mb-3"
+            placeholder="Date of Birth"
             value={profile.dob || ''}
             onChange={(e) => setProfile({ ...profile, dob: e.target.value })}
             type="date"
           />
           <input
-            className="wd-email"
+            className="form-control mb-3"
+            placeholder="Email"
             value={profile.email || ''}
             onChange={(e) => setProfile({ ...profile, email: e.target.value })}
           />
           <select
-            className="wd-role"
+            className="form-control mb-3"
             value={profile.role || 'USER'}
             onChange={(e) => setProfile({ ...profile, role: e.target.value })}
           >
@@ -87,9 +93,9 @@ export default function Profile() {
       )}
       <button
         onClick={signout}
-        className="wd-signout-btn btn btn-danger w-100"
+        className="btn btn-danger w-100 mt-3"
       >
-        Sign out
+        Signout
       </button>
     </div>
   );
