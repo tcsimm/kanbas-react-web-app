@@ -1,10 +1,8 @@
-// src/Kanbas/Courses/People/client.ts
 import axios from "axios";
 
 export const REMOTE_SERVER = process.env.REACT_APP_REMOTE_SERVER;
 export const USERS_API = `${REMOTE_SERVER}/api/users`;
 
-// Function to find all users
 export const findAllUsers = async () => {
   try {
     console.log(`Requesting all users from ${USERS_API}`);
@@ -17,7 +15,6 @@ export const findAllUsers = async () => {
   }
 };
 
-// Function to find a user by ID
 export const findUserById = async (id: string) => {
   try {
     console.log(`Requesting user by ID: ${id}`);
@@ -30,7 +27,6 @@ export const findUserById = async (id: string) => {
   }
 };
 
-// Function to find users by role
 export const findUsersByRole = async (role: string) => {
   try {
     const response = await axios.get(`${USERS_API}?role=${role}`);
@@ -41,7 +37,6 @@ export const findUsersByRole = async (role: string) => {
   }
 };
 
-// Function to find users by partial name
 export const findUsersByPartialName = async (name: string) => {
   try {
     const response = await axios.get(`${USERS_API}?name=${name}`);
@@ -52,7 +47,6 @@ export const findUsersByPartialName = async (name: string) => {
   }
 };
 
-// Function to delete a user
 export const deleteUser = async (userId: string) => {
   try {
     const response = await axios.delete(`${USERS_API}/${userId}`);
@@ -63,7 +57,6 @@ export const deleteUser = async (userId: string) => {
   }
 };
 
-// Function to update a user
 export const updateUser = async (user: any) => {
   try {
     console.log(`Updating user with ID: ${user._id}`);

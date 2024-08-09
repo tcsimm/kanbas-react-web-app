@@ -6,16 +6,12 @@ import * as db from '../Database';
 const Grades = () => {
   const { cid } = useParams();
 
-  // Filter enrollments based on course ID
   const courseEnrollments = db.enrollments.filter(enrollment => enrollment.course === cid);
 
-  // Filter assignments based on course ID
   const courseAssignments = db.assignments.filter(assignment => assignment.course === cid);
 
-  // Map enrolled users to students
   const students = courseEnrollments.map(enrollment => db.users.find(user => user._id === enrollment.user)).filter(student => student !== undefined);
 
-  // Filter grades based on assignments in the course
   const grades = db.grades.filter(grade => courseAssignments.some(assignment => assignment._id === grade.assignment));
 
   return (

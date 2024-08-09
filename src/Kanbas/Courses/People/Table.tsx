@@ -1,4 +1,3 @@
-// src/Kanbas/Courses/People/Table.tsx
 import React, { useState, useEffect } from "react";
 import * as client from "./client";
 import { Link, useParams } from "react-router-dom";
@@ -68,6 +67,9 @@ export default function PeopleTable() {
     fetchUsers();
   }, []);
 
+  // Filter out users with missing or empty names
+  const validUsers = users.filter(user => user.firstName?.trim() && user.lastName?.trim());
+
   return (
     <div id="wd-people-table">
       <input
@@ -97,7 +99,7 @@ export default function PeopleTable() {
           </tr>
         </thead>
         <tbody>
-          {users.map((user: any) => (
+          {validUsers.map((user: any) => (
             <tr key={user._id}>
               <td className="wd-full-name text-nowrap">
                 <Link to={`/Kanbas/Courses/${cid}/People/${user._id}`}>
