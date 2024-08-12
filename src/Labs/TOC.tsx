@@ -45,7 +45,7 @@ export default function TOC() {
         </a>
       </li>
       <li className="nav-item">
-        <a href="https://kanbas-node-server-app-en9o.onrender.com" target="_blank" rel="noopener noreferrer" className="nav-link">
+        <a href="https://a6-xjm6.onrender.com" target="_blank" rel="noopener noreferrer" className="nav-link">
           Server on Render
         </a>
       </li>
