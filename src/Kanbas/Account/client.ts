@@ -36,13 +36,8 @@ export const signout = async () => {
 };
 
 export const profile = async () => {
-  try {
-    const response = await axiosWithCredentials.get(`${USERS_API}/profile`);
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching profile:', error);
-    throw error;
-  }
+  const response = await axios.post(`${USERS_API}/profile`);
+  return response.data;
 };
 
 export const deleteUser = async (userId: string) => {
